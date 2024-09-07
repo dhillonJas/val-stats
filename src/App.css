@@ -1,6 +1,9 @@
 .App {
-  text-align: center;
   background-color: #fa4454;
+  min-height: 100vh;}
+
+.App-home{
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,7 +12,6 @@
   font-size: calc(10px + 2vmin);
   color: rgb(255, 255, 255);
 }
-
 
 
 

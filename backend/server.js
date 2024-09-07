@@ -16,7 +16,7 @@ const db = new sqlite3.Database('./my-database.db', (err) => {
 
 
 // Example endpoint to fetch match data
-app.get('/matches', (req, res) => {
+app.get('/', (req, res) => {
   db.all('SELECT * FROM matches', [], (err, rows) => {
     if (err) {
       res.status(400).json({ error: err.message });
@@ -28,7 +28,21 @@ app.get('/matches', (req, res) => {
   });
 });
 
+app.get('/#/action-3', (req, res) => {
+  db.all('SELECT * FROM matches WHERE TEAMA = "Team A"', [], (err, rows) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+      return;
+    }
+    res.json({
+      data: rows,
+    });
+  });
+});
+
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+

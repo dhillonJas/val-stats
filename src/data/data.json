@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "teamA": "Team A",
+    "teamB": "Team B",
+    "score": "13-7"
+  },
+  {
+    "id": 2,
+    "teamA": "Team C",
+    "teamB": "Team D",
+    "score": "8-13"
+  },
+  {
+    "id": 3,
+    "teamA": "Team E",
+    "teamB": "Team D",
+    "score": "8-13"
+  },
+  {
+    "id": 5,
+    "teamA": "Team E",
+    "teamB": "Team F",
+    "score": "8-13"
+  }
+]

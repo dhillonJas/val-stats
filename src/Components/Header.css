@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fa4454;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .logo-container {
+    position: relative;
+    left: -10px;
+  }
+  
+  .logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  

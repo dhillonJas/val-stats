@@ -1,0 +1,23 @@
+.home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .grid-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .grid-button:hover {
+    background-color: #0056b3;
+  }
+  
