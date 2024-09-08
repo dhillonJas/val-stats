@@ -3,24 +3,35 @@
     "id": 1,
     "teamA": "Team A",
     "teamB": "Team B",
-    "score": "13-7"
+    "score": "13-7",
+    "map": "Ascent"
   },
   {
     "id": 2,
     "teamA": "Team C",
     "teamB": "Team D",
-    "score": "8-13"
+    "score": "8-13",
+    "map": "Bind"
   },
   {
     "id": 3,
     "teamA": "Team E",
     "teamB": "Team D",
-    "score": "8-13"
+    "score": "8-13",
+    "map": "Pearl"
   },
   {
     "id": 5,
     "teamA": "Team E",
     "teamB": "Team F",
-    "score": "8-13"
+    "score": "8-13",
+    "map": "Pearl"
+  },
+  {
+    "id": 6,
+    "teamA": "Team B",
+    "teamB": "Team F",
+    "score": "8-13",
+    "map": "Bind"
   }
 ]

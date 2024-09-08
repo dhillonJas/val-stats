@@ -3,11 +3,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function DropdownComp({ selectedValue, setSelectedValue, handleFilter }) {
+function DropdownComp({ selectedValue, setSelectedValue, options }) {
 
   const handleSelect = (eventKey) => {
+    console.log('in evnent', eventKey)
     setSelectedValue(eventKey); // Update the selected value in the parent component
-    handleFilter(eventKey);
   };
 
   return (
@@ -17,9 +17,9 @@ function DropdownComp({ selectedValue, setSelectedValue, handleFilter }) {
       <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
 
       <Dropdown.Menu>
-        <Dropdown.Item eventKey="A">Action</Dropdown.Item>
-        <Dropdown.Item eventKey="B">Another action</Dropdown.Item>
-        <Dropdown.Item eventKey="C">Something else</Dropdown.Item>
+        {options.map((option, index) => (
+          <Dropdown.Item key={index} eventKey={option}>{option}</Dropdown.Item>
+        ))}
       </Dropdown.Menu>
     </Dropdown>
   );
