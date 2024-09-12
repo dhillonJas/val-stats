@@ -1,12 +1,14 @@
 import './DataTable.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import { Table, Pagination } from 'react-bootstrap';
 
 
 const DataTable = ({filterData, columnNames}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2; // Number of items you want to display per page
+  //const [data, setData] = useState(filterData)
 
+  
   // Calculate total pages
   const totalPages = Math.ceil(filterData.length / itemsPerPage);
 
@@ -20,9 +22,17 @@ const DataTable = ({filterData, columnNames}) => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+  
+  useEffect(() => {
+        setCurrentPage(1);
+          }, [filterData]);
+  
 
   return (
     <div>
+      <pre>{JSON.stringify(totalPages, null, 2)}</pre>
+      <pre>{JSON.stringify(indexOfFirstItem, null, 2)}</pre>
+      <pre>{JSON.stringify(indexOfLastItem, null, 2)}</pre>
       <Table striped bordered hover>
         <thead>
           {columnNames.map((item, index) => (

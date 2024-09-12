@@ -1,8 +1,8 @@
 [
   {
     "id": 1,
-    "teamA": "Team A",
-    "teamB": "Team B",
+    "teamA": "TeamA",
+    "teamB": "TeamB",
     "score": "13-7",
     "map": "Ascent"
   },
