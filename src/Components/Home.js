@@ -2,31 +2,22 @@ import React, { useState } from 'react';
 import './Home.css'; 
 import TeamDropdown from './TeamDropdowns';
 import DataTable from './DataTable';
-import data from '../data/data.json'
+import allData from '../data/data.json'
 const Home = () => {
 
-  const [filterdata, setData] = useState(data);
+  const columnNames = ['id', 'TeamA', 'TeamB', 'score', 'map']
+  const [data, setData] = useState(allData);
   const [selectedButton, setSelectedButton] = useState('Team');
 
   const handleButtonClick = (button) => {
     setSelectedButton(button);
   };
 
-
-  // const handleFilter = (criteria) => {
-  //   let sql = 'SELECT * FROM ?';
-  //   if (criteria !== 'Any')
-  //   {
-  //     sql += 'WHERE teamA = \'' + criteria + '\' OR teamB = \'' + criteria + '\'';
-  //   };
-  //   const filtered = alasql(sql, [data]);
-  //   console.log(filtered)
-  //   console.log(data)
-  //   setData(filtered);
-  // };
+  function a(s){console.log('data ' + s, data)}
 
   return (
     <div className="home">
+      <h1>{a('first ')}</h1>
       <div className="buttons">
         <button className="grid-button" onClick={() => handleButtonClick('Team')}>Team</button>
         <button className="grid-button" onClick={() => handleButtonClick('Map')}>Map</button>
@@ -51,7 +42,7 @@ const Home = () => {
           </div>
         
       )}
-      <DataTable filterdata={filterdata}></DataTable>
+      <DataTable filterData={data} columnNames={columnNames}></DataTable>
 
     </div>
   );

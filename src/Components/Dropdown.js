@@ -6,7 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function DropdownComp({ selectedValue, setSelectedValue, options }) {
 
   const handleSelect = (eventKey) => {
-    console.log('in evnent', eventKey)
     setSelectedValue(eventKey); // Update the selected value in the parent component
   };
 

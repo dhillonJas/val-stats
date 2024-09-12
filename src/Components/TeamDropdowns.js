@@ -19,7 +19,7 @@ function TeamDropdown({ data, setData }) {
         sql += 'AND (teamA = \'' + againstValue + '\' OR teamB = \'' + againstValue + '\')';
     }
     const filtered = alasql(sql, [data]);
-    console.log(sql)
+    // console.log(sql)
     setData(filtered);
   };
 
