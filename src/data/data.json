@@ -1,15 +1,50 @@
 [
   {
     "id": 1,
-    "teamA": "TeamA",
-    "teamB": "TeamB",
+    "teamA": "Team A",
+    "teamB": "Team B",
     "score": "13-7",
     "map": "Ascent"
+  },
+  {
+    "id": 10,
+    "teamA": "Team B",
+    "teamB": "Team H",
+    "score": "8-13",
+    "map": "Bind"
   },
   {
     "id": 2,
     "teamA": "Team C",
     "teamB": "Team D",
+    "score": "8-13",
+    "map": "Fracture"
+  },
+  {
+    "id": 4,
+    "teamA": "Team E",
+    "teamB": "Team F",
+    "score": "8-13",
+    "map": "Bind"
+  },
+  {
+    "id": 6,
+    "teamA": "Team B",
+    "teamB": "Team G",
+    "score": "13-7",
+    "map": "Ascent"
+  },
+  {
+    "id": 5,
+    "teamA": "Team B",
+    "teamB": "Team F",
+    "score": "8-13",
+    "map": "Bind"
+  },
+  {
+    "id": 7,
+    "teamA": "Team G",
+    "teamB": "Team E",
     "score": "8-13",
     "map": "Bind"
   },
@@ -21,17 +56,52 @@
     "map": "Pearl"
   },
   {
-    "id": 5,
+    "id": 8,
+    "teamA": "Team D",
+    "teamB": "Team A",
+    "score": "8-13",
+    "map": "Fracture"
+  },
+  {
+    "id": 15,
     "teamA": "Team E",
     "teamB": "Team F",
+    "score": "8-13",
+    "map": "Fracture"
+  },
+  {
+    "id": 11,
+    "teamA": "Team C",
+    "teamB": "Team E",
+    "score": "13-7",
+    "map": "Ascent"
+  },
+  {
+    "id": 12,
+    "teamA": "Team C",
+    "teamB": "Team H",
+    "score": "8-13",
+    "map": "Fracture"
+  },
+  {
+    "id": 13,
+    "teamA": "Team A",
+    "teamB": "Team I",
+    "score": "8-13",
+    "map": "Fracture"
+  },
+  {
+    "id": 9,
+    "teamA": "Team H",
+    "teamB": "Team A",
     "score": "8-13",
     "map": "Pearl"
   },
   {
-    "id": 6,
-    "teamA": "Team B",
-    "teamB": "Team F",
+    "id": 14,
+    "teamA": "Team E",
+    "teamB": "Team H",
     "score": "8-13",
-    "map": "Bind"
+    "map": "Pearl"
   }
 ]

@@ -25,9 +25,7 @@ const Home = () => {
 
 
   return (
-    <div className="home">
-      <pre>{JSON.stringify(filteredData,null,2)}</pre>
-      
+    <div className="home">      
       <div className="buttons">
         <button className="grid-button" onClick={() => handleButtonClick('Team')}>Team</button>
         <button className="grid-button" onClick={() => handleButtonClick('Map')}>Map</button>
