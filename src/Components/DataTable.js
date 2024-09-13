@@ -6,15 +6,34 @@ import { Table, Pagination } from 'react-bootstrap';
 const DataTable = ({filterData, columnNames}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
-  
+
+  const [searchQueries, setSearchQueries] = useState(
+    columnNames.reduce((acc, column) => {
+      acc[column] = '';
+      return acc;
+    }, {})
+  );
+
   /** TODO
    * make it changeable by user */
   const rowsPerPage = 5; // Number of items you want to display per page 
     
-  // Handle page change
-  const handlePageChange = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
+    // Handle search
+    const searchedData = filterData.filter(item =>
+      columnNames.every(column =>
+        !searchQueries[column] || 
+        item[column]?.toString().toLowerCase().includes(searchQueries[column].toLowerCase())
+      )    
+    );
+  
+
+    // Update search queries for each column dynamically
+    const handleSearchChange = (e, column) => {
+      setSearchQueries({
+        ...searchQueries,
+        [column]: e.target.value
+      });
+    };
 
     // Handle sort logic
     const handleSort = (column) => {
@@ -27,8 +46,8 @@ const DataTable = ({filterData, columnNames}) => {
 
   // Memoized sorted data
   const sortedData = useMemo(() => {
-    if (!sortConfig.key) return filterData;
-    return [...filterData].sort((a, b) => {
+    if (!sortConfig.key) return searchedData;
+    return [...searchedData].sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'asc' ? -1 : 1;
       }
@@ -48,10 +67,17 @@ const DataTable = ({filterData, columnNames}) => {
    return sortedData.slice(startIndex, startIndex + rowsPerPage);
  }, [sortedData, currentPage]);
 
+
+   // Handle page change
+   const handlePageChange = (pageNumber) => {
+    if (pageNumber > 0 && pageNumber <= totalPages)
+      setCurrentPage(pageNumber);
+  };
+
   // set current page to one after any filtering
   useEffect(() => {
         setCurrentPage(1);
-          }, [filterData, sortConfig]);
+          }, [filterData, sortConfig, searchQueries]);
   
 
   return (
@@ -60,15 +86,24 @@ const DataTable = ({filterData, columnNames}) => {
       <thead>
         <tr>
           {columnNames.map((column) => (
-            <th key={column} onClick={() => handleSort(column)}>
+            <th key={column} >
               {column}
-                <span>
-                  {sortConfig.key === column
-                    ? sortConfig.direction === 'asc'
-                      ? ' ▲'
-                      : ' ▼'
-                    : ''}
-                </span>            
+                <input
+                  key={column}
+                  type="text"
+                  placeholder={`Search ${column}`}
+                  value={searchQueries[column]}
+                  onChange={(e) => handleSearchChange(e, column)}
+                />
+                  <div onClick={() => handleSort(column)}>
+                    <span>
+                      {sortConfig.key === column
+                        ? sortConfig.direction === 'asc'
+                          ? ' ▲'
+                          : ' ▼'
+                        : 'no'}
+                    </span>
+                  </div>
             </th>
           ))}
         </tr>
