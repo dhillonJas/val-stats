@@ -3,7 +3,7 @@ import DropdownComp from './Dropdown';
 import {Teams} from '../data/dropdownoptions'
 import alasql from 'alasql';
 
-function TeamDropdown({ data, setData }) {
+function TeamDropdown({ data, onFilter }) {
 
   const [teamValue, setTeamValue] = useState('Any');
   const [againstValue, setAgainstValue] = useState('Any');
@@ -20,12 +20,12 @@ function TeamDropdown({ data, setData }) {
     }
     const filtered = alasql(sql, [data]);
     // console.log(sql)
-    setData(filtered);
+    onFilter(filtered);
   };
 
   useEffect(() => {
     handleFilter(teamValue, againstValue);
-  }, [teamValue, againstValue]);
+  }, [teamValue, againstValue, data, onFilter]);
 
   return (
     <div>

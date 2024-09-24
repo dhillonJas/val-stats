@@ -3,37 +3,37 @@ import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination } from 'react-bootstrap';
 
 
-const DataTable = ({filterData, columnNames}) => {
+const DataTable = ({data, columnNames}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
 
-  const [searchQueries, setSearchQueries] = useState(
-    columnNames.reduce((acc, column) => {
-      acc[column] = '';
-      return acc;
-    }, {})
-  );
+  // const [searchQueries, setSearchQueries] = useState(
+  //   columnNames.reduce((acc, column) => {
+  //     acc[column] = '';
+  //     return acc;
+  //   }, {})
+  // );
 
   /** TODO
    * make it changeable by user */
-  const rowsPerPage = 5; // Number of items you want to display per page 
+  const rowsPerPage = 20; // Number of items you want to display per page 
     
     // Handle search
-    const searchedData = filterData.filter(item =>
-      columnNames.every(column =>
-        !searchQueries[column] || 
-        item[column]?.toString().toLowerCase().includes(searchQueries[column].toLowerCase())
-      )    
-    );
+    // const searchedData = filterData.filter(item =>
+    //   columnNames.every(column =>
+    //     !searchQueries[column] || 
+    //     item[column]?.toString().toLowerCase().includes(searchQueries[column].toLowerCase())
+    //   )    
+    // );
   
 
-    // Update search queries for each column dynamically
-    const handleSearchChange = (e, column) => {
-      setSearchQueries({
-        ...searchQueries,
-        [column]: e.target.value
-      });
-    };
+    // // Update search queries for each column dynamically
+    // const handleSearchChange = (e, column) => {
+    //   setSearchQueries({
+    //     ...searchQueries,
+    //     [column]: e.target.value
+    //   });
+    // };
 
     // Handle sort logic
     const handleSort = (column) => {
@@ -46,8 +46,8 @@ const DataTable = ({filterData, columnNames}) => {
 
   // Memoized sorted data
   const sortedData = useMemo(() => {
-    if (!sortConfig.key) return searchedData;
-    return [...searchedData].sort((a, b) => {
+    if (!sortConfig.key) return data;
+    return [...data].sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === 'asc' ? -1 : 1;
       }
@@ -56,7 +56,7 @@ const DataTable = ({filterData, columnNames}) => {
       }
       return 0;
     });
-  }, [filterData, sortConfig]);
+  },  data, sortConfig);
   
    // Total number of pages
  const totalPages = Math.ceil(sortedData.length / rowsPerPage);
@@ -77,7 +77,7 @@ const DataTable = ({filterData, columnNames}) => {
   // set current page to one after any filtering
   useEffect(() => {
         setCurrentPage(1);
-          }, [filterData, sortConfig, searchQueries]);
+          },  data, sortConfig);
   
 
   return (
@@ -88,13 +88,13 @@ const DataTable = ({filterData, columnNames}) => {
           {columnNames.map((column) => (
             <th key={column} >
               {column}
-                <input
+                {/* <input
                   key={column}
                   type="text"
                   placeholder={`Search ${column}`}
                   value={searchQueries[column]}
                   onChange={(e) => handleSearchChange(e, column)}
-                />
+                /> */}
                   <div onClick={() => handleSort(column)}>
                     <span>
                       {sortConfig.key === column
