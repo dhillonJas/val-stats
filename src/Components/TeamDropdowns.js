@@ -25,7 +25,7 @@ function TeamDropdown({ data, onFilter }) {
 
   useEffect(() => {
     handleFilter(teamValue, againstValue);
-  }, [teamValue, againstValue, data, onFilter]);
+  }, [teamValue, againstValue, onFilter]);
 
   return (
     <div>

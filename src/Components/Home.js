@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import './Home.css'; 
 import TeamDropdown from './TeamDropdowns';
 import Event from './Event';
 import DataTable from './DataTable';
-import event_data from '../data/output/event_data.json'
-import player_data from '../data/output/player_data.json'
+import player_data from '../data/player_data.json'
 const Home = () => {
 
   const playerColumns = ['player_name', 'player_team', 'player_agent', 'player_both_kills', 'player_both_deaths']
   const eventColumns = ['event_id', 'event_title', 'event_prize_pool', 'event_year']
 
-  const [eventData, setEventData] = useState(event_data);
   const [playerData, setPlayerData] = useState(player_data);
 
-  const [selectedButton, setSelectedButton] = useState('Event');
-  const [filteredData, setFilteredData] = useState(eventData); // Filtered dataset (passed to DataTable)
+  const memoizedPlayerData = useMemo(() => playerData, [playerData]);
+
+  const [selectedButton, setSelectedButton] = useState('Team');
+  const [filteredData, setFilteredData] = useState(playerData); // Filtered dataset (passed to DataTable)
 
 
   //const [currentPage, setCurrentPage] = useState(1);
   // const [dataPerPage] = useState(10); // Items per page
 
-  const handleFilter = (filtered) => {
-    setFilteredData(filtered);
-  };
+  const handleFilter = useCallback((filteredData) => {
+    setFilteredData(filteredData);
+  }, []);
 
 
   return (
@@ -36,13 +36,13 @@ const Home = () => {
 
       {selectedButton === 'Team' && (
         <div>
-          <TeamDropdown data={playerData} onFilter={handleFilter}></TeamDropdown>
+          <TeamDropdown data={memoizedPlayerData} onFilter={handleFilter}></TeamDropdown>
                   </div>
       )}
       {
         selectedButton === 'Event' && (
           <div>
-            <Event data={eventData} onFilter={handleFilter}> </Event>
+            <Event onFilter={handleFilter}> </Event>
             </div>
         
       )}

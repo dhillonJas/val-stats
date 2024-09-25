@@ -53,7 +53,6 @@ def add_player_data_performance(match_performance_url):
         for key, value in performance_dict.items():
             filtered_players = [player for player in player_table if player["player_map_id"] == map_id and player["player_name"] == key]
             if len(filtered_players) == 0:
-                print(f'(add_performance_to_player_table) filtered_players empty. Possibly due to 6 players in a match: {match_performance_url}')
                 return
             if len(filtered_players) > 1:
                 print(f'(add_performance_to_player_table) duplicates found in player_table. More than one object with map_id: {map_id} and name:{key}')
@@ -107,9 +106,7 @@ def add_player_data_performance(match_performance_url):
                                 if len(stats_array) == 0:
                                     stats_array = [0,0,0]
                                 if len(stats_array) < 3: #assuming the length is 2 here
-                                    print('fixing stats_array in performance from:', stats_array)
                                     stats_array.append(stats_array[0] - stats_array[1])
-                                    print('fixied stats_array in performance to:', stats_array)
 
                                 player_head_to_head.get(name).update({teamB_names[i-1]:stats_array})
 
@@ -387,30 +384,6 @@ def add_map_data(match_url, teamA, teamB, match_id):
     except Exception as e:
         handle_exception(e, 'add_map_data', match_url)
 
-"""
-#  for the given match, adds the urls for each map in the array
-def insert_maps_urls(match_url):
-    try:
-        html_content = checkResponse(match_url)
-        soup = BeautifulSoup(html_content, 'html.parser')
-        maps_elements = soup.find_all('div', class_='vm-stats-gamesnav-item')
-
-        for maps in maps_elements:
-            match_performance_url = maps.get('data-href')
-            disabled = (int)(maps.get('data-disabled'))
-            game_id = maps.get('data-game-id')
-            if '?map=all' not in match_performance_url and not disabled:
-                params = '?game=' + game_id + '&tab='
-                overview_url = VLR + match_performance_url[:-6] + params + 'overview'
-                performance_url = VLR + match_performance_url[:-6] + params + 'performance'
-                map_urls_overview.append(overview_url)
-                map_urls_performance.append(performance_url)
-
-    except Exception as e:
-        handle_exception(e, 'get_maps_urls', match_url)
-
-"""
-
 # adds all the urls for every match in the given match page url
 def get_all_matches_urls(match_page_url):
     try:
@@ -547,7 +520,6 @@ def add_event_data(event_url, event_id):
         handle_exception(e, 'add_event_data', event_url)
 
 
-# event_urls = ['https://www.vlr.gg/event/2097/valorant-champions-2024']
 def main():
     for event_url in event_urls:
         event_id = get_id(event_url, 2)
@@ -578,21 +550,4 @@ def main():
     with open('src/data/output/player_data.json', 'w') as json_file:
         json.dump(player_table, json_file, indent=4)
 
-       
-    
-# test_url = 'https://www.vlr.gg/378825/team-heretics-vs-fnatic-valorant-champions-2024-ubqf/'
-# add_map_data(test_url, 'Team Heretics', 'FNATIC', 378825)
-# print(player_table)
-
-# add_match_data(test_url, 1657)
-# add_map_data(test_url, 'Zeta', 'nrg', 247096)
-# # print(match_table)
-# # print(map_table)
-# print(player_table)
-
-# test_url_map = 'https://www.vlr.gg/167349/detonation-focusme-vs-giants-gaming-champions-tour-2023-lock-in-s-o-paulo-alpha-ro16'
-# test_url = 'https://www.vlr.gg/167349/detonation-focusme-vs-giants-gaming-champions-tour-2023-lock-in-s-o-paulo-alpha-ro16/?game=all&tab=performance'
-# add_map_data(test_url_map, 'dfm', 'gia', 167349)
-# add_player_data_performance(test_url)
-# print(player_table)
 main()

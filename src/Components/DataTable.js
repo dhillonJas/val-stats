@@ -5,7 +5,7 @@ import { Table, Pagination } from 'react-bootstrap';
 
 const DataTable = ({data, columnNames}) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortConfig, setSortConfig] = useState({ key: 'id', direction: 'asc' });
+  const [sortConfig, setSortConfig] = useState({ key: 'event_id', direction: 'asc' });
 
   // const [searchQueries, setSearchQueries] = useState(
   //   columnNames.reduce((acc, column) => {
@@ -56,7 +56,7 @@ const DataTable = ({data, columnNames}) => {
       }
       return 0;
     });
-  },  data, sortConfig);
+  },  [data, sortConfig]);
   
    // Total number of pages
  const totalPages = Math.ceil(sortedData.length / rowsPerPage);
@@ -77,8 +77,46 @@ const DataTable = ({data, columnNames}) => {
   // set current page to one after any filtering
   useEffect(() => {
         setCurrentPage(1);
-          },  data, sortConfig);
+    },  [data, sortConfig]);
   
+  const getPaginationRange = () => {
+    const items = [];
+    //const totalVisiblePages = 5; // Number of visible page buttons
+    const startPage = Math.max(currentPage - 2, 1);
+    const endPage = Math.min(currentPage + 2, totalPages);
+
+    // Add the first page and ellipsis if startPage is greater than 1
+    if (startPage > 1) {
+      items.push(
+        <Pagination.Item key={1} active={currentPage === 1} onClick={() => handlePageChange(1)}>
+          1
+        </Pagination.Item>
+      );
+      items.push(<Pagination.Ellipsis key="start-ellipsis" />);
+    }
+
+    // Add visible pages around the current page
+    for (let i = startPage; i <= endPage; i++) {
+      items.push(
+        <Pagination.Item key={i} active={currentPage === i} onClick={() => handlePageChange(i)}>
+          {i}
+        </Pagination.Item>
+      );
+    }
+
+    // Add ellipsis and the last page if endPage is less than totalPages
+    if (endPage < totalPages) {
+      items.push(<Pagination.Ellipsis key="end-ellipsis" />);
+      items.push(
+        <Pagination.Item key={totalPages} active={currentPage === totalPages} onClick={() => handlePageChange(totalPages)}>
+          {totalPages}
+        </Pagination.Item>
+      );
+    }
+
+    return items;
+  };
+
 
   return (
     <div>
@@ -124,15 +162,7 @@ const DataTable = ({data, columnNames}) => {
         <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />
         <Pagination.Prev onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1} />
 
-        {[...Array(totalPages)].map((_, index) => (
-          <Pagination.Item
-            key={index}
-            active={index + 1 === currentPage}
-            onClick={() => handlePageChange(index + 1)}
-          >
-            {index + 1}
-          </Pagination.Item>
-        ))}
+        {getPaginationRange()}
 
         <Pagination.Next onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages} />
         <Pagination.Last onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages} />

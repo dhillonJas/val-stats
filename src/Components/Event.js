@@ -1,19 +1,20 @@
 import React, { useState , useEffect} from 'react';
 import DropdownComp from './Dropdown';
 import {Events} from '../data/dropdownoptions'
-import alasql from 'alasql';
+import event_data from '../data/event_data.json'
 
-function Event({ data, onFilter }) {
+function Event({ onFilter }) {
 
   const [eventName, setEventName] = useState('Any');
+  // const memoizedEventData = useMemo(() => event_data, [event_data]);
 
   const handleFilter = () => {
       if (eventName === 'Any')
       {
-        onFilter(data)
+        onFilter(event_data)
       }
       else{
-        const filtered = data.filter(item => eventName ? item.event_title === eventName : true);
+        const filtered = event_data.filter(item => eventName ? item.event_title === eventName : true);
       onFilter(filtered);
       }
     }
