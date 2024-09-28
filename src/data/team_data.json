@@ -1,0 +1,471 @@
+{
+    "17": {
+        "team_name": "Gen.G",
+        "team_tag": "GEN",
+        "team_logo": "//owcdn.net/img/654cc858ea9f5.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    },
+    "2": {
+        "team_name": "Sentinels",
+        "team_tag": "SEN",
+        "team_logo": "//owcdn.net/img/62875027c8e06.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "11328": {
+        "team_name": "FunPlus Phoenix",
+        "team_tag": "FPX",
+        "team_logo": "//owcdn.net/img/65a17b313b131.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "1001": {
+        "team_name": "Team Heretics",
+        "team_tag": "TH",
+        "team_logo": "//owcdn.net/img/637b755224c12.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "8185": {
+        "team_name": "DRX",
+        "team_tag": "DRX",
+        "team_logo": "//owcdn.net/img/63b17abd77fc0.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    },
+    "2355": {
+        "team_name": "KR\u00dc Esports",
+        "team_tag": "KR\u00dc",
+        "team_logo": "//owcdn.net/img/63976677069e1.png",
+        "team_country": "Argentina",
+        "team_region": "TBD"
+    },
+    "2593": {
+        "team_name": "FNATIC",
+        "team_tag": "FNC",
+        "team_logo": "//owcdn.net/img/62a40cc2b5e29.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "12010": {
+        "team_name": "Bilibili Gaming",
+        "team_tag": "BLG",
+        "team_logo": "//owcdn.net/img/63f25d72216c1.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "2359": {
+        "team_name": "LEVIAT\u00c1N",
+        "team_tag": "LEV",
+        "team_logo": "//owcdn.net/img/61b8888cc3860.png",
+        "team_country": "Chile",
+        "team_region": "TBD"
+    },
+    "8304": {
+        "team_name": "Talon Esports",
+        "team_tag": "TLN",
+        "team_logo": "//owcdn.net/img/6226f3d764e03.png",
+        "team_country": "Thailand",
+        "team_region": "TBD"
+    },
+    "2059": {
+        "team_name": "Team Vitality",
+        "team_tag": "VIT",
+        "team_logo": "//owcdn.net/img/6466d79e1ed40.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "12685": {
+        "team_name": "Trace Esports",
+        "team_tag": "TE",
+        "team_logo": "//owcdn.net/img/6433a2cc3ae72.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "11058": {
+        "team_name": "G2 Esports",
+        "team_tag": "G2",
+        "team_logo": "//owcdn.net/img/633822848a741.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "624": {
+        "team_name": "Paper Rex",
+        "team_tag": "PRX",
+        "team_logo": "//owcdn.net/img/62bbeba74d5cb.png",
+        "team_country": "Singapore",
+        "team_region": "TBD"
+    },
+    "1120": {
+        "team_name": "EDward Gaming",
+        "team_tag": "EDG",
+        "team_logo": "//owcdn.net/img/62c82049253b2.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "1184": {
+        "team_name": "FUT Esports",
+        "team_tag": "FUT",
+        "team_logo": "//owcdn.net/img/632be9976b8fe.png",
+        "team_country": "Turkey",
+        "team_region": "TBD"
+    },
+    "14": {
+        "team_name": "T1",
+        "team_tag": "T1",
+        "team_logo": "//owcdn.net/img/62fe0b8f6b084.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    },
+    "11981": {
+        "team_name": "Dragon Ranger Gaming",
+        "team_tag": "DRG",
+        "team_logo": "//owcdn.net/img/642233fc01f26.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "120": {
+        "team_name": "100 Thieves",
+        "team_tag": "100T",
+        "team_logo": "//owcdn.net/img/603c00d5c5a08.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "15315": {
+        "team_name": "Team International",
+        "team_tag": "INT",
+        "team_logo": "/img/vlr/tmp/vlr.png",
+        "team_country": "International",
+        "team_region": "TBD"
+    },
+    "15805": {
+        "team_name": "Team China",
+        "team_tag": "CN",
+        "team_logo": "//owcdn.net/img/5a3803d70cbe6.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "8877": {
+        "team_name": "Karmine Corp",
+        "team_tag": "KC",
+        "team_logo": "//owcdn.net/img/627403a0d9e48.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "6961": {
+        "team_name": "LOUD",
+        "team_tag": "LOUD",
+        "team_logo": "//owcdn.net/img/62bbec8dc1b9f.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "15316": {
+        "team_name": "Team Spain",
+        "team_tag": "Team Spain",
+        "team_logo": "/img/vlr/tmp/vlr.png",
+        "team_country": "Spain",
+        "team_region": "TBD"
+    },
+    "474": {
+        "team_name": "Team Liquid",
+        "team_tag": "TL",
+        "team_logo": "//owcdn.net/img/640c381f0603f.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "4915": {
+        "team_name": "Natus Vincere",
+        "team_tag": "NAVI",
+        "team_logo": "//owcdn.net/img/62a4109ddbd7f.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "5248": {
+        "team_name": "Evil Geniuses",
+        "team_tag": "EG",
+        "team_logo": "//owcdn.net/img/667462f046618.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "1034": {
+        "team_name": "NRG Esports",
+        "team_tag": "NRG",
+        "team_logo": "//owcdn.net/img/6610f026c1a9e.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "5448": {
+        "team_name": "ZETA DIVISION",
+        "team_tag": "ZETA",
+        "team_logo": "//owcdn.net/img/62a411783d94d.png",
+        "team_country": "Japan",
+        "team_region": "TBD"
+    },
+    "2304": {
+        "team_name": "Giants Gaming",
+        "team_tag": "GIA",
+        "team_logo": "//owcdn.net/img/61dfcae52b0d8.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "1837": {
+        "team_name": "Attacking Soul Esports",
+        "team_tag": "ASE",
+        "team_logo": "//owcdn.net/img/62bd5058300a4.png",
+        "team_country": "China",
+        "team_region": "TBD"
+    },
+    "7035": {
+        "team_name": "KOI",
+        "team_tag": "KOI",
+        "team_logo": "//owcdn.net/img/660ceac6275cd.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "278": {
+        "team_name": "DetonatioN FocusMe",
+        "team_tag": "DFM",
+        "team_logo": "//owcdn.net/img/63972e548cdc9.png",
+        "team_country": "Japan",
+        "team_region": "TBD"
+    },
+    "397": {
+        "team_name": "BBL Esports",
+        "team_tag": "BBL",
+        "team_logo": "//owcdn.net/img/65b8cce735f26.png",
+        "team_country": "Turkey",
+        "team_region": "TBD"
+    },
+    "188": {
+        "team_name": "Cloud9",
+        "team_tag": "C9",
+        "team_logo": "//owcdn.net/img/628addcbd509e.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "7386": {
+        "team_name": "MIBR",
+        "team_tag": "MIBR",
+        "team_logo": "//owcdn.net/img/632be7626d6d9.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "6199": {
+        "team_name": "Team Secret",
+        "team_tag": "TS",
+        "team_logo": "//owcdn.net/img/629f13085ead6.png",
+        "team_country": "Philippines",
+        "team_region": "TBD"
+    },
+    "918": {
+        "team_name": "Global Esports",
+        "team_tag": "GE",
+        "team_logo": "//owcdn.net/img/629f316ddd4dd.png",
+        "team_country": "India",
+        "team_region": "TBD"
+    },
+    "878": {
+        "team_name": "Rex Regum Qeon",
+        "team_tag": "RRQ",
+        "team_logo": "//owcdn.net/img/629f17f51e7a3.png",
+        "team_country": "Indonesia",
+        "team_region": "TBD"
+    },
+    "2406": {
+        "team_name": "FURIA",
+        "team_tag": "FUR",
+        "team_logo": "//owcdn.net/img/632be843b7d51.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "12065": {
+        "team_name": "Team tarik",
+        "team_tag": "tarik",
+        "team_logo": "/img/vlr/tmp/vlr.png",
+        "team_country": "International",
+        "team_region": "TBD"
+    },
+    "12066": {
+        "team_name": "Team FRTTT",
+        "team_tag": "FRTTT",
+        "team_logo": "/img/vlr/tmp/vlr.png",
+        "team_country": "International",
+        "team_region": "TBD"
+    },
+    "8127": {
+        "team_name": "OpTic Gaming",
+        "team_tag": "OPTC",
+        "team_logo": "//owcdn.net/img/62058299eef09.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "466": {
+        "team_name": "BOOM Esports",
+        "team_tag": "BME",
+        "team_logo": "//owcdn.net/img/629f1bdae82ab.png",
+        "team_country": "Indonesia",
+        "team_region": "TBD"
+    },
+    "533": {
+        "team_name": "XSET",
+        "team_tag": "XSET",
+        "team_logo": "//owcdn.net/img/62874ec8a2b0c.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "7397": {
+        "team_name": "XERXIA Esports",
+        "team_tag": "XIA",
+        "team_logo": "//owcdn.net/img/6386fd12b84b5.png",
+        "team_country": "Thailand",
+        "team_region": "TBD"
+    },
+    "628": {
+        "team_name": "FunPlus Phoenix",
+        "team_tag": "FPX",
+        "team_logo": "//owcdn.net/img/5feab33100c1d.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "2988": {
+        "team_name": "NORTHEPTION",
+        "team_tag": "NTH",
+        "team_logo": "//owcdn.net/img/649905216b9e3.png",
+        "team_country": "Japan",
+        "team_region": "TBD"
+    },
+    "1209": {
+        "team_name": "Guild Esports",
+        "team_tag": "GLD",
+        "team_logo": "//owcdn.net/img/6279315a0b968.png",
+        "team_country": "Sweden",
+        "team_region": "TBD"
+    },
+    "7391": {
+        "team_name": "Ninjas In Pyjamas",
+        "team_tag": "NIP",
+        "team_logo": "//owcdn.net/img/62b947039ec5e.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "257": {
+        "team_name": "G2 Esports",
+        "team_tag": "G2",
+        "team_logo": "//owcdn.net/img/633822848a741.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "6675": {
+        "team_name": "The Guard",
+        "team_tag": "TGRD",
+        "team_logo": "//owcdn.net/img/649d272e6ef32.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "198": {
+        "team_name": "Vision Strikers",
+        "team_tag": "VS",
+        "team_logo": "//owcdn.net/img/6217116c87b89.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    },
+    "4050": {
+        "team_name": "FULL SENSE",
+        "team_tag": "FS",
+        "team_logo": "//owcdn.net/img/6537a7954d915.png",
+        "team_country": "Thailand",
+        "team_region": "TBD"
+    },
+    "420": {
+        "team_name": "Team Vikings",
+        "team_tag": "VKS",
+        "team_logo": "//owcdn.net/img/609c8ce618abd.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "277": {
+        "team_name": "Crazy Raccoon",
+        "team_tag": "CR",
+        "team_logo": "//owcdn.net/img/654cc95339f53.png",
+        "team_country": "Japan",
+        "team_region": "TBD"
+    },
+    "682": {
+        "team_name": "Gambit Esports",
+        "team_tag": "GMB",
+        "team_logo": "//owcdn.net/img/5f5e971577783.png",
+        "team_country": "Russia",
+        "team_region": "TBD"
+    },
+    "427": {
+        "team_name": "Envy",
+        "team_tag": "NV",
+        "team_logo": "//owcdn.net/img/5f3ca822464a3.png",
+        "team_country": "United States",
+        "team_region": "TBD"
+    },
+    "2112": {
+        "team_name": "X10 Esports",
+        "team_tag": "X10",
+        "team_logo": "//owcdn.net/img/62bd90e55f45a.png",
+        "team_country": "Singapore",
+        "team_region": "TBD"
+    },
+    "3531": {
+        "team_name": "Acend",
+        "team_tag": "ACE",
+        "team_logo": "//owcdn.net/img/62a4157412b4f.png",
+        "team_country": "Europe",
+        "team_region": "TBD"
+    },
+    "4894": {
+        "team_name": "Keyd Stars",
+        "team_tag": "VKS",
+        "team_logo": "//owcdn.net/img/636c7e9c014ab.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "4567": {
+        "team_name": "Papara SuperMassive",
+        "team_tag": "SUP",
+        "team_logo": "//owcdn.net/img/651ef7628e347.png",
+        "team_country": "Turkey",
+        "team_region": "TBD"
+    },
+    "1670": {
+        "team_name": "F4Q",
+        "team_tag": "F4Q",
+        "team_logo": "//owcdn.net/img/613869ba6886b.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    },
+    "581": {
+        "team_name": "Liberty",
+        "team_tag": "LBR",
+        "team_logo": "//owcdn.net/img/60cecd6a853ad.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "2815": {
+        "team_name": "Version1",
+        "team_tag": "V1",
+        "team_logo": "//owcdn.net/img/62bc0b2763a8a.png",
+        "team_country": "Canada",
+        "team_region": "TBD"
+    },
+    "3512": {
+        "team_name": "Sharks Esports",
+        "team_tag": "SHK",
+        "team_logo": "//owcdn.net/img/60443f8490b7f.png",
+        "team_country": "Brazil",
+        "team_region": "TBD"
+    },
+    "2328": {
+        "team_name": "NUTURN",
+        "team_tag": "NU",
+        "team_logo": "//owcdn.net/img/615425fac2c84.png",
+        "team_country": "South Korea",
+        "team_region": "TBD"
+    }
+}

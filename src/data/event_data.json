@@ -149,7 +149,23 @@
         "event_winner": "TBD",
         "event_grand_finalist": "TBD",
         "event_total_teams": "TBD",
-        "event_all_teams": "TBD",
+        "event_all_teams": [
+                            "Acend",
+                            "Papara SuperMassive",
+                            "Gambit Esports",
+                            "G2 Esports",
+                            "Team Envy",
+                            "100 Thieves",
+                            "Vision Strikers",
+                            "Sentinels",
+                            "KRÜ Esports",
+                            "Crazy Raccoon",
+                            "F4Q",
+                            "Havan Liberty",
+                            "ZETA DIVISION",
+                            "Paper Rex",
+                            "Keyd Stars"
+                        ],
         "event_all_team_standings": "TBD",
         "event_vlr_link": "https://www.vlr.gg/event/466/valorant-champions-tour-stage-3-masters-berlin"
     },
@@ -162,9 +178,27 @@
         "event_prize_pool": "$600,000 USD",
         "event_winner": "Sentinels",
         "event_grand_finalist": "FNATIC",
-        "event_total_teams": "TBD",
-        "event_all_teams": "TBD",
-        "event_all_team_standings": "TBD",
+        "event_total_teams": 10,
+        "event_all_teams": ["Sentinels",
+                            "Version1",
+                            "Team Liquid",
+                            "FNATIC",
+                            "Team Vikings",
+                            "Sharks Esports",
+                            "KRU Esports",
+                            "NUTURN",
+                            "Crazy Raccoon",
+                            "X10 Esports"
+                        ],
+        "event_all_team_standings": {
+                            "1st": "Sentinels",
+                            "2nd": "Fnatic",
+                            "3rd": "NUTURN Gaming",
+                            "4th": "Version1",
+                            "5th-6th": ["Team Vikings", "Team Liquid"],
+                            "7th-8th": ["KRÜ Esports", "X10 Esports"],
+                            "9th-10th": ["Sharks Esports", "Crazy Raccoon"]
+          },
         "event_vlr_link": "https://www.vlr.gg/event/353/valorant-champions-tour-stage-2-masters-reykjav-k"
     }
 ]
