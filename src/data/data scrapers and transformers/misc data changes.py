@@ -1,5 +1,5 @@
 import json
-
+from datetime import datetime 
 
 def add_region():
     team_data_file = 'src/data/team_data.json'
@@ -24,7 +24,8 @@ def add_region():
         json.dump(team_data, file, indent=4)
 
 
-
+# Event table had team names--> change to id to avoid confusion with teams
+# that are in multiple regions (G2, FPX)
 def change_team_name_to_id():
     event_data_file = 'src/data/event_data.json'
     with open(event_data_file, 'r') as file:
@@ -67,4 +68,40 @@ def change_team_name_to_id():
         json.dump(event_data, file, indent=4)
 
 
-change_team_name_to_id()
+
+def convert_dates_to_ISO():
+    event_data_file = 'src/data/event_data.json'
+    with open(event_data_file, 'r') as file:
+        event_data = json.load(file)
+    
+    for event in event_data:
+        event_dates = event['event_dates'].split(' - ')
+        event_start_date = event_dates[0]
+        event_end_date = event_dates[1]
+
+        start_date_obj = datetime.strptime(event_start_date, "%b %d %Y")
+        end_date_obj = datetime.strptime(event_end_date, "%b %d %Y")
+
+        start_iso = start_date_obj.isoformat()
+        end_iso = end_date_obj.isoformat() 
+
+
+        event.update({'event_start_date':start_iso})
+        event.update({'event_end_date':end_iso})
+
+        with open(event_data_file, 'w') as file:
+            json.dump(event_data, file, indent=4)
+    
+def convert_prize_string_to_int():
+    event_data_file = 'src/data/event_data.json'
+    with open(event_data_file, 'r') as file:
+        event_data = json.load(file)
+
+    for event in event_data:
+        event_prize = event['event_prize_pool'].replace(',','').replace('$','').replace(' USD','').strip()
+        event_prize_int = int(event_prize)
+        event['event_prize_pool'] = event_prize_int
+
+    with open(event_data_file, 'w') as file:
+        json.dump(event_data, file, indent=4)
+convert_prize_string_to_int()

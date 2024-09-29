@@ -119,6 +119,20 @@ const DataTable = ({data, columns}) => {
   };
 
 
+  const formatCell = (value, type) => {
+    switch (type) {
+      case "date":
+        let dateObj = new Date(value)
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return dateObj.toLocaleDateString('en-US', options);
+      case "prize":
+        const prize_options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }
+        return new Intl.NumberFormat('en-US', prize_options).format(value);
+      default:
+        return value;
+    }
+  }
+
   return (
     <div style={{ overflowX: 'auto' }}>
       <Table striped bordered hover>
@@ -134,9 +148,9 @@ const DataTable = ({data, columns}) => {
                   value={searchQueries[column]}
                   onChange={(e) => handleSearchChange(e, column)}
                 /> */}
-                  <div onClick={() => handleSort(columns[column])}>
+                  <div onClick={() => handleSort(columns[column].value)}>
                     <span>
-                      {sortConfig.key === columns[column]
+                      {sortConfig.key === columns[column].value
                         ? sortConfig.direction === 'asc'
                           ? ' ▲'
                           : ' ▼'
@@ -152,7 +166,7 @@ const DataTable = ({data, columns}) => {
           {paginatedData.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {Object.values(columns).map((colName, colIndex) => (
-                <td key={colIndex}>{row[colName]}</td> // Dynamically rendering cell data
+                <td key={colIndex}>{formatCell(row[colName['value']], colName['type'])}</td> // Dynamically rendering cell data
               ))}
             </tr>
           ))}
