@@ -99,6 +99,8 @@ Buttons:
     Event:
         Columns to show (information):
             Event name
+            winner
+            winning region
             year
             locaiton
             prize

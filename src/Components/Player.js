@@ -1,25 +1,35 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
-import {Events} from '../data/dropdownoptions'
+import player_data from '../data/player_data.json'
 
-function Player({ data, onFilter }) {
+function Player({ onFilter }) {
 
-//   const [playerName, setEventName] = useState('Any');
+  // const [eventName, setEventName] = useState('Any');
+  const [playerName, setPlayerName] = useState('Any');
 
-  const handleFilter = () => {
-
-    }
+  const handleFilter = useCallback(() => {
+    if (playerName === 'Any')
+        onFilter(player_data)
+    else{
+      const filtered = player_data.filter(obj => obj.player_name === playerName);
+      onFilter(filtered)
+      }
+    }, [onFilter, playerName])
   
+  // const eventNames = event_data.map(event => event.event_name);
+  // const options = ['Any', ... eventNames]
 
-//   useEffect(() => {
-//     handleFilter(eventName);
-//   }, [eventName]);
+  const options = ['Any', 'TenZ', 'zekken', 'Boaster', 'Derke', 'C0M', 's0m']
+
+  useEffect(() => {
+    handleFilter(playerName);
+  }, [playerName, handleFilter]);
 
   return (
     <div>
-        <DropdownComp   selectedValue={eventName}
-                        setSelectedValue={setEventName} 
-                        options={Events}> 
+        <DropdownComp   selectedValue={playerName}
+                        setSelectedValue={setPlayerName} 
+                        options={options}> 
         </DropdownComp>
     </div>
 

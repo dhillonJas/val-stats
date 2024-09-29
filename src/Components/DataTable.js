@@ -2,10 +2,11 @@ import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination } from 'react-bootstrap';
 
-
-const DataTable = ({data, columnNames}) => {
+const DataTable = ({data, columns}) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortConfig, setSortConfig] = useState({ key: 'event_id', direction: 'asc' });
+  const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc' });
+
+
 
   // const [searchQueries, setSearchQueries] = useState(
   //   columnNames.reduce((acc, column) => {
@@ -41,7 +42,7 @@ const DataTable = ({data, columnNames}) => {
       if (sortConfig.key === column && sortConfig.direction === 'asc') {
         direction = 'desc';
       }
-      setSortConfig({ key: column, direction });
+      setSortConfig({ key:column, direction });
     };
 
   // Memoized sorted data
@@ -49,6 +50,7 @@ const DataTable = ({data, columnNames}) => {
     if (!sortConfig.key) return data;
     return [...data].sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
+
         return sortConfig.direction === 'asc' ? -1 : 1;
       }
       if (a[sortConfig.key] > b[sortConfig.key]) {
@@ -81,7 +83,6 @@ const DataTable = ({data, columnNames}) => {
   
   const getPaginationRange = () => {
     const items = [];
-    //const totalVisiblePages = 5; // Number of visible page buttons
     const startPage = Math.max(currentPage - 2, 1);
     const endPage = Math.min(currentPage + 2, totalPages);
 
@@ -119,11 +120,11 @@ const DataTable = ({data, columnNames}) => {
 
 
   return (
-    <div>
+    <div style={{ overflowX: 'auto' }}>
       <Table striped bordered hover>
       <thead>
         <tr>
-          {columnNames.map((column) => (
+          {Object.keys(columns).map((column) => (
             <th key={column} >
               {column}
                 {/* <input
@@ -133,13 +134,13 @@ const DataTable = ({data, columnNames}) => {
                   value={searchQueries[column]}
                   onChange={(e) => handleSearchChange(e, column)}
                 /> */}
-                  <div onClick={() => handleSort(column)}>
+                  <div onClick={() => handleSort(columns[column])}>
                     <span>
-                      {sortConfig.key === column
+                      {sortConfig.key === columns[column]
                         ? sortConfig.direction === 'asc'
                           ? ' ▲'
                           : ' ▼'
-                        : 'no'}
+                        : '-'}
                     </span>
                   </div>
             </th>
@@ -147,9 +148,10 @@ const DataTable = ({data, columnNames}) => {
         </tr>
       </thead>
         <tbody>
+        
           {paginatedData.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              {columnNames.map((colName, colIndex) => (
+              {Object.values(columns).map((colName, colIndex) => (
                 <td key={colIndex}>{row[colName]}</td> // Dynamically rendering cell data
               ))}
             </tr>

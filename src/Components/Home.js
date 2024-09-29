@@ -1,29 +1,22 @@
-import React, { useState, useMemo, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import './Home.css'; 
 import TeamDropdown from './TeamDropdowns';
 import Event from './Event';
+import Player from './Player';
 import DataTable from './DataTable';
-import player_data from '../data/player_data.json'
+import { columns_information } from '../data/columns_names';
+
 const Home = () => {
 
-  const playerColumns = ['player_name', 'player_team', 'player_agent', 'player_both_kills', 'player_both_deaths']
-  const eventColumns = ['event_id', 'event_title', 'event_prize_pool', 'event_year']
 
-  const [playerData, setPlayerData] = useState(player_data);
-
-  const memoizedPlayerData = useMemo(() => playerData, [playerData]);
-
-  const [selectedButton, setSelectedButton] = useState('Team');
-  const [filteredData, setFilteredData] = useState(playerData); // Filtered dataset (passed to DataTable)
-
-
-  //const [currentPage, setCurrentPage] = useState(1);
-  // const [dataPerPage] = useState(10); // Items per page
+  const [selectedButton, setSelectedButton] = useState('Event');
+  const [filteredData, setFilteredData] = useState([]); // Filtered dataset (passed to DataTable)
 
   const handleFilter = useCallback((filteredData) => {
     setFilteredData(filteredData);
   }, []);
 
+ const columns = columns_information[selectedButton]['Info']
 
   return (
     <div className="home">      
@@ -36,7 +29,7 @@ const Home = () => {
 
       {selectedButton === 'Team' && (
         <div>
-          <TeamDropdown data={memoizedPlayerData} onFilter={handleFilter}></TeamDropdown>
+          <TeamDropdown onFilter={handleFilter}></TeamDropdown>
                   </div>
       )}
       {
@@ -46,8 +39,15 @@ const Home = () => {
             </div>
         
       )}
+      {
+        selectedButton === 'Player' && (
+          <div>
+            <Player onFilter={handleFilter}> </Player>
+            </div>
+        
+      )}      
       <DataTable data={filteredData}
-      columnNames={selectedButton === 'Team' ? playerColumns : eventColumns}></DataTable>
+      columns={columns}></DataTable>
 
     </div>
   );
