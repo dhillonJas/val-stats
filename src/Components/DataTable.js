@@ -128,6 +128,8 @@ const DataTable = ({data, columns}) => {
       case "prize":
         const prize_options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }
         return new Intl.NumberFormat('en-US', prize_options).format(value);
+      case "link":
+        return <a href={value} target="_blank" rel="noopener noreferrer">Link</a>
       default:
         return value;
     }

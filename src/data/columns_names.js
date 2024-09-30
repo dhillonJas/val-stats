@@ -1,7 +1,8 @@
-const INTEGER = "int"
+const INTEGER = "integer"
 const DATE = "date"
-const STRING = "str"
+const STRING = "string"
 const PRIZE = "prize"
+const LINK = "link"
 export const columns_information = {
     Event:{
         Info:{
@@ -14,6 +15,7 @@ export const columns_information = {
             "Total Teams":      { value:"event_total_teams",    type:INTEGER },
             "Start Date":       { value:"event_start_date",     type:DATE },
             "End Date":         { value:"event_end_date",       type:DATE },
+            "Event Link":       { value:"event_vlr_link",       type:LINK}
         },
         Advanced: {
             "Total Kills":      { value:"total_kills",          type:INTEGER }
