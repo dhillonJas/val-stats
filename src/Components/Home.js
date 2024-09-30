@@ -8,15 +8,19 @@ import { columns_information } from '../data/columns_names';
 
 const Home = () => {
 
-
   const [selectedButton, setSelectedButton] = useState('Event');
   const [filteredData, setFilteredData] = useState([]); // Filtered dataset (passed to DataTable)
+  const [columnsToShow, setColumnsToShow] = useState([]);
+  // const [viewMode, setViewMode ] = useState('Information');
 
   const handleFilter = useCallback((filteredData) => {
     setFilteredData(filteredData);
   }, []);
 
- const columns = columns_information[selectedButton]['Info']
+  const handleColumnChange = (columns) => {
+    setColumnsToShow(columns);
+  };
+//  const columns = columns_information[selectedButton][viewMode]
 
   return (
     <div className="home">      
@@ -35,7 +39,7 @@ const Home = () => {
       {
         selectedButton === 'Event' && (
           <div>
-            <Event onFilter={handleFilter}> </Event>
+            <Event onFilter={handleFilter} onViewModeChange={handleColumnChange}> </Event>
             </div>
         
       )}
@@ -47,7 +51,7 @@ const Home = () => {
         
       )}      
       <DataTable data={filteredData}
-      columns={columns}></DataTable>
+      columns={columnsToShow}></DataTable>
 
     </div>
   );

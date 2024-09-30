@@ -1,5 +1,3 @@
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -10,10 +8,11 @@ function DropdownComp({ selectedValue, setSelectedValue, options }) {
   };
 
   return (
-    <Dropdown as={ButtonGroup} onSelect={handleSelect}>
-      <Button variant="success">{selectedValue}</Button>
+    <Dropdown onSelect={handleSelect}>
 
-      <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
+      <Dropdown.Toggle variant="success" id="dropdown-split-basic" >
+      {selectedValue}
+      </Dropdown.Toggle>
 
       <Dropdown.Menu>
         {options.map((option, index) => (

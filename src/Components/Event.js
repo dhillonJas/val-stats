@@ -1,36 +1,37 @@
-import React, { useState , useEffect, useCallback} from 'react';
+import React, { useState , useEffect} from 'react';
 import DropdownComp from './Dropdown';
-import event_data from '../data/event_data.json'
+import event_data from '../data/tables/event_table.json'
+import { columns_information } from '../data/columns_names';
 
-function Event({ onFilter }) {
+function Event({ onFilter, onViewModeChange}) {
 
-  const [eventName, setEventName] = useState('Any');
-
-  const handleFilter = useCallback(() => {
-      if (eventName === 'Any')
-      {
-        onFilter(event_data)
-      }
-      else{
-        const filtered = event_data.filter(item => eventName ? item.event_name === eventName : true);
-      onFilter(filtered);
-      }
-    },[onFilter, eventName])
+  const options = ['Information', 'Advanced']
   
-  const eventNames = event_data.map(event => event.event_name);
-  eventNames.push('Any')
-  
+  const [viewMode, setViewMode] = useState('Information'); // Basic or Advanced mode
+
   useEffect(() => {
-    handleFilter(eventName);
-  }, [eventName, handleFilter]);
+    onViewModeChange(columns_information['Event'][viewMode]); // Pass columns to Home.js
+    onFilter(event_data)
+  }, [viewMode, onViewModeChange]);
+
+  // const handleFilter = useCallback(() => {
+  //     if (dropdownOption === 'Information')
+  //     {
+  //       onFilter(event_data)
+  //     }
+  //   },[onFilter, dropdownOption])
+  
+  
+  // useEffect(() => {
+  //   handleFilter(dropdownOption);
+  // }, [dropdownOption, handleFilter]);
 
   return (
     <div>
-        <DropdownComp   selectedValue={eventName}
-                        setSelectedValue={setEventName} 
-                        options={eventNames}> 
+        <DropdownComp   selectedValue={viewMode}
+                        setSelectedValue={setViewMode}
+                        options={options}> 
         </DropdownComp>
-        <button> Advanced Stats </button>
     </div>
 
   );

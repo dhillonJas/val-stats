@@ -104,4 +104,3 @@ def convert_prize_string_to_int():
 
     with open(event_data_file, 'w') as file:
         json.dump(event_data, file, indent=4)
-convert_prize_string_to_int()

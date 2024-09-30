@@ -1,7 +1,6 @@
 import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
-import { Table, Pagination } from 'react-bootstrap';
-
+import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
 const DataTable = ({data, columns}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc' });
@@ -120,6 +119,7 @@ const DataTable = ({data, columns}) => {
 
 
   const formatCell = (value, type) => {
+    console.log(value, type)
     switch (type) {
       case "date":
         let dateObj = new Date(value)
@@ -129,7 +129,35 @@ const DataTable = ({data, columns}) => {
         const prize_options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }
         return new Intl.NumberFormat('en-US', prize_options).format(value);
       case "link":
-        return <a href={value} target="_blank" rel="noopener noreferrer">Link</a>
+        return <a href={value} target="_blank" rel="noopener noreferrer">Link</a>;
+      case "list":
+        return <OverlayTrigger
+                placement="left"
+                overlay={
+                  <Tooltip id={`tooltip-${Math.random()}`}>
+                    {value.map((val, index) => (
+                      <div key={index}>{val}</div>
+                    ))}
+                  </Tooltip>
+                }
+              >
+                <span>→ ... ←</span>
+              </OverlayTrigger>
+      case "object":
+        return <OverlayTrigger
+                placement="left"
+                overlay={
+                  <Tooltip id={`tooltip-${Math.random()}`}>
+                    {Object.entries(value).map(([key, val], index) => (
+                      <div key={index}>
+                        <strong>{key}</strong>: {Array.isArray(val) ? val.join(', ') : val}
+                      </div>
+                    ))}
+                  </Tooltip>
+                }
+              >
+                <span>Hover for info</span>
+              </OverlayTrigger>
       default:
         return value;
     }
