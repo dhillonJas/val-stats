@@ -59,5 +59,10 @@ export const columns_information = {
         Advanced:{
             "Deaths":           { value:"player_both_deaths",    type:INTEGER }
         }
+    },
+    Team:{
+        Information:{
+            "Name" :            { value:"team_name",    type:INTEGER }
+        }
     }
 }

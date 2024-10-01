@@ -1,0 +1,7 @@
+import json
+
+event_table = []
+
+def open_file(json_file_name):
+    with open(json_file_name, 'r') as file:
+        return json.load(file)

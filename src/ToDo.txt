@@ -28,7 +28,7 @@ IMPORT EVENTDATA IN EVENT.JS AND SO ON
 
 Buttons:
 
-    Team:
+    Team (total stats):
 
         Columns to show:
             Team Name
@@ -37,6 +37,8 @@ Buttons:
             best placements (event names)
             Total Maps won
             Total maps lost
+            total map picks won
+            total map picks lost
             total matches won
             total matches lost
             total kills, deaths, assists (attack, defense, both)
@@ -49,6 +51,18 @@ Buttons:
             Maps 
             against team 
 
+    Team (individual maps): (all maps played)
+        Columns:
+            Team (show one at a time)
+            Opponent
+            Map
+            Result
+            Team Score
+            Opponent score
+            vlr link 
+        Filter:
+            Opponent
+            Map
 
     Map:
         Columns to show:

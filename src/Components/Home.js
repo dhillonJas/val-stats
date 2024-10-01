@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import './Home.css'; 
-import TeamDropdown from './TeamDropdowns';
+import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
@@ -33,7 +33,7 @@ const Home = () => {
 
       {selectedButton === 'Team' && (
         <div>
-          <TeamDropdown onFilter={handleFilter}></TeamDropdown>
+          <Team onFilter={handleFilter}  onViewModeChange={handleColumnChange}></Team>
                   </div>
       )}
       {
