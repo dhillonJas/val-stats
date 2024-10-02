@@ -49,7 +49,8 @@ const Home = () => {
         
       )}      
       <DataTable data={filteredData}
-      columns={columnsToShow}></DataTable>
+      columns={columnsToShow}
+      selectedButton={selectedButton}></DataTable>
 
     </div>
   );

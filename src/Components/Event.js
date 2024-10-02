@@ -1,25 +1,27 @@
 import React, { useState , useEffect} from 'react';
-import DropdownComp from './Dropdown';
+import Button from 'react-bootstrap/Button'
+
 import event_data from '../data/tables/event_table.json'
-import { columns_information } from '../data/columns_names';
+import { INFORMATION, ADVANCED, events_columns } from '../data/columns_names';
 
 function Event({ onFilter, onViewModeChange}) {
 
-  const options = ['Information', 'Advanced']
+  const [isAdvanced, setIsAdvanced] = useState(false)
   
-  const [viewMode, setViewMode] = useState('Information'); // Basic or Advanced mode
-
   useEffect(() => {
-    onViewModeChange(columns_information['Event'][viewMode]); // Pass columns to Home.js
+    let viewMode = isAdvanced  ?  ADVANCED: INFORMATION
+    onViewModeChange(events_columns[viewMode]); // Pass columns to Home.js
     onFilter(event_data)
-  }, [viewMode, onViewModeChange]);
+  }, [isAdvanced, onViewModeChange, onFilter]);
 
+  const handleClick = () => {
+    setIsAdvanced(!isAdvanced);
+  };
   return (
     <div>
-        <DropdownComp   selectedValue={viewMode}
-                        setSelectedValue={setViewMode}
-                        options={options}> 
-        </DropdownComp>
+        <Button variant="dark"   onClick={handleClick}>
+        {isAdvanced ? ADVANCED : INFORMATION}
+       </Button>
     </div>
 
   );

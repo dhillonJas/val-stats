@@ -1,12 +1,14 @@
 import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {INTEGER, DATE,STRING, PRIZE,  LINK, LIST, OBJECT, SIDES_OBJECT} from '../data/columns_names'
+import {DATE, PRIZE,  LINK, LIST, OBJECT, SIDES_OBJECT} from '../data/columns_names'
 
-const DataTable = ({data, columns}) => {
+const DataTable = ({data, columns, selectedButton}) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc' });
-
+  const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc', type:'' });
+  const rowsPerPage = 20; // Number of items you want to display per page 
+  const side_display_order = ['all', 'attack', 'defense', 'overtime']
+  
   // const [searchQueries, setSearchQueries] = useState(
   //   columnNames.reduce((acc, column) => {
   //     acc[column] = '';
@@ -14,9 +16,6 @@ const DataTable = ({data, columns}) => {
   //   }, {})
   // );
 
-  /** TODO
-   * make it changeable by user */
-  const rowsPerPage = 20; // Number of items you want to display per page 
     
     // Handle search
     // const searchedData = filterData.filter(item =>
@@ -36,23 +35,51 @@ const DataTable = ({data, columns}) => {
     // };
 
     // Handle sort logic
-    const handleSort = (column) => {
+    const handleSort = (column, type) => {
       let direction = 'asc';
       if (sortConfig.key === column && sortConfig.direction === 'asc') {
         direction = 'desc';
       }
-      setSortConfig({ key:column, direction });
+      setSortConfig({ key:column, direction:direction, type:type});
     };
+
+
+  // const getValueToSort = useCallback((v) => {
+  //   let value = v[sortConfig.key]
+  //   // console.log(value)
+  //   if (sortConfig.type === SIDES_OBJECT ){
+  //     const side_key = sortConfig.key.split('_').pop()
+  //     const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
+  //     // console.log(data_key, v[data_key], side_key)
+  //     value = v[data_key][side_key]
+  //   }
+  //   return value
+  // },[sortConfig])
+
+  console.log(sortConfig)
 
   // Memoized sorted data
   const sortedData = useMemo(() => {
     if (!sortConfig.key) return data;
     return [...data].sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
+      // const aValue = getValueToSort(a)
+      // const bValue = getValueToSort(b)
+      let aValue = a[sortConfig.key]
+      let bValue = b[sortConfig.key]
+
+      if (sortConfig.type === SIDES_OBJECT ){
+        const side_key = sortConfig.key.split('_').pop()
+        const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
+        // console.log(data_key, v[data_key], side_key)
+        aValue = a[data_key][side_key]
+        bValue = b[data_key][side_key]
+      }
+
+      if (aValue < bValue) {
 
         return sortConfig.direction === 'asc' ? -1 : 1;
       }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
+      if (aValue > bValue) {
         return sortConfig.direction === 'asc' ? 1 : -1;
       }
       return 0;
@@ -79,6 +106,10 @@ const DataTable = ({data, columns}) => {
   useEffect(() => {
         setCurrentPage(1);
     },  [data, sortConfig]);
+
+  useEffect(() => {
+     setSortConfig({ key: '', direction: 'asc', type:'' })
+  }, [selectedButton])
   
   const getPaginationRange = () => {
     const items = [];
@@ -140,7 +171,7 @@ const DataTable = ({data, columns}) => {
                   </Tooltip>
                 }
               >
-                <span>→ ... ←</span>
+                <span>Hover for info</span>
               </OverlayTrigger>
       case OBJECT:
         return <OverlayTrigger
@@ -158,11 +189,50 @@ const DataTable = ({data, columns}) => {
                 <span>Hover for info</span>
               </OverlayTrigger>
       case SIDES_OBJECT:
-        return value['all']
+        return <div>
+                {side_display_order.map((side, index) => (
+                <React.Fragment key={index}>
+                  {value[side]}
+                {index < side_display_order.length - 1 && <span> / </span>}
+              </React.Fragment>
+            ))}
+        </div>
+        
       default:
         return value;
     }
   }
+
+  const renderTableHeader= (isSidesObject, column) => {
+    
+    if (isSidesObject)
+    {
+      return <div>{side_display_order.map((side, index) => (
+        <React.Fragment key={index}>
+          <span onClick={() => handleSort(columns[column].value + '_' + side, SIDES_OBJECT) }>
+            {sortConfig.key === columns[column].value + '_' + side
+              ? sortConfig.direction === 'asc'
+                ? ' ▲'
+                : ' ▼'
+              : '-'
+              }
+          </span>
+          {index < side_display_order.length - 1 && <span> / </span>}
+        </React.Fragment>
+      ))}
+      </div>
+    }
+    else{
+      return <span onClick={() => handleSort(columns[column].value, '')}>
+      {sortConfig.key === columns[column].value
+        ? sortConfig.direction === 'asc'
+          ? ' ▲'
+          : ' ▼'
+        : '-'}
+    </span>
+    }
+  }
+
 
   return (
     <div style={{ overflowX: 'auto' }}>
@@ -178,15 +248,9 @@ const DataTable = ({data, columns}) => {
                   placeholder={`Search ${column}`}
                   value={searchQueries[column]}
                   onChange={(e) => handleSearchChange(e, column)}
-                /> */}
-                  <div onClick={() => handleSort(columns[column].value)}>
-                    <span>
-                      {sortConfig.key === columns[column].value
-                        ? sortConfig.direction === 'asc'
-                          ? ' ▲'
-                          : ' ▼'
-                        : '-'}
-                    </span>
+                  /> */}
+                  <div >
+                  { renderTableHeader(columns[column].type === SIDES_OBJECT, column)}
                   </div>
             </th>
           ))}
@@ -197,7 +261,7 @@ const DataTable = ({data, columns}) => {
           {paginatedData.map((row, rowIndex) => (
             <tr key={rowIndex}>
               {Object.values(columns).map((colName, colIndex) => (
-                <td key={colIndex}>{formatCell(row[colName['value']], colName['type'])}</td> // Dynamically rendering cell data
+                <td key={colIndex}>{formatCell(row[colName.value], colName.type)}</td> // Dynamically rendering cell data
               ))}
             </tr>
           ))}
