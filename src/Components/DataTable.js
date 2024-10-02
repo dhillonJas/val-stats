@@ -43,34 +43,16 @@ const DataTable = ({data, columns, selectedButton}) => {
       setSortConfig({ key:column, direction:direction, type:type});
     };
 
-
-  // const getValueToSort = useCallback((v) => {
-  //   let value = v[sortConfig.key]
-  //   // console.log(value)
-  //   if (sortConfig.type === SIDES_OBJECT ){
-  //     const side_key = sortConfig.key.split('_').pop()
-  //     const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
-  //     // console.log(data_key, v[data_key], side_key)
-  //     value = v[data_key][side_key]
-  //   }
-  //   return value
-  // },[sortConfig])
-
-  console.log(sortConfig)
-
   // Memoized sorted data
   const sortedData = useMemo(() => {
     if (!sortConfig.key) return data;
     return [...data].sort((a, b) => {
-      // const aValue = getValueToSort(a)
-      // const bValue = getValueToSort(b)
       let aValue = a[sortConfig.key]
       let bValue = b[sortConfig.key]
 
       if (sortConfig.type === SIDES_OBJECT ){
         const side_key = sortConfig.key.split('_').pop()
         const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
-        // console.log(data_key, v[data_key], side_key)
         aValue = a[data_key][side_key]
         bValue = b[data_key][side_key]
       }
@@ -107,6 +89,8 @@ const DataTable = ({data, columns, selectedButton}) => {
         setCurrentPage(1);
     },  [data, sortConfig]);
 
+  // had to reset type to '' when the page change as it 
+  // was trying to access  undefined['all'] in sortedData
   useEffect(() => {
      setSortConfig({ key: '', direction: 'asc', type:'' })
   }, [selectedButton])
@@ -148,6 +132,19 @@ const DataTable = ({data, columns, selectedButton}) => {
     return items;
   };
 
+  function handleSidesObject(value){
+    return <div>
+            {side_display_order.map((side, index) => (
+            <span key={index}>
+              {value[side]}
+              {index < side_display_order.length - 1 && 
+                  <span>
+                    {' / '} 
+                  </span>}
+            </span>
+        ))}
+    </div>
+  }
 
   const formatCell = (value, type) => {
     switch (type) {
@@ -189,15 +186,7 @@ const DataTable = ({data, columns, selectedButton}) => {
                 <span>Hover for info</span>
               </OverlayTrigger>
       case SIDES_OBJECT:
-        return <div>
-                {side_display_order.map((side, index) => (
-                <React.Fragment key={index}>
-                  {value[side]}
-                {index < side_display_order.length - 1 && <span> / </span>}
-              </React.Fragment>
-            ))}
-        </div>
-        
+        return handleSidesObject(value)       
       default:
         return value;
     }
@@ -208,17 +197,15 @@ const DataTable = ({data, columns, selectedButton}) => {
     if (isSidesObject)
     {
       return <div>{side_display_order.map((side, index) => (
-        <React.Fragment key={index}>
-          <span onClick={() => handleSort(columns[column].value + '_' + side, SIDES_OBJECT) }>
-            {sortConfig.key === columns[column].value + '_' + side
-              ? sortConfig.direction === 'asc'
-                ? ' ▲'
-                : ' ▼'
-              : '-'
-              }
-          </span>
-          {index < side_display_order.length - 1 && <span> / </span>}
-        </React.Fragment>
+            <span key={index} onClick={() => handleSort(columns[column].value + '_' + side, SIDES_OBJECT) }>
+              {sortConfig.key === columns[column].value + '_' + side
+                ? sortConfig.direction === 'asc'
+                  ? ' ▲'
+                  : ' ▼'
+                : '-'
+                }
+            {index < side_display_order.length - 1 && <span> / </span>}
+            </span>
       ))}
       </div>
     }
