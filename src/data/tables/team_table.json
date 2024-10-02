@@ -1,7 +1,4033 @@
-import json
 
-event_table = []
-
-def open_file(json_file_name):
-    with open(json_file_name, 'r') as file:
-        return json.load(file)
+[
+    {
+        "team_name": "Gen.G",
+        "team_maps_won": 26,
+        "team_maps_lost": 17,
+        "team_map_picks_won": 8,
+        "team_map_picks_lost": 9,
+        "team_rounds_won": {
+            "attack": 172,
+            "defense": 166,
+            "overtime": 0,
+            "all": 338
+        },
+        "team_rounds_lost": {
+            "attack": 87,
+            "defense": 68,
+            "overtime": 2,
+            "all": 157
+        },
+        "team_matches_won": {
+            "Bo3": 10,
+            "Bo5": 1,
+            "all": 11
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 1,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 971,
+            "defense": 889,
+            "overtime": 0,
+            "all": 3279
+        },
+        "team_deaths": {
+            "attack": 952,
+            "defense": 894,
+            "overtime": 0,
+            "all": 3110
+        },
+        "team_assists": {
+            "attack": 411,
+            "defense": 378,
+            "overtime": 0,
+            "all": 1352
+        },
+        "team_diffs": {
+            "attack": 19,
+            "defense": -5,
+            "overtime": 0,
+            "all": 169
+        },
+        "team_first_kills": {
+            "attack": 137,
+            "defense": 133,
+            "overtime": 0,
+            "all": 473
+        },
+        "team_first_deaths": {
+            "attack": 138,
+            "defense": 119,
+            "overtime": 0,
+            "all": 442
+        }
+    },
+    {
+        "team_name": "Sentinels",
+        "team_maps_won": 42,
+        "team_maps_lost": 27,
+        "team_map_picks_won": 22,
+        "team_map_picks_lost": 9,
+        "team_rounds_won": {
+            "attack": 271,
+            "defense": 269,
+            "overtime": 15,
+            "all": 555
+        },
+        "team_rounds_lost": {
+            "attack": 115,
+            "defense": 103,
+            "overtime": 1,
+            "all": 219
+        },
+        "team_matches_won": {
+            "Bo3": 14,
+            "Bo5": 3,
+            "all": 17
+        },
+        "team_matches_lost": {
+            "Bo3": 9,
+            "Bo5": 0,
+            "all": 9
+        },
+        "team_kills": {
+            "attack": 2570,
+            "defense": 2621,
+            "overtime": 0,
+            "all": 5191
+        },
+        "team_deaths": {
+            "attack": 2576,
+            "defense": 2399,
+            "overtime": 0,
+            "all": 4975
+        },
+        "team_assists": {
+            "attack": 1171,
+            "defense": 1214,
+            "overtime": 0,
+            "all": 2385
+        },
+        "team_diffs": {
+            "attack": -6,
+            "defense": 222,
+            "overtime": 0,
+            "all": 216
+        },
+        "team_first_kills": {
+            "attack": 366,
+            "defense": 401,
+            "overtime": 0,
+            "all": 767
+        },
+        "team_first_deaths": {
+            "attack": 365,
+            "defense": 333,
+            "overtime": 0,
+            "all": 698
+        }
+    },
+    {
+        "team_name": "Team Heretics",
+        "team_maps_won": 34,
+        "team_maps_lost": 24,
+        "team_map_picks_won": 17,
+        "team_map_picks_lost": 6,
+        "team_rounds_won": {
+            "attack": 220,
+            "defense": 216,
+            "overtime": 18,
+            "all": 454
+        },
+        "team_rounds_lost": {
+            "attack": 91,
+            "defense": 96,
+            "overtime": 1,
+            "all": 188
+        },
+        "team_matches_won": {
+            "Bo3": 10,
+            "Bo5": 2,
+            "all": 12
+        },
+        "team_matches_lost": {
+            "Bo3": 6,
+            "Bo5": 2,
+            "all": 8
+        },
+        "team_kills": {
+            "attack": 1219,
+            "defense": 1300,
+            "overtime": 0,
+            "all": 4319
+        },
+        "team_deaths": {
+            "attack": 1176,
+            "defense": 1336,
+            "overtime": 0,
+            "all": 4129
+        },
+        "team_assists": {
+            "attack": 543,
+            "defense": 525,
+            "overtime": 0,
+            "all": 1851
+        },
+        "team_diffs": {
+            "attack": 43,
+            "defense": -36,
+            "overtime": 0,
+            "all": 190
+        },
+        "team_first_kills": {
+            "attack": 171,
+            "defense": 181,
+            "overtime": 0,
+            "all": 633
+        },
+        "team_first_deaths": {
+            "attack": 173,
+            "defense": 198,
+            "overtime": 0,
+            "all": 582
+        }
+    },
+    {
+        "team_name": "FunPlus Phoenix",
+        "team_maps_won": 6,
+        "team_maps_lost": 19,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 9,
+        "team_rounds_won": {
+            "attack": 48,
+            "defense": 29,
+            "overtime": 4,
+            "all": 81
+        },
+        "team_rounds_lost": {
+            "attack": 88,
+            "defense": 74,
+            "overtime": 4,
+            "all": 166
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 9,
+            "Bo5": 0,
+            "all": 9
+        },
+        "team_kills": {
+            "attack": 572,
+            "defense": 545,
+            "overtime": 0,
+            "all": 1849
+        },
+        "team_deaths": {
+            "attack": 669,
+            "defense": 606,
+            "overtime": 0,
+            "all": 2028
+        },
+        "team_assists": {
+            "attack": 205,
+            "defense": 215,
+            "overtime": 0,
+            "all": 694
+        },
+        "team_diffs": {
+            "attack": -97,
+            "defense": -61,
+            "overtime": 0,
+            "all": -179
+        },
+        "team_first_kills": {
+            "attack": 84,
+            "defense": 80,
+            "overtime": 0,
+            "all": 269
+        },
+        "team_first_deaths": {
+            "attack": 94,
+            "defense": 87,
+            "overtime": 0,
+            "all": 287
+        }
+    },
+    {
+        "team_name": "KRU Esports",
+        "team_maps_won": 22,
+        "team_maps_lost": 40,
+        "team_map_picks_won": 12,
+        "team_map_picks_lost": 15,
+        "team_rounds_won": {
+            "attack": 132,
+            "defense": 152,
+            "overtime": 5,
+            "all": 289
+        },
+        "team_rounds_lost": {
+            "attack": 149,
+            "defense": 153,
+            "overtime": 8,
+            "all": 310
+        },
+        "team_matches_won": {
+            "Bo3": 9,
+            "Bo5": 0,
+            "all": 9
+        },
+        "team_matches_lost": {
+            "Bo3": 17,
+            "Bo5": 0,
+            "all": 17
+        },
+        "team_kills": {
+            "attack": 2008,
+            "defense": 2365,
+            "overtime": 0,
+            "all": 4373
+        },
+        "team_deaths": {
+            "attack": 2315,
+            "defense": 2431,
+            "overtime": 0,
+            "all": 4746
+        },
+        "team_assists": {
+            "attack": 776,
+            "defense": 908,
+            "overtime": 0,
+            "all": 1684
+        },
+        "team_diffs": {
+            "attack": -307,
+            "defense": -66,
+            "overtime": 0,
+            "all": -373
+        },
+        "team_first_kills": {
+            "attack": 280,
+            "defense": 362,
+            "overtime": 0,
+            "all": 642
+        },
+        "team_first_deaths": {
+            "attack": 341,
+            "defense": 330,
+            "overtime": 0,
+            "all": 671
+        }
+    },
+    {
+        "team_name": "DRX",
+        "team_maps_won": 53,
+        "team_maps_lost": 41,
+        "team_map_picks_won": 23,
+        "team_map_picks_lost": 15,
+        "team_rounds_won": {
+            "attack": 374,
+            "defense": 309,
+            "overtime": 24,
+            "all": 707
+        },
+        "team_rounds_lost": {
+            "attack": 156,
+            "defense": 172,
+            "overtime": 3,
+            "all": 331
+        },
+        "team_matches_won": {
+            "Bo3": 22,
+            "Bo5": 0,
+            "all": 22
+        },
+        "team_matches_lost": {
+            "Bo3": 12,
+            "Bo5": 2,
+            "all": 14
+        },
+        "team_kills": {
+            "attack": 3614,
+            "defense": 3272,
+            "overtime": 0,
+            "all": 6886
+        },
+        "team_deaths": {
+            "attack": 3689,
+            "defense": 3043,
+            "overtime": 0,
+            "all": 6732
+        },
+        "team_assists": {
+            "attack": 1605,
+            "defense": 1359,
+            "overtime": 0,
+            "all": 2964
+        },
+        "team_diffs": {
+            "attack": -75,
+            "defense": 229,
+            "overtime": 0,
+            "all": 154
+        },
+        "team_first_kills": {
+            "attack": 467,
+            "defense": 504,
+            "overtime": 0,
+            "all": 971
+        },
+        "team_first_deaths": {
+            "attack": 573,
+            "defense": 424,
+            "overtime": 0,
+            "all": 997
+        }
+    },
+    {
+        "team_name": "FNATIC",
+        "team_maps_won": 67,
+        "team_maps_lost": 45,
+        "team_map_picks_won": 31,
+        "team_map_picks_lost": 17,
+        "team_rounds_won": {
+            "attack": 468,
+            "defense": 395,
+            "overtime": 24,
+            "all": 887
+        },
+        "team_rounds_lost": {
+            "attack": 213,
+            "defense": 181,
+            "overtime": 3,
+            "all": 397
+        },
+        "team_matches_won": {
+            "Bo3": 25,
+            "Bo5": 3,
+            "all": 28
+        },
+        "team_matches_lost": {
+            "Bo3": 16,
+            "Bo5": 1,
+            "all": 17
+        },
+        "team_kills": {
+            "attack": 4219,
+            "defense": 3947,
+            "overtime": 0,
+            "all": 8586
+        },
+        "team_deaths": {
+            "attack": 3987,
+            "defense": 3493,
+            "overtime": 0,
+            "all": 7923
+        },
+        "team_assists": {
+            "attack": 1725,
+            "defense": 1652,
+            "overtime": 0,
+            "all": 3559
+        },
+        "team_diffs": {
+            "attack": 232,
+            "defense": 454,
+            "overtime": 0,
+            "all": 663
+        },
+        "team_first_kills": {
+            "attack": 574,
+            "defense": 618,
+            "overtime": 0,
+            "all": 1251
+        },
+        "team_first_deaths": {
+            "attack": 615,
+            "defense": 474,
+            "overtime": 0,
+            "all": 1155
+        }
+    },
+    {
+        "team_name": "Bilibili Gaming",
+        "team_maps_won": 5,
+        "team_maps_lost": 10,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 5,
+        "team_rounds_won": {
+            "attack": 32,
+            "defense": 31,
+            "overtime": 5,
+            "all": 68
+        },
+        "team_rounds_lost": {
+            "attack": 34,
+            "defense": 35,
+            "overtime": 0,
+            "all": 69
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_kills": {
+            "attack": 510,
+            "defense": 533,
+            "overtime": 0,
+            "all": 1043
+        },
+        "team_deaths": {
+            "attack": 594,
+            "defense": 576,
+            "overtime": 0,
+            "all": 1170
+        },
+        "team_assists": {
+            "attack": 247,
+            "defense": 217,
+            "overtime": 0,
+            "all": 464
+        },
+        "team_diffs": {
+            "attack": -84,
+            "defense": -43,
+            "overtime": 0,
+            "all": -127
+        },
+        "team_first_kills": {
+            "attack": 72,
+            "defense": 74,
+            "overtime": 0,
+            "all": 146
+        },
+        "team_first_deaths": {
+            "attack": 85,
+            "defense": 84,
+            "overtime": 0,
+            "all": 169
+        }
+    },
+    {
+        "team_name": "LEVIATAN",
+        "team_maps_won": 27,
+        "team_maps_lost": 22,
+        "team_map_picks_won": 16,
+        "team_map_picks_lost": 5,
+        "team_rounds_won": {
+            "attack": 150,
+            "defense": 194,
+            "overtime": 24,
+            "all": 368
+        },
+        "team_rounds_lost": {
+            "attack": 86,
+            "defense": 86,
+            "overtime": 4,
+            "all": 176
+        },
+        "team_matches_won": {
+            "Bo3": 10,
+            "Bo5": 0,
+            "all": 10
+        },
+        "team_matches_lost": {
+            "Bo3": 9,
+            "Bo5": 1,
+            "all": 10
+        },
+        "team_kills": {
+            "attack": 1493,
+            "defense": 1728,
+            "overtime": 0,
+            "all": 3804
+        },
+        "team_deaths": {
+            "attack": 1602,
+            "defense": 1600,
+            "overtime": 0,
+            "all": 3771
+        },
+        "team_assists": {
+            "attack": 639,
+            "defense": 684,
+            "overtime": 0,
+            "all": 1541
+        },
+        "team_diffs": {
+            "attack": -109,
+            "defense": 128,
+            "overtime": 0,
+            "all": 33
+        },
+        "team_first_kills": {
+            "attack": 220,
+            "defense": 272,
+            "overtime": 0,
+            "all": 577
+        },
+        "team_first_deaths": {
+            "attack": 222,
+            "defense": 218,
+            "overtime": 0,
+            "all": 516
+        }
+    },
+    {
+        "team_name": "Talon Esports",
+        "team_maps_won": 5,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 23,
+            "defense": 42,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_rounds_lost": {
+            "attack": 20,
+            "defense": 29,
+            "overtime": 0,
+            "all": 49
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 339,
+            "defense": 483,
+            "overtime": 0,
+            "all": 822
+        },
+        "team_deaths": {
+            "attack": 450,
+            "defense": 418,
+            "overtime": 0,
+            "all": 868
+        },
+        "team_assists": {
+            "attack": 150,
+            "defense": 175,
+            "overtime": 0,
+            "all": 325
+        },
+        "team_diffs": {
+            "attack": -111,
+            "defense": 65,
+            "overtime": 0,
+            "all": -46
+        },
+        "team_first_kills": {
+            "attack": 47,
+            "defense": 77,
+            "overtime": 0,
+            "all": 124
+        },
+        "team_first_deaths": {
+            "attack": 67,
+            "defense": 51,
+            "overtime": 0,
+            "all": 118
+        }
+    },
+    {
+        "team_name": "Trace Esports",
+        "team_maps_won": 4,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 24,
+            "defense": 27,
+            "overtime": 3,
+            "all": 54
+        },
+        "team_rounds_lost": {
+            "attack": 20,
+            "defense": 21,
+            "overtime": 0,
+            "all": 41
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 333,
+            "defense": 357,
+            "overtime": 0,
+            "all": 690
+        },
+        "team_deaths": {
+            "attack": 347,
+            "defense": 374,
+            "overtime": 0,
+            "all": 721
+        },
+        "team_assists": {
+            "attack": 143,
+            "defense": 142,
+            "overtime": 0,
+            "all": 285
+        },
+        "team_diffs": {
+            "attack": -14,
+            "defense": -17,
+            "overtime": 0,
+            "all": -31
+        },
+        "team_first_kills": {
+            "attack": 45,
+            "defense": 60,
+            "overtime": 0,
+            "all": 105
+        },
+        "team_first_deaths": {
+            "attack": 55,
+            "defense": 48,
+            "overtime": 0,
+            "all": 103
+        }
+    },
+    {
+        "team_name": "Team Vitality",
+        "team_maps_won": 5,
+        "team_maps_lost": 7,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 38,
+            "defense": 27,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_rounds_lost": {
+            "attack": 31,
+            "defense": 28,
+            "overtime": 3,
+            "all": 62
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 497,
+            "defense": 404,
+            "overtime": 0,
+            "all": 901
+        },
+        "team_deaths": {
+            "attack": 508,
+            "defense": 387,
+            "overtime": 0,
+            "all": 895
+        },
+        "team_assists": {
+            "attack": 213,
+            "defense": 213,
+            "overtime": 0,
+            "all": 426
+        },
+        "team_diffs": {
+            "attack": -11,
+            "defense": 17,
+            "overtime": 0,
+            "all": 6
+        },
+        "team_first_kills": {
+            "attack": 59,
+            "defense": 57,
+            "overtime": 0,
+            "all": 116
+        },
+        "team_first_deaths": {
+            "attack": 85,
+            "defense": 54,
+            "overtime": 0,
+            "all": 139
+        }
+    },
+    {
+        "team_name": "G2 Esports",
+        "team_maps_won": 12,
+        "team_maps_lost": 14,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 8,
+        "team_rounds_won": {
+            "attack": 77,
+            "defense": 78,
+            "overtime": 2,
+            "all": 157
+        },
+        "team_rounds_lost": {
+            "attack": 59,
+            "defense": 38,
+            "overtime": 2,
+            "all": 99
+        },
+        "team_matches_won": {
+            "Bo3": 6,
+            "Bo5": 0,
+            "all": 6
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 1,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 366,
+            "defense": 297,
+            "overtime": 0,
+            "all": 1823
+        },
+        "team_deaths": {
+            "attack": 376,
+            "defense": 358,
+            "overtime": 0,
+            "all": 1980
+        },
+        "team_assists": {
+            "attack": 127,
+            "defense": 136,
+            "overtime": 0,
+            "all": 782
+        },
+        "team_diffs": {
+            "attack": -10,
+            "defense": -61,
+            "overtime": 0,
+            "all": -157
+        },
+        "team_first_kills": {
+            "attack": 54,
+            "defense": 45,
+            "overtime": 0,
+            "all": 267
+        },
+        "team_first_deaths": {
+            "attack": 53,
+            "defense": 49,
+            "overtime": 0,
+            "all": 278
+        }
+    },
+    {
+        "team_name": "Paper Rex",
+        "team_maps_won": 52,
+        "team_maps_lost": 48,
+        "team_map_picks_won": 18,
+        "team_map_picks_lost": 23,
+        "team_rounds_won": {
+            "attack": 343,
+            "defense": 324,
+            "overtime": 23,
+            "all": 690
+        },
+        "team_rounds_lost": {
+            "attack": 196,
+            "defense": 166,
+            "overtime": 1,
+            "all": 363
+        },
+        "team_matches_won": {
+            "Bo3": 19,
+            "Bo5": 0,
+            "all": 19
+        },
+        "team_matches_lost": {
+            "Bo3": 14,
+            "Bo5": 4,
+            "all": 18
+        },
+        "team_kills": {
+            "attack": 3509,
+            "defense": 3287,
+            "overtime": 0,
+            "all": 7407
+        },
+        "team_deaths": {
+            "attack": 3798,
+            "defense": 3287,
+            "overtime": 0,
+            "all": 7705
+        },
+        "team_assists": {
+            "attack": 1497,
+            "defense": 1381,
+            "overtime": 0,
+            "all": 3147
+        },
+        "team_diffs": {
+            "attack": -289,
+            "defense": 0,
+            "overtime": 0,
+            "all": -298
+        },
+        "team_first_kills": {
+            "attack": 447,
+            "defense": 496,
+            "overtime": 0,
+            "all": 1024
+        },
+        "team_first_deaths": {
+            "attack": 577,
+            "defense": 453,
+            "overtime": 0,
+            "all": 1120
+        }
+    },
+    {
+        "team_name": "EDward Gaming",
+        "team_maps_won": 36,
+        "team_maps_lost": 36,
+        "team_map_picks_won": 14,
+        "team_map_picks_lost": 14,
+        "team_rounds_won": {
+            "attack": 268,
+            "defense": 197,
+            "overtime": 9,
+            "all": 474
+        },
+        "team_rounds_lost": {
+            "attack": 161,
+            "defense": 141,
+            "overtime": 6,
+            "all": 308
+        },
+        "team_matches_won": {
+            "Bo3": 12,
+            "Bo5": 1,
+            "all": 13
+        },
+        "team_matches_lost": {
+            "Bo3": 14,
+            "Bo5": 0,
+            "all": 14
+        },
+        "team_kills": {
+            "attack": 2781,
+            "defense": 2490,
+            "overtime": 0,
+            "all": 5528
+        },
+        "team_deaths": {
+            "attack": 2672,
+            "defense": 2483,
+            "overtime": 0,
+            "all": 5468
+        },
+        "team_assists": {
+            "attack": 1151,
+            "defense": 1016,
+            "overtime": 0,
+            "all": 2258
+        },
+        "team_diffs": {
+            "attack": 109,
+            "defense": 7,
+            "overtime": 0,
+            "all": 60
+        },
+        "team_first_kills": {
+            "attack": 378,
+            "defense": 376,
+            "overtime": 0,
+            "all": 792
+        },
+        "team_first_deaths": {
+            "attack": 406,
+            "defense": 319,
+            "overtime": 0,
+            "all": 765
+        }
+    },
+    {
+        "team_name": "FUT Esports",
+        "team_maps_won": 17,
+        "team_maps_lost": 25,
+        "team_map_picks_won": 6,
+        "team_map_picks_lost": 12,
+        "team_rounds_won": {
+            "attack": 108,
+            "defense": 110,
+            "overtime": 6,
+            "all": 224
+        },
+        "team_rounds_lost": {
+            "attack": 102,
+            "defense": 90,
+            "overtime": 1,
+            "all": 193
+        },
+        "team_matches_won": {
+            "Bo3": 7,
+            "Bo5": 0,
+            "all": 7
+        },
+        "team_matches_lost": {
+            "Bo3": 11,
+            "Bo5": 0,
+            "all": 11
+        },
+        "team_kills": {
+            "attack": 889,
+            "defense": 1073,
+            "overtime": 0,
+            "all": 2995
+        },
+        "team_deaths": {
+            "attack": 1039,
+            "defense": 1002,
+            "overtime": 0,
+            "all": 3153
+        },
+        "team_assists": {
+            "attack": 409,
+            "defense": 500,
+            "overtime": 0,
+            "all": 1378
+        },
+        "team_diffs": {
+            "attack": -150,
+            "defense": 71,
+            "overtime": 0,
+            "all": -158
+        },
+        "team_first_kills": {
+            "attack": 119,
+            "defense": 165,
+            "overtime": 0,
+            "all": 417
+        },
+        "team_first_deaths": {
+            "attack": 154,
+            "defense": 135,
+            "overtime": 0,
+            "all": 462
+        }
+    },
+    {
+        "team_name": "T1",
+        "team_maps_won": 6,
+        "team_maps_lost": 15,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 6,
+        "team_rounds_won": {
+            "attack": 48,
+            "defense": 29,
+            "overtime": 2,
+            "all": 79
+        },
+        "team_rounds_lost": {
+            "attack": 48,
+            "defense": 68,
+            "overtime": 0,
+            "all": 116
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 7,
+            "Bo5": 0,
+            "all": 7
+        },
+        "team_kills": {
+            "attack": 517,
+            "defense": 527,
+            "overtime": 0,
+            "all": 1447
+        },
+        "team_deaths": {
+            "attack": 605,
+            "defense": 602,
+            "overtime": 0,
+            "all": 1664
+        },
+        "team_assists": {
+            "attack": 210,
+            "defense": 216,
+            "overtime": 0,
+            "all": 563
+        },
+        "team_diffs": {
+            "attack": -88,
+            "defense": -75,
+            "overtime": 0,
+            "all": -217
+        },
+        "team_first_kills": {
+            "attack": 61,
+            "defense": 77,
+            "overtime": 0,
+            "all": 186
+        },
+        "team_first_deaths": {
+            "attack": 95,
+            "defense": 89,
+            "overtime": 0,
+            "all": 239
+        }
+    },
+    {
+        "team_name": "Dragon Ranger Gaming",
+        "team_maps_won": 0,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 15,
+            "defense": 17,
+            "overtime": 0,
+            "all": 32
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 271
+        },
+        "team_deaths": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 329
+        },
+        "team_assists": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 104
+        },
+        "team_diffs": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": -58
+        },
+        "team_first_kills": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 34
+        },
+        "team_first_deaths": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 51
+        }
+    },
+    {
+        "team_name": "100 Thieves",
+        "team_maps_won": 16,
+        "team_maps_lost": 18,
+        "team_map_picks_won": 7,
+        "team_map_picks_lost": 8,
+        "team_rounds_won": {
+            "attack": 92,
+            "defense": 113,
+            "overtime": 6,
+            "all": 211
+        },
+        "team_rounds_lost": {
+            "attack": 72,
+            "defense": 67,
+            "overtime": 5,
+            "all": 144
+        },
+        "team_matches_won": {
+            "Bo3": 8,
+            "Bo5": 0,
+            "all": 8
+        },
+        "team_matches_lost": {
+            "Bo3": 6,
+            "Bo5": 0,
+            "all": 6
+        },
+        "team_kills": {
+            "attack": 889,
+            "defense": 990,
+            "overtime": 0,
+            "all": 2536
+        },
+        "team_deaths": {
+            "attack": 869,
+            "defense": 1061,
+            "overtime": 0,
+            "all": 2592
+        },
+        "team_assists": {
+            "attack": 374,
+            "defense": 423,
+            "overtime": 0,
+            "all": 1033
+        },
+        "team_diffs": {
+            "attack": 20,
+            "defense": -71,
+            "overtime": 0,
+            "all": -56
+        },
+        "team_first_kills": {
+            "attack": 106,
+            "defense": 152,
+            "overtime": 0,
+            "all": 349
+        },
+        "team_first_deaths": {
+            "attack": 143,
+            "defense": 139,
+            "overtime": 0,
+            "all": 379
+        }
+    },
+    {
+        "team_name": "Karmine Corp",
+        "team_maps_won": 5,
+        "team_maps_lost": 7,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 32,
+            "defense": 33,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_rounds_lost": {
+            "attack": 35,
+            "defense": 32,
+            "overtime": 0,
+            "all": 67
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 429,
+            "defense": 469,
+            "overtime": 0,
+            "all": 898
+        },
+        "team_deaths": {
+            "attack": 416,
+            "defense": 475,
+            "overtime": 0,
+            "all": 891
+        },
+        "team_assists": {
+            "attack": 185,
+            "defense": 212,
+            "overtime": 0,
+            "all": 397
+        },
+        "team_diffs": {
+            "attack": 13,
+            "defense": -6,
+            "overtime": 0,
+            "all": 7
+        },
+        "team_first_kills": {
+            "attack": 63,
+            "defense": 71,
+            "overtime": 0,
+            "all": 134
+        },
+        "team_first_deaths": {
+            "attack": 60,
+            "defense": 66,
+            "overtime": 0,
+            "all": 126
+        }
+    },
+    {
+        "team_name": "LOUD",
+        "team_maps_won": 53,
+        "team_maps_lost": 38,
+        "team_map_picks_won": 25,
+        "team_map_picks_lost": 13,
+        "team_rounds_won": {
+            "attack": 357,
+            "defense": 325,
+            "overtime": 22,
+            "all": 704
+        },
+        "team_rounds_lost": {
+            "attack": 162,
+            "defense": 157,
+            "overtime": 3,
+            "all": 322
+        },
+        "team_matches_won": {
+            "Bo3": 18,
+            "Bo5": 2,
+            "all": 20
+        },
+        "team_matches_lost": {
+            "Bo3": 10,
+            "Bo5": 3,
+            "all": 13
+        },
+        "team_kills": {
+            "attack": 3506,
+            "defense": 3550,
+            "overtime": 0,
+            "all": 7056
+        },
+        "team_deaths": {
+            "attack": 3458,
+            "defense": 3215,
+            "overtime": 0,
+            "all": 6673
+        },
+        "team_assists": {
+            "attack": 1501,
+            "defense": 1520,
+            "overtime": 0,
+            "all": 3021
+        },
+        "team_diffs": {
+            "attack": 48,
+            "defense": 335,
+            "overtime": 0,
+            "all": 383
+        },
+        "team_first_kills": {
+            "attack": 459,
+            "defense": 536,
+            "overtime": 0,
+            "all": 995
+        },
+        "team_first_deaths": {
+            "attack": 542,
+            "defense": 429,
+            "overtime": 0,
+            "all": 971
+        }
+    },
+    {
+        "team_name": "Natus Vincere",
+        "team_maps_won": 11,
+        "team_maps_lost": 11,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 4,
+        "team_rounds_won": {
+            "attack": 82,
+            "defense": 59,
+            "overtime": 7,
+            "all": 148
+        },
+        "team_rounds_lost": {
+            "attack": 56,
+            "defense": 54,
+            "overtime": 4,
+            "all": 114
+        },
+        "team_matches_won": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 1,
+            "all": 5
+        },
+        "team_kills": {
+            "attack": 893,
+            "defense": 896,
+            "overtime": 0,
+            "all": 1789
+        },
+        "team_deaths": {
+            "attack": 827,
+            "defense": 873,
+            "overtime": 0,
+            "all": 1700
+        },
+        "team_assists": {
+            "attack": 398,
+            "defense": 349,
+            "overtime": 0,
+            "all": 747
+        },
+        "team_diffs": {
+            "attack": 66,
+            "defense": 23,
+            "overtime": 0,
+            "all": 89
+        },
+        "team_first_kills": {
+            "attack": 129,
+            "defense": 140,
+            "overtime": 0,
+            "all": 269
+        },
+        "team_first_deaths": {
+            "attack": 121,
+            "defense": 118,
+            "overtime": 0,
+            "all": 239
+        }
+    },
+    {
+        "team_name": "Team Liquid",
+        "team_maps_won": 25,
+        "team_maps_lost": 30,
+        "team_map_picks_won": 12,
+        "team_map_picks_lost": 11,
+        "team_rounds_won": {
+            "attack": 145,
+            "defense": 174,
+            "overtime": 20,
+            "all": 339
+        },
+        "team_rounds_lost": {
+            "attack": 100,
+            "defense": 130,
+            "overtime": 3,
+            "all": 233
+        },
+        "team_matches_won": {
+            "Bo3": 10,
+            "Bo5": 0,
+            "all": 10
+        },
+        "team_matches_lost": {
+            "Bo3": 13,
+            "Bo5": 0,
+            "all": 13
+        },
+        "team_kills": {
+            "attack": 1869,
+            "defense": 2247,
+            "overtime": 0,
+            "all": 4116
+        },
+        "team_deaths": {
+            "attack": 2117,
+            "defense": 1937,
+            "overtime": 0,
+            "all": 4054
+        },
+        "team_assists": {
+            "attack": 706,
+            "defense": 807,
+            "overtime": 0,
+            "all": 1513
+        },
+        "team_diffs": {
+            "attack": -248,
+            "defense": 310,
+            "overtime": 0,
+            "all": 62
+        },
+        "team_first_kills": {
+            "attack": 229,
+            "defense": 357,
+            "overtime": 0,
+            "all": 586
+        },
+        "team_first_deaths": {
+            "attack": 338,
+            "defense": 257,
+            "overtime": 0,
+            "all": 595
+        }
+    },
+    {
+        "team_name": "Evil Geniuses",
+        "team_maps_won": 29,
+        "team_maps_lost": 15,
+        "team_map_picks_won": 14,
+        "team_map_picks_lost": 5,
+        "team_rounds_won": {
+            "attack": 189,
+            "defense": 185,
+            "overtime": 7,
+            "all": 381
+        },
+        "team_rounds_lost": {
+            "attack": 65,
+            "defense": 82,
+            "overtime": 1,
+            "all": 148
+        },
+        "team_matches_won": {
+            "Bo3": 9,
+            "Bo5": 3,
+            "all": 12
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 1,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 1645,
+            "defense": 1812,
+            "overtime": 0,
+            "all": 3457
+        },
+        "team_deaths": {
+            "attack": 1580,
+            "defense": 1628,
+            "overtime": 0,
+            "all": 3208
+        },
+        "team_assists": {
+            "attack": 781,
+            "defense": 812,
+            "overtime": 0,
+            "all": 1593
+        },
+        "team_diffs": {
+            "attack": 65,
+            "defense": 184,
+            "overtime": 0,
+            "all": 249
+        },
+        "team_first_kills": {
+            "attack": 214,
+            "defense": 286,
+            "overtime": 0,
+            "all": 500
+        },
+        "team_first_deaths": {
+            "attack": 240,
+            "defense": 209,
+            "overtime": 0,
+            "all": 449
+        }
+    },
+    {
+        "team_name": "NRG Esports",
+        "team_maps_won": 16,
+        "team_maps_lost": 14,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 7,
+        "team_rounds_won": {
+            "attack": 117,
+            "defense": 88,
+            "overtime": 8,
+            "all": 213
+        },
+        "team_rounds_lost": {
+            "attack": 71,
+            "defense": 58,
+            "overtime": 5,
+            "all": 134
+        },
+        "team_matches_won": {
+            "Bo3": 7,
+            "Bo5": 0,
+            "all": 7
+        },
+        "team_matches_lost": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_kills": {
+            "attack": 1126,
+            "defense": 1080,
+            "overtime": 0,
+            "all": 2305
+        },
+        "team_deaths": {
+            "attack": 1075,
+            "defense": 1077,
+            "overtime": 0,
+            "all": 2247
+        },
+        "team_assists": {
+            "attack": 507,
+            "defense": 540,
+            "overtime": 0,
+            "all": 1107
+        },
+        "team_diffs": {
+            "attack": 51,
+            "defense": 3,
+            "overtime": 0,
+            "all": 58
+        },
+        "team_first_kills": {
+            "attack": 159,
+            "defense": 167,
+            "overtime": 0,
+            "all": 326
+        },
+        "team_first_deaths": {
+            "attack": 166,
+            "defense": 146,
+            "overtime": 0,
+            "all": 312
+        }
+    },
+    {
+        "team_name": "ZETA DIVISION",
+        "team_maps_won": 13,
+        "team_maps_lost": 26,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 11,
+        "team_rounds_won": {
+            "attack": 69,
+            "defense": 99,
+            "overtime": 2,
+            "all": 170
+        },
+        "team_rounds_lost": {
+            "attack": 75,
+            "defense": 103,
+            "overtime": 2,
+            "all": 180
+        },
+        "team_matches_won": {
+            "Bo3": 6,
+            "Bo5": 0,
+            "all": 6
+        },
+        "team_matches_lost": {
+            "Bo3": 9,
+            "Bo5": 1,
+            "all": 10
+        },
+        "team_kills": {
+            "attack": 1090,
+            "defense": 1474,
+            "overtime": 0,
+            "all": 2659
+        },
+        "team_deaths": {
+            "attack": 1303,
+            "defense": 1490,
+            "overtime": 0,
+            "all": 2892
+        },
+        "team_assists": {
+            "attack": 410,
+            "defense": 520,
+            "overtime": 0,
+            "all": 960
+        },
+        "team_diffs": {
+            "attack": -213,
+            "defense": -16,
+            "overtime": 0,
+            "all": -233
+        },
+        "team_first_kills": {
+            "attack": 137,
+            "defense": 231,
+            "overtime": 0,
+            "all": 368
+        },
+        "team_first_deaths": {
+            "attack": 203,
+            "defense": 194,
+            "overtime": 0,
+            "all": 397
+        }
+    },
+    {
+        "team_name": "Giants Gaming",
+        "team_maps_won": 6,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 43,
+            "defense": 32,
+            "overtime": 7,
+            "all": 82
+        },
+        "team_rounds_lost": {
+            "attack": 18,
+            "defense": 22,
+            "overtime": 0,
+            "all": 40
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 429,
+            "defense": 474,
+            "overtime": 0,
+            "all": 903
+        },
+        "team_deaths": {
+            "attack": 438,
+            "defense": 471,
+            "overtime": 0,
+            "all": 909
+        },
+        "team_assists": {
+            "attack": 199,
+            "defense": 222,
+            "overtime": 0,
+            "all": 421
+        },
+        "team_diffs": {
+            "attack": -9,
+            "defense": 3,
+            "overtime": 0,
+            "all": -6
+        },
+        "team_first_kills": {
+            "attack": 52,
+            "defense": 77,
+            "overtime": 0,
+            "all": 129
+        },
+        "team_first_deaths": {
+            "attack": 69,
+            "defense": 59,
+            "overtime": 0,
+            "all": 128
+        }
+    },
+    {
+        "team_name": "Attacking Soul Esports",
+        "team_maps_won": 1,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 4,
+            "defense": 9,
+            "overtime": 0,
+            "all": 13
+        },
+        "team_rounds_lost": {
+            "attack": 15,
+            "defense": 13,
+            "overtime": 0,
+            "all": 28
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 149,
+            "defense": 189,
+            "overtime": 0,
+            "all": 338
+        },
+        "team_deaths": {
+            "attack": 188,
+            "defense": 207,
+            "overtime": 0,
+            "all": 395
+        },
+        "team_assists": {
+            "attack": 82,
+            "defense": 87,
+            "overtime": 0,
+            "all": 169
+        },
+        "team_diffs": {
+            "attack": -39,
+            "defense": -18,
+            "overtime": 0,
+            "all": -57
+        },
+        "team_first_kills": {
+            "attack": 25,
+            "defense": 29,
+            "overtime": 0,
+            "all": 54
+        },
+        "team_first_deaths": {
+            "attack": 22,
+            "defense": 25,
+            "overtime": 0,
+            "all": 47
+        }
+    },
+    {
+        "team_name": "KOI",
+        "team_maps_won": 0,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 14,
+            "defense": 6,
+            "overtime": 0,
+            "all": 20
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 79,
+            "defense": 56,
+            "overtime": 0,
+            "all": 135
+        },
+        "team_deaths": {
+            "attack": 74,
+            "defense": 78,
+            "overtime": 0,
+            "all": 152
+        },
+        "team_assists": {
+            "attack": 39,
+            "defense": 24,
+            "overtime": 0,
+            "all": 63
+        },
+        "team_diffs": {
+            "attack": 5,
+            "defense": -22,
+            "overtime": 0,
+            "all": -17
+        },
+        "team_first_kills": {
+            "attack": 10,
+            "defense": 6,
+            "overtime": 0,
+            "all": 16
+        },
+        "team_first_deaths": {
+            "attack": 12,
+            "defense": 18,
+            "overtime": 0,
+            "all": 30
+        }
+    },
+    {
+        "team_name": "DetonatioN FocusMe",
+        "team_maps_won": 0,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 7,
+            "defense": 4,
+            "overtime": 0,
+            "all": 11
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 57,
+            "defense": 47,
+            "overtime": 0,
+            "all": 104
+        },
+        "team_deaths": {
+            "attack": 80,
+            "defense": 69,
+            "overtime": 0,
+            "all": 149
+        },
+        "team_assists": {
+            "attack": 26,
+            "defense": 15,
+            "overtime": 0,
+            "all": 41
+        },
+        "team_diffs": {
+            "attack": -23,
+            "defense": -22,
+            "overtime": 0,
+            "all": -45
+        },
+        "team_first_kills": {
+            "attack": 8,
+            "defense": 7,
+            "overtime": 0,
+            "all": 15
+        },
+        "team_first_deaths": {
+            "attack": 12,
+            "defense": 10,
+            "overtime": 0,
+            "all": 22
+        }
+    },
+    {
+        "team_name": "BBL Esports",
+        "team_maps_won": 1,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 0,
+        "team_rounds_won": {
+            "attack": 4,
+            "defense": 9,
+            "overtime": 0,
+            "all": 13
+        },
+        "team_rounds_lost": {
+            "attack": 6,
+            "defense": 4,
+            "overtime": 0,
+            "all": 10
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 76,
+            "defense": 112,
+            "overtime": 0,
+            "all": 188
+        },
+        "team_deaths": {
+            "attack": 92,
+            "defense": 137,
+            "overtime": 0,
+            "all": 229
+        },
+        "team_assists": {
+            "attack": 28,
+            "defense": 48,
+            "overtime": 0,
+            "all": 76
+        },
+        "team_diffs": {
+            "attack": -16,
+            "defense": -25,
+            "overtime": 0,
+            "all": -41
+        },
+        "team_first_kills": {
+            "attack": 8,
+            "defense": 18,
+            "overtime": 0,
+            "all": 26
+        },
+        "team_first_deaths": {
+            "attack": 16,
+            "defense": 18,
+            "overtime": 0,
+            "all": 34
+        }
+    },
+    {
+        "team_name": "Cloud9",
+        "team_maps_won": 8,
+        "team_maps_lost": 7,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 45,
+            "defense": 58,
+            "overtime": 2,
+            "all": 105
+        },
+        "team_rounds_lost": {
+            "attack": 29,
+            "defense": 33,
+            "overtime": 0,
+            "all": 62
+        },
+        "team_matches_won": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 512,
+            "defense": 607,
+            "overtime": 0,
+            "all": 1119
+        },
+        "team_deaths": {
+            "attack": 533,
+            "defense": 582,
+            "overtime": 0,
+            "all": 1115
+        },
+        "team_assists": {
+            "attack": 228,
+            "defense": 288,
+            "overtime": 0,
+            "all": 516
+        },
+        "team_diffs": {
+            "attack": -21,
+            "defense": 25,
+            "overtime": 0,
+            "all": 4
+        },
+        "team_first_kills": {
+            "attack": 74,
+            "defense": 91,
+            "overtime": 0,
+            "all": 165
+        },
+        "team_first_deaths": {
+            "attack": 76,
+            "defense": 84,
+            "overtime": 0,
+            "all": 160
+        }
+    },
+    {
+        "team_name": "MIBR",
+        "team_maps_won": 0,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 9,
+            "defense": 10,
+            "overtime": 0,
+            "all": 19
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 78,
+            "defense": 83,
+            "overtime": 0,
+            "all": 161
+        },
+        "team_deaths": {
+            "attack": 99,
+            "defense": 68,
+            "overtime": 0,
+            "all": 167
+        },
+        "team_assists": {
+            "attack": 40,
+            "defense": 51,
+            "overtime": 0,
+            "all": 91
+        },
+        "team_diffs": {
+            "attack": -21,
+            "defense": 15,
+            "overtime": 0,
+            "all": -6
+        },
+        "team_first_kills": {
+            "attack": 9,
+            "defense": 14,
+            "overtime": 0,
+            "all": 23
+        },
+        "team_first_deaths": {
+            "attack": 15,
+            "defense": 7,
+            "overtime": 0,
+            "all": 22
+        }
+    },
+    {
+        "team_name": "Team Secret",
+        "team_maps_won": 7,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 4,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 29,
+            "defense": 62,
+            "overtime": 0,
+            "all": 91
+        },
+        "team_rounds_lost": {
+            "attack": 18,
+            "defense": 14,
+            "overtime": 0,
+            "all": 32
+        },
+        "team_matches_won": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 327,
+            "defense": 524,
+            "overtime": 0,
+            "all": 851
+        },
+        "team_deaths": {
+            "attack": 376,
+            "defense": 504,
+            "overtime": 0,
+            "all": 880
+        },
+        "team_assists": {
+            "attack": 132,
+            "defense": 211,
+            "overtime": 0,
+            "all": 343
+        },
+        "team_diffs": {
+            "attack": -49,
+            "defense": 20,
+            "overtime": 0,
+            "all": -29
+        },
+        "team_first_kills": {
+            "attack": 39,
+            "defense": 77,
+            "overtime": 0,
+            "all": 116
+        },
+        "team_first_deaths": {
+            "attack": 62,
+            "defense": 64,
+            "overtime": 0,
+            "all": 126
+        }
+    },
+    {
+        "team_name": "Global Esports",
+        "team_maps_won": 1,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 5,
+            "defense": 8,
+            "overtime": 0,
+            "all": 13
+        },
+        "team_rounds_lost": {
+            "attack": 3,
+            "defense": 7,
+            "overtime": 0,
+            "all": 10
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 76,
+            "defense": 110,
+            "overtime": 0,
+            "all": 186
+        },
+        "team_deaths": {
+            "attack": 99,
+            "defense": 124,
+            "overtime": 0,
+            "all": 223
+        },
+        "team_assists": {
+            "attack": 31,
+            "defense": 37,
+            "overtime": 0,
+            "all": 68
+        },
+        "team_diffs": {
+            "attack": -23,
+            "defense": -14,
+            "overtime": 0,
+            "all": -37
+        },
+        "team_first_kills": {
+            "attack": 11,
+            "defense": 19,
+            "overtime": 0,
+            "all": 30
+        },
+        "team_first_deaths": {
+            "attack": 13,
+            "defense": 15,
+            "overtime": 0,
+            "all": 28
+        }
+    },
+    {
+        "team_name": "Rex Regum Qeon",
+        "team_maps_won": 0,
+        "team_maps_lost": 2,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 9,
+            "defense": 5,
+            "overtime": 0,
+            "all": 14
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_kills": {
+            "attack": 78,
+            "defense": 50,
+            "overtime": 0,
+            "all": 128
+        },
+        "team_deaths": {
+            "attack": 87,
+            "defense": 62,
+            "overtime": 0,
+            "all": 149
+        },
+        "team_assists": {
+            "attack": 36,
+            "defense": 31,
+            "overtime": 0,
+            "all": 67
+        },
+        "team_diffs": {
+            "attack": -9,
+            "defense": -12,
+            "overtime": 0,
+            "all": -21
+        },
+        "team_first_kills": {
+            "attack": 9,
+            "defense": 8,
+            "overtime": 0,
+            "all": 17
+        },
+        "team_first_deaths": {
+            "attack": 15,
+            "defense": 8,
+            "overtime": 0,
+            "all": 23
+        }
+    },
+    {
+        "team_name": "FURIA",
+        "team_maps_won": 5,
+        "team_maps_lost": 10,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 5,
+        "team_rounds_won": {
+            "attack": 33,
+            "defense": 32,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_rounds_lost": {
+            "attack": 47,
+            "defense": 43,
+            "overtime": 6,
+            "all": 96
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_kills": {
+            "attack": 566,
+            "defense": 536,
+            "overtime": 0,
+            "all": 1177
+        },
+        "team_deaths": {
+            "attack": 638,
+            "defense": 516,
+            "overtime": 0,
+            "all": 1200
+        },
+        "team_assists": {
+            "attack": 209,
+            "defense": 194,
+            "overtime": 0,
+            "all": 427
+        },
+        "team_diffs": {
+            "attack": -72,
+            "defense": 20,
+            "overtime": 0,
+            "all": -23
+        },
+        "team_first_kills": {
+            "attack": 64,
+            "defense": 92,
+            "overtime": 0,
+            "all": 156
+        },
+        "team_first_deaths": {
+            "attack": 107,
+            "defense": 61,
+            "overtime": 0,
+            "all": 168
+        }
+    },
+    {
+        "team_name": "BOOM Esports",
+        "team_maps_won": 2,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 0,
+        "team_rounds_won": {
+            "attack": 8,
+            "defense": 17,
+            "overtime": 6,
+            "all": 31
+        },
+        "team_rounds_lost": {
+            "attack": 14,
+            "defense": 7,
+            "overtime": 0,
+            "all": 21
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 222,
+            "defense": 190,
+            "overtime": 0,
+            "all": 412
+        },
+        "team_deaths": {
+            "attack": 308,
+            "defense": 184,
+            "overtime": 0,
+            "all": 492
+        },
+        "team_assists": {
+            "attack": 85,
+            "defense": 58,
+            "overtime": 0,
+            "all": 143
+        },
+        "team_diffs": {
+            "attack": -86,
+            "defense": 6,
+            "overtime": 0,
+            "all": -80
+        },
+        "team_first_kills": {
+            "attack": 23,
+            "defense": 33,
+            "overtime": 0,
+            "all": 56
+        },
+        "team_first_deaths": {
+            "attack": 54,
+            "defense": 21,
+            "overtime": 0,
+            "all": 75
+        }
+    },
+    {
+        "team_name": "OpTic Gaming",
+        "team_maps_won": 37,
+        "team_maps_lost": 26,
+        "team_map_picks_won": 15,
+        "team_map_picks_lost": 11,
+        "team_rounds_won": {
+            "attack": 243,
+            "defense": 233,
+            "overtime": 13,
+            "all": 489
+        },
+        "team_rounds_lost": {
+            "attack": 94,
+            "defense": 117,
+            "overtime": 9,
+            "all": 220
+        },
+        "team_matches_won": {
+            "Bo3": 12,
+            "Bo5": 3,
+            "all": 15
+        },
+        "team_matches_lost": {
+            "Bo3": 5,
+            "Bo5": 2,
+            "all": 7
+        },
+        "team_kills": {
+            "attack": 2310,
+            "defense": 2481,
+            "overtime": 0,
+            "all": 4791
+        },
+        "team_deaths": {
+            "attack": 2383,
+            "defense": 2222,
+            "overtime": 0,
+            "all": 4605
+        },
+        "team_assists": {
+            "attack": 911,
+            "defense": 928,
+            "overtime": 0,
+            "all": 1839
+        },
+        "team_diffs": {
+            "attack": -73,
+            "defense": 259,
+            "overtime": 0,
+            "all": 186
+        },
+        "team_first_kills": {
+            "attack": 302,
+            "defense": 421,
+            "overtime": 0,
+            "all": 723
+        },
+        "team_first_deaths": {
+            "attack": 371,
+            "defense": 261,
+            "overtime": 0,
+            "all": 632
+        }
+    },
+    {
+        "team_name": "XSET",
+        "team_maps_won": 9,
+        "team_maps_lost": 9,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 49,
+            "defense": 68,
+            "overtime": 0,
+            "all": 117
+        },
+        "team_rounds_lost": {
+            "attack": 37,
+            "defense": 42,
+            "overtime": 3,
+            "all": 82
+        },
+        "team_matches_won": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 619,
+            "defense": 784,
+            "overtime": 0,
+            "all": 1403
+        },
+        "team_deaths": {
+            "attack": 716,
+            "defense": 703,
+            "overtime": 0,
+            "all": 1419
+        },
+        "team_assists": {
+            "attack": 246,
+            "defense": 275,
+            "overtime": 0,
+            "all": 521
+        },
+        "team_diffs": {
+            "attack": -97,
+            "defense": 81,
+            "overtime": 0,
+            "all": -16
+        },
+        "team_first_kills": {
+            "attack": 84,
+            "defense": 117,
+            "overtime": 0,
+            "all": 201
+        },
+        "team_first_deaths": {
+            "attack": 107,
+            "defense": 96,
+            "overtime": 0,
+            "all": 203
+        }
+    },
+    {
+        "team_name": "XERXIA Esports",
+        "team_maps_won": 6,
+        "team_maps_lost": 12,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 4,
+        "team_rounds_won": {
+            "attack": 38,
+            "defense": 40,
+            "overtime": 0,
+            "all": 78
+        },
+        "team_rounds_lost": {
+            "attack": 55,
+            "defense": 52,
+            "overtime": 4,
+            "all": 111
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 6,
+            "Bo5": 0,
+            "all": 6
+        },
+        "team_kills": {
+            "attack": 667,
+            "defense": 690,
+            "overtime": 0,
+            "all": 1357
+        },
+        "team_deaths": {
+            "attack": 761,
+            "defense": 727,
+            "overtime": 0,
+            "all": 1488
+        },
+        "team_assists": {
+            "attack": 244,
+            "defense": 239,
+            "overtime": 0,
+            "all": 483
+        },
+        "team_diffs": {
+            "attack": -94,
+            "defense": -37,
+            "overtime": 0,
+            "all": -131
+        },
+        "team_first_kills": {
+            "attack": 75,
+            "defense": 105,
+            "overtime": 0,
+            "all": 180
+        },
+        "team_first_deaths": {
+            "attack": 124,
+            "defense": 104,
+            "overtime": 0,
+            "all": 228
+        }
+    },
+    {
+        "team_name": "FunPlus Phoenix",
+        "team_maps_won": 26,
+        "team_maps_lost": 17,
+        "team_map_picks_won": 10,
+        "team_map_picks_lost": 8,
+        "team_rounds_won": {
+            "attack": 178,
+            "defense": 158,
+            "overtime": 4,
+            "all": 340
+        },
+        "team_rounds_lost": {
+            "attack": 51,
+            "defense": 79,
+            "overtime": 6,
+            "all": 136
+        },
+        "team_matches_won": {
+            "Bo3": 9,
+            "Bo5": 2,
+            "all": 11
+        },
+        "team_matches_lost": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_kills": {
+            "attack": 1595,
+            "defense": 1685,
+            "overtime": 0,
+            "all": 3280
+        },
+        "team_deaths": {
+            "attack": 1624,
+            "defense": 1557,
+            "overtime": 0,
+            "all": 3181
+        },
+        "team_assists": {
+            "attack": 644,
+            "defense": 579,
+            "overtime": 0,
+            "all": 1223
+        },
+        "team_diffs": {
+            "attack": -29,
+            "defense": 128,
+            "overtime": 0,
+            "all": 99
+        },
+        "team_first_kills": {
+            "attack": 207,
+            "defense": 260,
+            "overtime": 0,
+            "all": 467
+        },
+        "team_first_deaths": {
+            "attack": 242,
+            "defense": 203,
+            "overtime": 0,
+            "all": 445
+        }
+    },
+    {
+        "team_name": "NORTHEPTION",
+        "team_maps_won": 2,
+        "team_maps_lost": 5,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 14,
+            "defense": 11,
+            "overtime": 3,
+            "all": 28
+        },
+        "team_rounds_lost": {
+            "attack": 18,
+            "defense": 18,
+            "overtime": 0,
+            "all": 36
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 221,
+            "defense": 263,
+            "overtime": 0,
+            "all": 484
+        },
+        "team_deaths": {
+            "attack": 247,
+            "defense": 304,
+            "overtime": 0,
+            "all": 551
+        },
+        "team_assists": {
+            "attack": 85,
+            "defense": 96,
+            "overtime": 0,
+            "all": 181
+        },
+        "team_diffs": {
+            "attack": -26,
+            "defense": -41,
+            "overtime": 0,
+            "all": -67
+        },
+        "team_first_kills": {
+            "attack": 30,
+            "defense": 42,
+            "overtime": 0,
+            "all": 72
+        },
+        "team_first_deaths": {
+            "attack": 39,
+            "defense": 39,
+            "overtime": 0,
+            "all": 78
+        }
+    },
+    {
+        "team_name": "Guild Esports",
+        "team_maps_won": 5,
+        "team_maps_lost": 5,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 27,
+            "defense": 36,
+            "overtime": 8,
+            "all": 71
+        },
+        "team_rounds_lost": {
+            "attack": 20,
+            "defense": 23,
+            "overtime": 0,
+            "all": 43
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 384,
+            "defense": 446,
+            "overtime": 0,
+            "all": 830
+        },
+        "team_deaths": {
+            "attack": 425,
+            "defense": 360,
+            "overtime": 0,
+            "all": 785
+        },
+        "team_assists": {
+            "attack": 176,
+            "defense": 168,
+            "overtime": 0,
+            "all": 344
+        },
+        "team_diffs": {
+            "attack": -41,
+            "defense": 86,
+            "overtime": 0,
+            "all": 45
+        },
+        "team_first_kills": {
+            "attack": 54,
+            "defense": 63,
+            "overtime": 0,
+            "all": 117
+        },
+        "team_first_deaths": {
+            "attack": 59,
+            "defense": 53,
+            "overtime": 0,
+            "all": 112
+        }
+    },
+    {
+        "team_name": "Ninjas In Pyjamas",
+        "team_maps_won": 3,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 18,
+            "defense": 21,
+            "overtime": 0,
+            "all": 39
+        },
+        "team_rounds_lost": {
+            "attack": 16,
+            "defense": 18,
+            "overtime": 0,
+            "all": 34
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 230,
+            "defense": 264,
+            "overtime": 0,
+            "all": 494
+        },
+        "team_deaths": {
+            "attack": 241,
+            "defense": 291,
+            "overtime": 0,
+            "all": 532
+        },
+        "team_assists": {
+            "attack": 81,
+            "defense": 109,
+            "overtime": 0,
+            "all": 190
+        },
+        "team_diffs": {
+            "attack": -11,
+            "defense": -27,
+            "overtime": 0,
+            "all": -38
+        },
+        "team_first_kills": {
+            "attack": 27,
+            "defense": 40,
+            "overtime": 0,
+            "all": 67
+        },
+        "team_first_deaths": {
+            "attack": 39,
+            "defense": 41,
+            "overtime": 0,
+            "all": 80
+        }
+    },
+    {
+        "team_name": "G2 Esports",
+        "team_maps_won": 11,
+        "team_maps_lost": 9,
+        "team_map_picks_won": 7,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 82,
+            "defense": 61,
+            "overtime": 0,
+            "all": 143
+        },
+        "team_rounds_lost": {
+            "attack": 26,
+            "defense": 40,
+            "overtime": 0,
+            "all": 66
+        },
+        "team_matches_won": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 724,
+            "defense": 708,
+            "overtime": 0,
+            "all": 1432
+        },
+        "team_deaths": {
+            "attack": 715,
+            "defense": 683,
+            "overtime": 0,
+            "all": 1398
+        },
+        "team_assists": {
+            "attack": 298,
+            "defense": 211,
+            "overtime": 0,
+            "all": 509
+        },
+        "team_diffs": {
+            "attack": 9,
+            "defense": 25,
+            "overtime": 0,
+            "all": 34
+        },
+        "team_first_kills": {
+            "attack": 93,
+            "defense": 96,
+            "overtime": 0,
+            "all": 189
+        },
+        "team_first_deaths": {
+            "attack": 110,
+            "defense": 105,
+            "overtime": 0,
+            "all": 215
+        }
+    },
+    {
+        "team_name": "The Guard",
+        "team_maps_won": 1,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 7,
+            "defense": 6,
+            "overtime": 0,
+            "all": 13
+        },
+        "team_rounds_lost": {
+            "attack": 14,
+            "defense": 22,
+            "overtime": 0,
+            "all": 36
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 170,
+            "defense": 199,
+            "overtime": 0,
+            "all": 369
+        },
+        "team_deaths": {
+            "attack": 224,
+            "defense": 165,
+            "overtime": 0,
+            "all": 389
+        },
+        "team_assists": {
+            "attack": 49,
+            "defense": 62,
+            "overtime": 0,
+            "all": 111
+        },
+        "team_diffs": {
+            "attack": -54,
+            "defense": 34,
+            "overtime": 0,
+            "all": -20
+        },
+        "team_first_kills": {
+            "attack": 20,
+            "defense": 30,
+            "overtime": 0,
+            "all": 50
+        },
+        "team_first_deaths": {
+            "attack": 36,
+            "defense": 22,
+            "overtime": 0,
+            "all": 58
+        }
+    },
+    {
+        "team_name": "Vision Strikers",
+        "team_maps_won": 9,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 66,
+            "defense": 51,
+            "overtime": 0,
+            "all": 117
+        },
+        "team_rounds_lost": {
+            "attack": 21,
+            "defense": 26,
+            "overtime": 0,
+            "all": 47
+        },
+        "team_matches_won": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_matches_lost": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 542,
+            "defense": 555,
+            "overtime": 0,
+            "all": 1097
+        },
+        "team_deaths": {
+            "attack": 506,
+            "defense": 523,
+            "overtime": 0,
+            "all": 1029
+        },
+        "team_assists": {
+            "attack": 221,
+            "defense": 203,
+            "overtime": 0,
+            "all": 424
+        },
+        "team_diffs": {
+            "attack": 36,
+            "defense": 32,
+            "overtime": 0,
+            "all": 68
+        },
+        "team_first_kills": {
+            "attack": 72,
+            "defense": 81,
+            "overtime": 0,
+            "all": 153
+        },
+        "team_first_deaths": {
+            "attack": 82,
+            "defense": 79,
+            "overtime": 0,
+            "all": 161
+        }
+    },
+    {
+        "team_name": "FULL SENSE",
+        "team_maps_won": 0,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 13,
+            "defense": 16,
+            "overtime": 0,
+            "all": 29
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 118,
+            "defense": 137,
+            "overtime": 0,
+            "all": 255
+        },
+        "team_deaths": {
+            "attack": 145,
+            "defense": 169,
+            "overtime": 0,
+            "all": 314
+        },
+        "team_assists": {
+            "attack": 41,
+            "defense": 48,
+            "overtime": 0,
+            "all": 89
+        },
+        "team_diffs": {
+            "attack": -27,
+            "defense": -32,
+            "overtime": 0,
+            "all": -59
+        },
+        "team_first_kills": {
+            "attack": 18,
+            "defense": 20,
+            "overtime": 0,
+            "all": 38
+        },
+        "team_first_deaths": {
+            "attack": 19,
+            "defense": 25,
+            "overtime": 0,
+            "all": 44
+        }
+    },
+    {
+        "team_name": "Team Vikings",
+        "team_maps_won": 5,
+        "team_maps_lost": 8,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 34,
+            "defense": 30,
+            "overtime": 2,
+            "all": 66
+        },
+        "team_rounds_lost": {
+            "attack": 27,
+            "defense": 30,
+            "overtime": 0,
+            "all": 57
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 447,
+            "defense": 395,
+            "overtime": 0,
+            "all": 932
+        },
+        "team_deaths": {
+            "attack": 532,
+            "defense": 382,
+            "overtime": 0,
+            "all": 998
+        },
+        "team_assists": {
+            "attack": 168,
+            "defense": 165,
+            "overtime": 0,
+            "all": 355
+        },
+        "team_diffs": {
+            "attack": -85,
+            "defense": 13,
+            "overtime": 0,
+            "all": -66
+        },
+        "team_first_kills": {
+            "attack": 60,
+            "defense": 57,
+            "overtime": 0,
+            "all": 117
+        },
+        "team_first_deaths": {
+            "attack": 78,
+            "defense": 54,
+            "overtime": 0,
+            "all": 132
+        }
+    },
+    {
+        "team_name": "Crazy Raccoon",
+        "team_maps_won": 2,
+        "team_maps_lost": 12,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 6,
+        "team_rounds_won": {
+            "attack": 15,
+            "defense": 11,
+            "overtime": 0,
+            "all": 26
+        },
+        "team_rounds_lost": {
+            "attack": 41,
+            "defense": 40,
+            "overtime": 0,
+            "all": 81
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 6,
+            "Bo5": 0,
+            "all": 6
+        },
+        "team_kills": {
+            "attack": 440,
+            "defense": 445,
+            "overtime": 0,
+            "all": 885
+        },
+        "team_deaths": {
+            "attack": 557,
+            "defense": 554,
+            "overtime": 0,
+            "all": 1111
+        },
+        "team_assists": {
+            "attack": 170,
+            "defense": 161,
+            "overtime": 0,
+            "all": 331
+        },
+        "team_diffs": {
+            "attack": -117,
+            "defense": -109,
+            "overtime": 0,
+            "all": -226
+        },
+        "team_first_kills": {
+            "attack": 49,
+            "defense": 64,
+            "overtime": 0,
+            "all": 113
+        },
+        "team_first_deaths": {
+            "attack": 94,
+            "defense": 74,
+            "overtime": 0,
+            "all": 168
+        }
+    },
+    {
+        "team_name": "Gambit Esports",
+        "team_maps_won": 22,
+        "team_maps_lost": 10,
+        "team_map_picks_won": 11,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 155,
+            "defense": 127,
+            "overtime": 13,
+            "all": 295
+        },
+        "team_rounds_lost": {
+            "attack": 40,
+            "defense": 40,
+            "overtime": 0,
+            "all": 80
+        },
+        "team_matches_won": {
+            "Bo3": 8,
+            "Bo5": 1,
+            "all": 9
+        },
+        "team_matches_lost": {
+            "Bo3": 1,
+            "Bo5": 1,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 1332,
+            "defense": 1153,
+            "overtime": 0,
+            "all": 2485
+        },
+        "team_deaths": {
+            "attack": 1235,
+            "defense": 910,
+            "overtime": 0,
+            "all": 2145
+        },
+        "team_assists": {
+            "attack": 442,
+            "defense": 399,
+            "overtime": 0,
+            "all": 841
+        },
+        "team_diffs": {
+            "attack": 97,
+            "defense": 243,
+            "overtime": 0,
+            "all": 340
+        },
+        "team_first_kills": {
+            "attack": 178,
+            "defense": 188,
+            "overtime": 0,
+            "all": 366
+        },
+        "team_first_deaths": {
+            "attack": 187,
+            "defense": 109,
+            "overtime": 0,
+            "all": 296
+        }
+    },
+    {
+        "team_name": "Envy",
+        "team_maps_won": 11,
+        "team_maps_lost": 7,
+        "team_map_picks_won": 5,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 84,
+            "defense": 57,
+            "overtime": 6,
+            "all": 147
+        },
+        "team_rounds_lost": {
+            "attack": 37,
+            "defense": 34,
+            "overtime": 1,
+            "all": 72
+        },
+        "team_matches_won": {
+            "Bo3": 5,
+            "Bo5": 0,
+            "all": 5
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 1,
+            "all": 3
+        },
+        "team_kills": {
+            "attack": 767,
+            "defense": 686,
+            "overtime": 0,
+            "all": 1453
+        },
+        "team_deaths": {
+            "attack": 699,
+            "defense": 687,
+            "overtime": 0,
+            "all": 1386
+        },
+        "team_assists": {
+            "attack": 260,
+            "defense": 248,
+            "overtime": 0,
+            "all": 508
+        },
+        "team_diffs": {
+            "attack": 68,
+            "defense": -1,
+            "overtime": 0,
+            "all": 67
+        },
+        "team_first_kills": {
+            "attack": 99,
+            "defense": 92,
+            "overtime": 0,
+            "all": 191
+        },
+        "team_first_deaths": {
+            "attack": 109,
+            "defense": 104,
+            "overtime": 0,
+            "all": 213
+        }
+    },
+    {
+        "team_name": "X10 Esports",
+        "team_maps_won": 7,
+        "team_maps_lost": 9,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 5,
+        "team_rounds_won": {
+            "attack": 44,
+            "defense": 46,
+            "overtime": 2,
+            "all": 92
+        },
+        "team_rounds_lost": {
+            "attack": 46,
+            "defense": 29,
+            "overtime": 0,
+            "all": 75
+        },
+        "team_matches_won": {
+            "Bo3": 3,
+            "Bo5": 0,
+            "all": 3
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 564,
+            "defense": 529,
+            "overtime": 0,
+            "all": 1177
+        },
+        "team_deaths": {
+            "attack": 566,
+            "defense": 540,
+            "overtime": 0,
+            "all": 1196
+        },
+        "team_assists": {
+            "attack": 233,
+            "defense": 215,
+            "overtime": 0,
+            "all": 482
+        },
+        "team_diffs": {
+            "attack": -2,
+            "defense": -11,
+            "overtime": 0,
+            "all": -19
+        },
+        "team_first_kills": {
+            "attack": 85,
+            "defense": 87,
+            "overtime": 0,
+            "all": 172
+        },
+        "team_first_deaths": {
+            "attack": 75,
+            "defense": 66,
+            "overtime": 0,
+            "all": 141
+        }
+    },
+    {
+        "team_name": "Keyd Stars",
+        "team_maps_won": 3,
+        "team_maps_lost": 8,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 19,
+            "defense": 20,
+            "overtime": 0,
+            "all": 39
+        },
+        "team_rounds_lost": {
+            "attack": 33,
+            "defense": 34,
+            "overtime": 1,
+            "all": 68
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 377,
+            "defense": 389,
+            "overtime": 0,
+            "all": 766
+        },
+        "team_deaths": {
+            "attack": 411,
+            "defense": 381,
+            "overtime": 0,
+            "all": 792
+        },
+        "team_assists": {
+            "attack": 130,
+            "defense": 141,
+            "overtime": 0,
+            "all": 271
+        },
+        "team_diffs": {
+            "attack": -34,
+            "defense": 8,
+            "overtime": 0,
+            "all": -26
+        },
+        "team_first_kills": {
+            "attack": 50,
+            "defense": 61,
+            "overtime": 0,
+            "all": 111
+        },
+        "team_first_deaths": {
+            "attack": 58,
+            "defense": 53,
+            "overtime": 0,
+            "all": 111
+        }
+    },
+    {
+        "team_name": "Acend",
+        "team_maps_won": 16,
+        "team_maps_lost": 8,
+        "team_map_picks_won": 8,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 105,
+            "defense": 102,
+            "overtime": 2,
+            "all": 209
+        },
+        "team_rounds_lost": {
+            "attack": 31,
+            "defense": 34,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_matches_won": {
+            "Bo3": 6,
+            "Bo5": 1,
+            "all": 7
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 819,
+            "defense": 929,
+            "overtime": 0,
+            "all": 1748
+        },
+        "team_deaths": {
+            "attack": 849,
+            "defense": 869,
+            "overtime": 0,
+            "all": 1718
+        },
+        "team_assists": {
+            "attack": 317,
+            "defense": 357,
+            "overtime": 0,
+            "all": 674
+        },
+        "team_diffs": {
+            "attack": -30,
+            "defense": 60,
+            "overtime": 0,
+            "all": 30
+        },
+        "team_first_kills": {
+            "attack": 114,
+            "defense": 137,
+            "overtime": 0,
+            "all": 251
+        },
+        "team_first_deaths": {
+            "attack": 125,
+            "defense": 120,
+            "overtime": 0,
+            "all": 245
+        }
+    },
+    {
+        "team_name": "Papara SuperMassive",
+        "team_maps_won": 3,
+        "team_maps_lost": 5,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 3,
+        "team_rounds_won": {
+            "attack": 16,
+            "defense": 23,
+            "overtime": 0,
+            "all": 39
+        },
+        "team_rounds_lost": {
+            "attack": 26,
+            "defense": 17,
+            "overtime": 0,
+            "all": 43
+        },
+        "team_matches_won": {
+            "Bo3": 1,
+            "Bo5": 0,
+            "all": 1
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 274,
+            "defense": 303,
+            "overtime": 0,
+            "all": 577
+        },
+        "team_deaths": {
+            "attack": 283,
+            "defense": 290,
+            "overtime": 0,
+            "all": 573
+        },
+        "team_assists": {
+            "attack": 103,
+            "defense": 108,
+            "overtime": 0,
+            "all": 211
+        },
+        "team_diffs": {
+            "attack": -9,
+            "defense": 13,
+            "overtime": 0,
+            "all": 4
+        },
+        "team_first_kills": {
+            "attack": 39,
+            "defense": 50,
+            "overtime": 0,
+            "all": 89
+        },
+        "team_first_deaths": {
+            "attack": 43,
+            "defense": 34,
+            "overtime": 0,
+            "all": 77
+        }
+    },
+    {
+        "team_name": "F4Q",
+        "team_maps_won": 2,
+        "team_maps_lost": 8,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 13,
+            "defense": 13,
+            "overtime": 0,
+            "all": 26
+        },
+        "team_rounds_lost": {
+            "attack": 18,
+            "defense": 24,
+            "overtime": 0,
+            "all": 42
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 4,
+            "Bo5": 0,
+            "all": 4
+        },
+        "team_kills": {
+            "attack": 247,
+            "defense": 344,
+            "overtime": 0,
+            "all": 591
+        },
+        "team_deaths": {
+            "attack": 293,
+            "defense": 439,
+            "overtime": 0,
+            "all": 732
+        },
+        "team_assists": {
+            "attack": 82,
+            "defense": 117,
+            "overtime": 0,
+            "all": 199
+        },
+        "team_diffs": {
+            "attack": -46,
+            "defense": -95,
+            "overtime": 0,
+            "all": -141
+        },
+        "team_first_kills": {
+            "attack": 40,
+            "defense": 52,
+            "overtime": 0,
+            "all": 92
+        },
+        "team_first_deaths": {
+            "attack": 36,
+            "defense": 61,
+            "overtime": 0,
+            "all": 97
+        }
+    },
+    {
+        "team_name": "Liberty",
+        "team_maps_won": 0,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 0,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 0,
+            "defense": 0,
+            "overtime": 0,
+            "all": 0
+        },
+        "team_rounds_lost": {
+            "attack": 17,
+            "defense": 9,
+            "overtime": 0,
+            "all": 26
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 146,
+            "defense": 92,
+            "overtime": 0,
+            "all": 238
+        },
+        "team_deaths": {
+            "attack": 178,
+            "defense": 138,
+            "overtime": 0,
+            "all": 316
+        },
+        "team_assists": {
+            "attack": 47,
+            "defense": 29,
+            "overtime": 0,
+            "all": 76
+        },
+        "team_diffs": {
+            "attack": -32,
+            "defense": -46,
+            "overtime": 0,
+            "all": -78
+        },
+        "team_first_kills": {
+            "attack": 20,
+            "defense": 15,
+            "overtime": 0,
+            "all": 35
+        },
+        "team_first_deaths": {
+            "attack": 25,
+            "defense": 18,
+            "overtime": 0,
+            "all": 43
+        }
+    },
+    {
+        "team_name": "Version1",
+        "team_maps_won": 5,
+        "team_maps_lost": 5,
+        "team_map_picks_won": 2,
+        "team_map_picks_lost": 2,
+        "team_rounds_won": {
+            "attack": 35,
+            "defense": 30,
+            "overtime": 0,
+            "all": 65
+        },
+        "team_rounds_lost": {
+            "attack": 26,
+            "defense": 28,
+            "overtime": 3,
+            "all": 57
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 410,
+            "defense": 414,
+            "overtime": 0,
+            "all": 824
+        },
+        "team_deaths": {
+            "attack": 448,
+            "defense": 382,
+            "overtime": 0,
+            "all": 830
+        },
+        "team_assists": {
+            "attack": 134,
+            "defense": 155,
+            "overtime": 0,
+            "all": 289
+        },
+        "team_diffs": {
+            "attack": -38,
+            "defense": 32,
+            "overtime": 0,
+            "all": -6
+        },
+        "team_first_kills": {
+            "attack": 51,
+            "defense": 64,
+            "overtime": 0,
+            "all": 115
+        },
+        "team_first_deaths": {
+            "attack": 68,
+            "defense": 50,
+            "overtime": 0,
+            "all": 118
+        }
+    },
+    {
+        "team_name": "Sharks Esports",
+        "team_maps_won": 1,
+        "team_maps_lost": 4,
+        "team_map_picks_won": 1,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 10,
+            "defense": 3,
+            "overtime": 0,
+            "all": 13
+        },
+        "team_rounds_lost": {
+            "attack": 12,
+            "defense": 9,
+            "overtime": 0,
+            "all": 21
+        },
+        "team_matches_won": {
+            "Bo3": 0,
+            "Bo5": 0,
+            "all": 0
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 151,
+            "defense": 99,
+            "overtime": 0,
+            "all": 250
+        },
+        "team_deaths": {
+            "attack": 193,
+            "defense": 153,
+            "overtime": 0,
+            "all": 346
+        },
+        "team_assists": {
+            "attack": 65,
+            "defense": 30,
+            "overtime": 0,
+            "all": 95
+        },
+        "team_diffs": {
+            "attack": -42,
+            "defense": -54,
+            "overtime": 0,
+            "all": -96
+        },
+        "team_first_kills": {
+            "attack": 23,
+            "defense": 14,
+            "overtime": 0,
+            "all": 37
+        },
+        "team_first_deaths": {
+            "attack": 31,
+            "defense": 23,
+            "overtime": 0,
+            "all": 54
+        }
+    },
+    {
+        "team_name": "NUTURN",
+        "team_maps_won": 5,
+        "team_maps_lost": 6,
+        "team_map_picks_won": 3,
+        "team_map_picks_lost": 1,
+        "team_rounds_won": {
+            "attack": 32,
+            "defense": 31,
+            "overtime": 5,
+            "all": 68
+        },
+        "team_rounds_lost": {
+            "attack": 20,
+            "defense": 13,
+            "overtime": 0,
+            "all": 33
+        },
+        "team_matches_won": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_matches_lost": {
+            "Bo3": 2,
+            "Bo5": 0,
+            "all": 2
+        },
+        "team_kills": {
+            "attack": 410,
+            "defense": 348,
+            "overtime": 0,
+            "all": 758
+        },
+        "team_deaths": {
+            "attack": 423,
+            "defense": 353,
+            "overtime": 0,
+            "all": 776
+        },
+        "team_assists": {
+            "attack": 128,
+            "defense": 108,
+            "overtime": 0,
+            "all": 236
+        },
+        "team_diffs": {
+            "attack": -13,
+            "defense": -5,
+            "overtime": 0,
+            "all": -18
+        },
+        "team_first_kills": {
+            "attack": 55,
+            "defense": 58,
+            "overtime": 0,
+            "all": 113
+        },
+        "team_first_deaths": {
+            "attack": 62,
+            "defense": 47,
+            "overtime": 0,
+            "all": 109
+        }
+    }
+]

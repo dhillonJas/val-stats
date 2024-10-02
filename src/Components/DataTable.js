@@ -1,11 +1,11 @@
 import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import {INTEGER, DATE,STRING, PRIZE,  LINK, LIST, OBJECT, SIDES_OBJECT} from '../data/columns_names'
+
 const DataTable = ({data, columns}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc' });
-
-
 
   // const [searchQueries, setSearchQueries] = useState(
   //   columnNames.reduce((acc, column) => {
@@ -119,18 +119,17 @@ const DataTable = ({data, columns}) => {
 
 
   const formatCell = (value, type) => {
-    console.log(value, type)
     switch (type) {
-      case "date":
+      case DATE:
         let dateObj = new Date(value)
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return dateObj.toLocaleDateString('en-US', options);
-      case "prize":
+      case PRIZE:
         const prize_options = { style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }
         return new Intl.NumberFormat('en-US', prize_options).format(value);
-      case "link":
+      case LINK:
         return <a href={value} target="_blank" rel="noopener noreferrer">Link</a>;
-      case "list":
+      case LIST:
         return <OverlayTrigger
                 placement="left"
                 overlay={
@@ -143,7 +142,7 @@ const DataTable = ({data, columns}) => {
               >
                 <span>→ ... ←</span>
               </OverlayTrigger>
-      case "object":
+      case OBJECT:
         return <OverlayTrigger
                 placement="left"
                 overlay={
@@ -158,6 +157,8 @@ const DataTable = ({data, columns}) => {
               >
                 <span>Hover for info</span>
               </OverlayTrigger>
+      case SIDES_OBJECT:
+        return value['all']
       default:
         return value;
     }

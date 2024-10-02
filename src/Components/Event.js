@@ -14,18 +14,6 @@ function Event({ onFilter, onViewModeChange}) {
     onFilter(event_data)
   }, [viewMode, onViewModeChange]);
 
-  // const handleFilter = useCallback(() => {
-  //     if (dropdownOption === 'Information')
-  //     {
-  //       onFilter(event_data)
-  //     }
-  //   },[onFilter, dropdownOption])
-  
-  
-  // useEffect(() => {
-  //   handleFilter(dropdownOption);
-  // }, [dropdownOption, handleFilter]);
-
   return (
     <div>
         <DropdownComp   selectedValue={viewMode}

@@ -1,10 +1,11 @@
-const INTEGER = "integer"
-const DATE = "date"
-const STRING = "string"
-const PRIZE = "prize"
-const LINK = "link"
-const LIST = "list"
-const OBJECT = "object"
+export const INTEGER = "integer"
+export const DATE = "date"
+export const STRING = "string"
+export const PRIZE = "prize"
+export const LINK = "link"
+export const LIST = "list"
+export const OBJECT = "object"
+export const SIDES_OBJECT = "sides_object"
 export const columns_information = {
     Event:{
         Information:{
@@ -62,7 +63,12 @@ export const columns_information = {
     },
     Team:{
         Information:{
-            "Name" :            { value:"team_name",    type:INTEGER }
+            "Name" :            { value:"team_name",              type:STRING },
+            "Maps Won" :        { value:"team_maps_won",          type:INTEGER },
+            "Maps Lost" :       { value:"team_maps_lost",         type:INTEGER },
+            "Map Picks Won" :   { value:"team_map_picks_won",     type:INTEGER },
+            "Map Picks Lost" :  { value:"team_map_picks_lost",    type:INTEGER },
+            "Rounds Won" :      { value:"team_rounds_won",        type:SIDES_OBJECT }
         }
     }
 }

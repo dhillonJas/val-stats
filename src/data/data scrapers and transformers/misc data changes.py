@@ -1,6 +1,10 @@
 import json
 from datetime import datetime 
 
+def open_file(json_file_name):
+    with open(json_file_name, 'r') as file:
+        return json.load(file)
+    
 def add_region():
     team_data_file = 'src/data/team_data.json'
     with open(team_data_file, 'r') as file:
@@ -104,3 +108,111 @@ def convert_prize_string_to_int():
 
     with open(event_data_file, 'w') as file:
         json.dump(event_data, file, indent=4)
+
+
+def add_team_id_in_map():
+    map_data = open_file('src/data/map_data.json')
+    team_data = open_file('src/data/team_data.json')
+
+
+    for map in map_data:
+        map_winner_id = [(int)(key) for key, value in team_data.items() if map['map_winner'] == value['team_name']][0]
+        map_loser_id = [(int)(key) for key, value in team_data.items() if map['map_loser'] == value['team_name']][0]
+
+        map.update({"map_winner_id":map_winner_id})
+        map.update({"map_loser_id":map_loser_id})
+        
+    with open('src/data/map_data.json', 'w') as file:
+        json.dump(map_data, file, indent=4)
+
+def add_team_id_in_match():
+    match_data = open_file('src/data/match_data.json')
+    team_data = open_file('src/data/team_data.json')
+
+    for match in match_data:
+        match_winner_id = [(int)(key) for key, value in team_data.items() if match['match_winner'] == value['team_name']]
+        match_loser_id = [(int)(key) for key, value in team_data.items() if match['match_loser'] == value['team_name']]
+
+        if match['match_winner'] in ('G2 Esports', 'FunPlus Phoenix'):
+            if ('-2024-' in match['match_vlr_link']) or ('-2023-' in match['match_vlr_link']):
+                match_winner_id = match_winner_id[0]
+            else:
+                match_winner_id = match_winner_id[1]
+            match_loser_id = match_loser_id[0]
+        elif match['match_loser'] in ('G2 Esports', 'FunPlus Phoenix'):
+            if ('-2024-' in match['match_vlr_link']) or ('-2023-' in match['match_vlr_link']):
+                match_loser_id = match_loser_id[0]
+            else:
+                match_loser_id = match_loser_id[1]
+            match_winner_id = match_winner_id[0]
+
+        else:
+            match_winner_id = match_winner_id[0]
+            match_loser_id = match_loser_id[0]
+
+        match.update({"match_winner_id":match_winner_id})
+        match.update({"match_loser_id":match_loser_id})
+    with open('src/data/match_data.json', 'w') as file:
+        json.dump(match_data, file, indent=4)
+
+
+def add_team_id_to_player():
+    team_data = open_file('src/data/team_data.json')
+    player_data = open_file('src/data/player_data.json')
+    map_data = open_file('src/data/map_data.json')
+
+    maps_by_g2_amer = [map['map_id'] for map in map_data if map['map_winner_id'] == 11058 or map['map_loser_id'] == 11058]
+    maps_by_g2_emea = [map['map_id'] for map in map_data if map['map_winner_id'] == 257 or map['map_loser_id'] == 257]
+    maps_by_fpx_chn = [map['map_id'] for map in map_data if map['map_winner_id'] == 11328 or map['map_loser_id'] == 11328]
+    maps_by_fpx_emea = [map['map_id'] for map in map_data if map['map_winner_id'] == 628 or map['map_loser_id'] == 628]
+    maps_by_team_vks = [map['map_id'] for map in map_data if map['map_winner_id'] == 420 or map['map_loser_id'] == 420]
+    maps_by_keyd_stars = [map['map_id'] for map in map_data if map['map_winner_id'] == 4894 or map['map_loser_id'] == 4894]
+    
+    for player in player_data:
+        if player['player_team'] not in ('G2', 'FPX', 'VKS'):
+            team_id = [key for key, value in team_data.items() if value['team_tag'] == player['player_team']]
+            if len(team_id) > 1:
+                print('something wrong')
+                print(team_id)
+                exit()
+            
+            team_id = (int)(team_id[0])
+    
+        elif player['player_map_id'] in maps_by_g2_amer:
+            team_id = 11058
+        elif player['player_map_id'] in maps_by_g2_emea:
+            team_id = 257
+        elif player['player_map_id'] in maps_by_fpx_chn:
+            team_id = 11328
+        elif player['player_map_id'] in maps_by_fpx_emea:
+            team_id = 628
+        elif player['player_map_id'] in maps_by_team_vks:
+            team_id = 420
+        elif player['player_map_id'] in maps_by_keyd_stars:
+            team_id = 4894
+        
+        player.update({'player_team_id':team_id})
+
+    with open('src/data/player_data.json', 'w') as file:
+        json.dump(player_data, file, indent=4)
+
+
+def test_kills_in_player():
+    player_data = open_file('src/data/player_data.json')
+
+    for player in player_data:
+        if player['player_t_kills'] + player['player_ct_kills'] != player['player_both_kills']:
+            print('found it')
+            return player
+    
+    return "Nothing here"
+
+
+def remove_key_team_table():
+    team_table = open_file('src/data/tables/team_table.json')
+    result = [list(item.values()) for item in team_table]
+
+    team_table_file = 'src/data/tables/team_table.json'
+    with open(team_table_file, 'w') as file:
+        json.dump(result, file, indent=4)
+
