@@ -1,0 +1,2588 @@
+[
+    {
+        "17": {
+            "name": "",
+            "region": "",
+            "maps_won": 0,
+            "maps_lost": 0,
+            "map_picks_won": 0,
+            "map_picks_lost": 0,
+            "rounds_won": {
+                "attack": 0,
+                "defense": 0,
+                "overtime": 0,
+                "all": 0
+            },
+            "rounds_lost": {
+                "attack": 0,
+                "defense": 0,
+                "overtime": 0,
+                "all": 0
+            },
+            "matches_won": {
+                "Bo3": 0,
+                "Bo5": 0,
+                "all": 0
+            },
+            "matches_lost": {
+                "Bo3": 0,
+                "Bo5": 0,
+                "all": 0
+            },
+            "kills": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "deaths": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "assists": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "diffs": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "first_kills": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "first_deaths": {
+                "attack": 0,
+                "defense": 0,
+                "all": 0
+            },
+            "event_stats": {
+                "2097": {
+                    "event_name:": "Valorant Champions 2024",
+                    "event_maps": {
+                        "Haven": {
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Ascent": {
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 3,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 7
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Abyss": {
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Lotus": {
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "rounds_lost": {
+                                    "attack": 9,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 4,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 9
+                                },
+                                "rounds_lost": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Bind": {
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "rounds_lost": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Icebox": {
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 5,
+                                    "defense": 1,
+                                    "overtime": 0,
+                                    "all": 6
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "1999": {
+                    "event_name:": "Masters Shanghai 2024",
+                    "event_maps": {
+                        "Icebox": {
+                            "2359": {
+                                "name": "LEVIATAN",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 2,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 7
+                                },
+                                "rounds_lost": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "120": {
+                                "name": "100 Thieves",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 4,
+                                    "defense": 9,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 3,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 2,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 9
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 8,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Lotus": {
+                            "2359": {
+                                "name": "LEVIATAN",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 0,
+                                    "overtime": 0,
+                                    "all": 5
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "11328": {
+                                "name": "FunPlus Phoenix",
+                                "region": "China",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 10,
+                                    "defense": 2,
+                                    "overtime": 2,
+                                    "all": 14
+                                },
+                                "rounds_lost": {
+                                    "attack": 10,
+                                    "defense": 2,
+                                    "overtime": 4,
+                                    "all": 16
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2593": {
+                                "name": "FNATIC",
+                                "region": "EMEA",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 3,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "rounds_lost": {
+                                    "attack": 4,
+                                    "defense": 9,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "11058": {
+                                "name": "G2 Esports",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 4,
+                                    "defense": 9,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 3,
+                                    "defense": 1,
+                                    "overtime": 0,
+                                    "all": 4
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Breeze": {
+                            "2359": {
+                                "name": "LEVIATAN",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 3,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 7
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2593": {
+                                "name": "FNATIC",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 7,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 3,
+                                    "defense": 10,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 2,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 6
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Sunset": {
+                            "11328": {
+                                "name": "FunPlus Phoenix",
+                                "region": "China",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 1,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 7
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Ascent": {
+                            "11328": {
+                                "name": "FunPlus Phoenix",
+                                "region": "China",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 5,
+                                    "defense": 8,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 4,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "120": {
+                                "name": "100 Thieves",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 4,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "11058": {
+                                "name": "G2 Esports",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 9
+                                },
+                                "rounds_lost": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Bind": {
+                            "2593": {
+                                "name": "FNATIC",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 10
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Split": {
+                            "1001": {
+                                "name": "Team Heretics",
+                                "region": "EMEA",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 9,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 0,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 3
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "1921": {
+                    "event_name:": "Masters Madrid 2024",
+                    "event_maps": {
+                        "Icebox": {
+                            "6961": {
+                                "name": "LOUD",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1120": {
+                                "name": "EDward Gaming",
+                                "region": "China",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 4,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "rounds_lost": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 5,
+                                    "defense": 1,
+                                    "overtime": 0,
+                                    "all": 6
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Breeze": {
+                            "6961": {
+                                "name": "LOUD",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 5,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "rounds_lost": {
+                                    "attack": 9,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "1120": {
+                                "name": "EDward Gaming",
+                                "region": "China",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 11,
+                                    "defense": 2,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 5,
+                                    "defense": 1,
+                                    "overtime": 0,
+                                    "all": 6
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 2,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 11,
+                                    "defense": 15,
+                                    "overtime": 0,
+                                    "all": 26
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 11
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Ascent": {
+                            "6961": {
+                                "name": "LOUD",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 9,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 2,
+                                    "defense": 3,
+                                    "overtime": 0,
+                                    "all": 5
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 7,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 2,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Split": {
+                            "1120": {
+                                "name": "EDward Gaming",
+                                "region": "China",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 0,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 5
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "624": {
+                                "name": "Paper Rex",
+                                "region": "APAC",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 4,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 8
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 1,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 12,
+                                    "defense": 11,
+                                    "overtime": 0,
+                                    "all": 23
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 12,
+                                    "overtime": 0,
+                                    "all": 18
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Lotus": {
+                            "624": {
+                                "name": "Paper Rex",
+                                "region": "APAC",
+                                "maps_won": 1,
+                                "maps_lost": 0,
+                                "map_picks_won": 1,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 5,
+                                    "defense": 8,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "rounds_lost": {
+                                    "attack": 4,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 9
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            },
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 2,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 7
+                                },
+                                "rounds_lost": {
+                                    "attack": 7,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Bind": {
+                            "2": {
+                                "name": "Sentinels",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 6,
+                                    "defense": 6,
+                                    "overtime": 0,
+                                    "all": 12
+                                },
+                                "rounds_lost": {
+                                    "attack": 6,
+                                    "defense": 6,
+                                    "overtime": 2,
+                                    "all": 14
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        }
+                    }
+                },
+                "1188": {
+                    "event_name:": "Masters S\u00e3o Paulo LOCK//IN 2023",
+                    "event_maps": {
+                        "Pearl": {
+                            "6961": {
+                                "name": "LOUD",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 0,
+                                "rounds_won": {
+                                    "attack": 7,
+                                    "defense": 2,
+                                    "overtime": 0,
+                                    "all": 9
+                                },
+                                "rounds_lost": {
+                                    "attack": 8,
+                                    "defense": 5,
+                                    "overtime": 0,
+                                    "all": 13
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        },
+                        "Fracture": {
+                            "6961": {
+                                "name": "LOUD",
+                                "region": "Americas",
+                                "maps_won": 0,
+                                "maps_lost": 1,
+                                "map_picks_won": 0,
+                                "map_picks_lost": 1,
+                                "rounds_won": {
+                                    "attack": 8,
+                                    "defense": 4,
+                                    "overtime": 0,
+                                    "all": 12
+                                },
+                                "rounds_lost": {
+                                    "attack": 8,
+                                    "defense": 4,
+                                    "overtime": 2,
+                                    "all": 14
+                                },
+                                "matches_won": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "matches_lost": {
+                                    "Bo3": 0,
+                                    "Bo5": 0,
+                                    "all": 0
+                                },
+                                "kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "assists": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "diffs": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_kills": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                },
+                                "first_deaths": {
+                                    "attack": 0,
+                                    "defense": 0,
+                                    "all": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+]

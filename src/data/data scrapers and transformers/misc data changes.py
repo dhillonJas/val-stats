@@ -215,4 +215,3 @@ def remove_key_team_table():
     team_table_file = 'src/data/tables/team_table.json'
     with open(team_table_file, 'w') as file:
         json.dump(result, file, indent=4)
-

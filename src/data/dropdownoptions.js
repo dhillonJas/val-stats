@@ -13,6 +13,7 @@ export const Maps = [
     "Abyss"
   ];
 
+  // should match the event_name in event_table.json
 export const Events = [
     'Any',
     'Valorant Champions 2024',

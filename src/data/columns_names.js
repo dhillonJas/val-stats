@@ -56,15 +56,16 @@ export const events_columns = {
 
 export const teams_columns = {
     Information:{
-        "Name" :            { value:"team_name",              type:STRING },
-        "Maps Won" :        { value:"team_maps_won",          type:INTEGER },
-        "Maps Lost" :       { value:"team_maps_lost",         type:INTEGER },
-        "Map Picks Won" :   { value:"team_map_picks_won",     type:INTEGER },
-        "Map Picks Lost" :  { value:"team_map_picks_lost",    type:INTEGER },
-        "Rounds Won" :      { value:"team_rounds_won",        type:SIDES_OBJECT }
+        "Name" :            { value:"name",              type:STRING },
+        "Region":           { value:"region",            type:STRING },
+        "Maps Won" :        { value:"maps_won",          type:INTEGER },
+        "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
+        "Map Picks Won" :   { value:"map_picks_won",     type:INTEGER },
+        "Map Picks Lost" :  { value:"map_picks_lost",    type:INTEGER },
+        "Rounds Won" :      { value:"rounds_won",        type:SIDES_OBJECT }
     },
     Advanced:{
-        "Name":             { value:"team_rounds_lost",        type:SIDES_OBJECT }
+        "Name":             { value:"rounds_lost",        type:SIDES_OBJECT }
     }
     
 }
