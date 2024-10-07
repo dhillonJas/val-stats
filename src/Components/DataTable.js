@@ -1,13 +1,14 @@
 import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {DATE, PRIZE,  LINK, LIST, OBJECT, SIDES_OBJECT} from '../data/columns_names'
+import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES} from '../data/columns_names'
 
 const DataTable = ({data, columns, selectedButton}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc', type:'' });
   const rowsPerPage = 20; // Number of items you want to display per page 
-  const side_display_order = ['all', 'attack', 'defense', 'overtime']
+  const round_sides_display_order = ['all', 'attack', 'defense', 'overtime']
+  const stat_sides_display_order = ['all', 'attack', 'defense']
   
   // const [searchQueries, setSearchQueries] = useState(
   //   columnNames.reduce((acc, column) => {
@@ -50,7 +51,7 @@ const DataTable = ({data, columns, selectedButton}) => {
       let aValue = a[sortConfig.key]
       let bValue = b[sortConfig.key]
 
-      if (sortConfig.type === SIDES_OBJECT ){
+      if (sortConfig.type === ROUND_SIDES || sortConfig.type === STAT_SIDES ){
         const side_key = sortConfig.key.split('_').pop()
         const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
         aValue = a[data_key][side_key]
@@ -132,15 +133,16 @@ const DataTable = ({data, columns, selectedButton}) => {
     return items;
   };
 
-  function handleSidesObject(value){
+  function handleSidesObject(value, type){
+    const display_order = type === ROUND_SIDES ? round_sides_display_order : stat_sides_display_order
     return <div>
-            {side_display_order.map((side, index) => (
+            {display_order.map((side, index) => (
             <span key={index}>
               {value[side]}
-              {index < side_display_order.length - 1 && 
-                  <span>
+              {index < display_order.length - 1 && 
+                  <strong>
                     {' / '} 
-                  </span>}
+                  </strong>}
             </span>
         ))}
     </div>
@@ -168,7 +170,7 @@ const DataTable = ({data, columns, selectedButton}) => {
                   </Tooltip>
                 }
               >
-                <span>Hover for info</span>
+                <span>Hover</span>
               </OverlayTrigger>
       case OBJECT:
         return <OverlayTrigger
@@ -183,28 +185,30 @@ const DataTable = ({data, columns, selectedButton}) => {
                   </Tooltip>
                 }
               >
-                <span>Hover for info</span>
+                <span>Hover</span>
               </OverlayTrigger>
-      case SIDES_OBJECT:
-        return handleSidesObject(value)       
+      case ROUND_SIDES:
+      case STAT_SIDES:
+        return handleSidesObject(value, type)       
       default:
         return value;
     }
   }
 
-  const renderTableHeader= (isSidesObject, column) => {
+  const renderTableHeader= (type, column) => {
     
-    if (isSidesObject)
+    if (type === STAT_SIDES || type === ROUND_SIDES)
     {
-      return <div>{side_display_order.map((side, index) => (
-            <span key={index} onClick={() => handleSort(columns[column].value + '_' + side, SIDES_OBJECT) }>
+      const display_order = type === ROUND_SIDES ? round_sides_display_order : stat_sides_display_order
+      return <div>{display_order.map((side, index) => (
+            <span key={index} onClick={() => handleSort(columns[column].value + '_' + side, columns[column].type) }>
               {sortConfig.key === columns[column].value + '_' + side
                 ? sortConfig.direction === 'asc'
                   ? ' ▲'
                   : ' ▼'
                 : '-'
                 }
-            {index < side_display_order.length - 1 && <span> / </span>}
+            {index < display_order.length - 1 && <span> / </span>}
             </span>
       ))}
       </div>
@@ -237,7 +241,7 @@ const DataTable = ({data, columns, selectedButton}) => {
                   onChange={(e) => handleSearchChange(e, column)}
                   /> */}
                   <div >
-                  { renderTableHeader(columns[column].type === SIDES_OBJECT, column)}
+                  { renderTableHeader(columns[column].type, column)}
                   </div>
             </th>
           ))}

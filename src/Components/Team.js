@@ -18,10 +18,41 @@ function Team({ onFilter, onViewModeChange}) {
   //   return [{"Name" : "Sentinels"}]
   // }
 
-//   const handleFilter = useCallback(() => {
-//     if (event === 'Any')
-//         onFilter(team_data)
-//     }, [onFilter])
+  const handleFilter = useCallback(() => {
+    if (event === 'All')
+        onFilter(team_data)
+    else{
+        const teamTotals = {};
+
+        team_data.forEach(item => {
+          if (!teamTotals[item.id]) {
+            teamTotals[item.id] = { 
+                                      name: item.name,
+                                      region: item.region,
+                                      events_attended: item.events_attended,
+                                      events_won: item.events_won,
+                                      events_best_placements: item.events_best_placements,
+                                      maps_won: 0,
+                                      maps_lost: 0,
+                                      map_picks_won: 0,
+                                      map_picks_lost: 0,
+                                      rounds_won: 0,
+                                      rounds_lost: 0,
+                                      maps:[]
+                                    };
+          }
+        }
+
+      
+
+        )
+    }
+    }, [onFilter])
+
+useEffect(() => {
+  handleFilter()
+}, [event]);
+
 
   useEffect(() => {
     let viewMode = isAdvanced  ?  ADVANCED: INFORMATION

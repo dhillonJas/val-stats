@@ -215,3 +215,15 @@ def remove_key_team_table():
     team_table_file = 'src/data/tables/team_table.json'
     with open(team_table_file, 'w') as file:
         json.dump(result, file, indent=4)
+
+
+def test_total_team_kills():
+    player_data = open_file('src/data/player_data.json')
+
+    total_kills = 0
+    for player in player_data:
+        if player['player_team_id'] == 2593:
+            total_kills += player['player_both_kills']
+    return total_kills
+
+print(test_total_team_kills())

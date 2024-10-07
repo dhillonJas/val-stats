@@ -9,17 +9,17 @@ Data
 
 
 
-LEVIATAN has accent on A, coming up wrong in json
+--- done --- LEVIATAN has accent on A, coming up wrong in json
 
-Teams' shorter names should be searchable
+--- done --- Teams' shorter names should be searchable
 
 add team logo info  (img)
 
-IMPORT EVENTDATA IN EVENT.JS AND SO ON
+--- done --- IMPORT EVENTDATA IN EVENT.JS AND SO ON
 
 
-
-
+check total kills for teams in team_table (8586 for fnatic (too high??))
+check rounds won for some teams (0/0/0/0)
 
 
 
