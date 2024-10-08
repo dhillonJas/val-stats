@@ -5,8 +5,8 @@ export const Teams = ['All', 'Gen.G', 'Sentinels', 'FunPlus Phoenix', 'Team Here
                       'Natus Vincere', 'Evil Geniuses', 'NRG Esports', 'ZETA DIVISION', 'Giants Gaming', 
                       'Attacking Soul Esports', 'KOI', 'DetonatioN FocusMe', 'BBL Esports', 'Cloud9', 
                       'MIBR', 'Team Secret', 'Global Esports', 'Rex Regum Qeon', 'FURIA', 'OpTic Gaming', 
-                      'BOOM Esports', 'XSET', 'XERXIA Esports', 'FunPlus Phoenix', 'NORTHEPTION', 
-                      'Guild Esports', 'Ninjas In Pyjamas', 'G2 Esports', 'The Guard', 'Vision Strikers', 
+                      'BOOM Esports', 'XSET', 'XERXIA Esports', 'NORTHEPTION', 
+                      'Guild Esports', 'Ninjas In Pyjamas', 'The Guard', 'Vision Strikers', 
                       'FULL SENSE', 'Team Vikings', 'Crazy Raccoon', 'Gambit Esports', 'Envy', 
                       'X10 Esports', 'Acend', 'Keyd Stars', 'Papara SuperMassive', 'F4Q', 'Liberty', 
                       'Version1', 'Sharks Esports', 'NUTURN']
