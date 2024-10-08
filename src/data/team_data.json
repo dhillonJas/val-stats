@@ -132,20 +132,6 @@
         "team_country": "United States",
         "team_region": "Americas"
     },
-    "15315": {
-        "team_name": "Team International",
-        "team_tag": "INT",
-        "team_logo": "/img/vlr/tmp/vlr.png",
-        "team_country": "International",
-        "team_region": "TBD"
-    },
-    "15805": {
-        "team_name": "Team China",
-        "team_tag": "CN",
-        "team_logo": "//owcdn.net/img/5a3803d70cbe6.png",
-        "team_country": "China",
-        "team_region": "China"
-    },
     "8877": {
         "team_name": "Karmine Corp",
         "team_tag": "KC",
@@ -159,13 +145,6 @@
         "team_logo": "//owcdn.net/img/62bbec8dc1b9f.png",
         "team_country": "Brazil",
         "team_region": "Americas"
-    },
-    "15316": {
-        "team_name": "Team Spain",
-        "team_tag": "Team Spain",
-        "team_logo": "/img/vlr/tmp/vlr.png",
-        "team_country": "Spain",
-        "team_region": "TBD"
     },
     "474": {
         "team_name": "Team Liquid",
@@ -278,20 +257,6 @@
         "team_logo": "//owcdn.net/img/632be843b7d51.png",
         "team_country": "Brazil",
         "team_region": "Americas"
-    },
-    "12065": {
-        "team_name": "Team tarik",
-        "team_tag": "tarik",
-        "team_logo": "/img/vlr/tmp/vlr.png",
-        "team_country": "International",
-        "team_region": "TBD"
-    },
-    "12066": {
-        "team_name": "Team FRTTT",
-        "team_tag": "FRTTT",
-        "team_logo": "/img/vlr/tmp/vlr.png",
-        "team_country": "International",
-        "team_region": "TBD"
     },
     "8127": {
         "team_name": "OpTic Gaming",

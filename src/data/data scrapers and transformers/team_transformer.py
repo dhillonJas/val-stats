@@ -1,7 +1,6 @@
 import json
 import re
 import copy
-team_table = []
 team_stats = {}
 
 round_side_dict = {
@@ -277,16 +276,33 @@ def team_event_stats(team_id, events, players, maps, matches, teams):
                     opponent_obj['1v5'] += player['player_multis_clutches_stats']['1v5']
                     
 
+def flattenEventStats(team_stats_r):
+
+
+    for team in team_stats_r:
+        flattened_stats = []
+        for event_id, event_info in team['event_stats'].items():
+            event_name = ''
+            for key, event_maps in event_info.items():
+                if key == 'event_name:':
+                    event_name = event_maps
+                elif key == 'event_maps':
+                    for mapname, opponents in event_maps.items():
+                        for opponent, stats in opponents.items():
+                            flattened_stats.append({
+                                "event_id": event_id,
+                                "event_name": event_name,
+                                "map_name": mapname,
+                                "opponent_id": opponent,
+                                **stats
+                            })
+        team['event_stats'] = flattened_stats
+    
+
+
+
         
 def team():
-
-    def remove_key_team_table():
-        team_table = open_file('src/data/tables/team_table.json')
-        result = [list(item.values()) for item in team_table]
-
-        team_table_file = 'src/data/tables/team_table.json'
-        with open(team_table_file, 'w') as file:
-            json.dump(result, file, indent=4)
 
 
     event_data = open_file('src/data/event_data.json')
@@ -317,12 +333,18 @@ def team():
             team_event_stats(int_key, event_data, player_data, map_data, match_data, team_data)
 
 
+
+    team_stats_r = list(team_stats.values())
+    flattenEventStats(team_stats_r)
     team_table_file = 'src/data/tables/team_table.json'
     with open(team_table_file, 'w') as file:
-        json.dump([team_stats], file, indent=4)
-    remove_key_team_table()
+        json.dump(team_stats_r, file, indent=4)
 
 team()
+
+
+
+
 
 
 

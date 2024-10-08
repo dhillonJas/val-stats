@@ -226,4 +226,11 @@ def test_total_team_kills():
             total_kills += player['player_both_kills']
     return total_kills
 
-print(test_total_team_kills())
+
+def get_team_names_id():
+    team_data = open_file('src/data/team_data.json')
+    teams = []
+    for team_id, team in team_data.items():
+        teams.append(team['team_name'])
+    
+    print(teams)

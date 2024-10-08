@@ -14,7 +14,7 @@ function DropdownComp({ selectedValue, setSelectedValue, options }) {
       {selectedValue}
       </Dropdown.Toggle>
 
-      <Dropdown.Menu>
+      <Dropdown.Menu style={{ maxHeight: '200px', overflowY: 'auto' }}>
         {options.map((option, index) => (
           <Dropdown.Item key={index} eventKey={option}>{option}</Dropdown.Item>
         ))}

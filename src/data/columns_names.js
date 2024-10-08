@@ -68,8 +68,8 @@ export const teams_columns = {
         "Map Picks Lost" :  { value:"map_picks_lost",    type:INTEGER },
         "Rounds Won" :      { value:"rounds_won",        type:ROUND_SIDES },
         "Rounds Lost" :     { value:"rounds_lost",       type:ROUND_SIDES },
-        // "Rounds Lost" :      { value:"matches_won",      type:ROUND_SIDES },
-        // "Rounds Lost" :      { value:"matches_lost",      type:ROUND_SIDES },
+        // "Matches Won" :      { value:"matches_won",      type:ROUND_SIDES },
+        // "Matches Lost" :      { value:"matches_lost",      type:ROUND_SIDES },
 
     },
     Advanced:{
