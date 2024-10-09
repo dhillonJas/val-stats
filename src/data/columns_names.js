@@ -96,11 +96,32 @@ export const teams_columns = {
 
 export const player_columns = {
     Information:{
-        "Name":             { value:"player_name",          type:STRING },
-        "Team":             { value:"player_team",          type:STRING },
-        "Kills":            { value:"player_both_kills",    type:INTEGER }
+        "Name":             { value:"player_name",  type:STRING },
+        "Team":             { value:"player_team",  type:STRING },
+        "Kills":            { value:"kills",        type:STAT_SIDES },
+        "Deaths":           { value:"deaths",       type:STAT_SIDES },
+        "Assists":          { value:"assists",       type:STAT_SIDES },
+        "Kill Diff":        { value:"diffs",        type:STAT_SIDES },
+        "Average Rating":   { value:"rating",       type:STAT_SIDES },
+        "ADR":              { value:"adr",          type:STAT_SIDES },
+        "ACS":              { value:"acs",          type:STAT_SIDES },
+        "Kill Assists":     { value:"kast",         type:STAT_SIDES },
+        "Headshot %":       { value:"hsp",          type:STAT_SIDES },
+        "First Kills":      { value:"first_kills",  type:STAT_SIDES },
+        "First Deaths":     { value:"first_deaths", type:STAT_SIDES },
+
     },
     Advanced:{
-        "Deaths":           { value:"player_both_deaths",    type:INTEGER }
+        "Name":             { value:"player_name",  type:STRING },
+        "Team":             { value:"player_team",  type:STRING },
+        "Aces" :            { value:"Aces",         type:INTEGER },
+        "2K" :              { value:"2k",           type:INTEGER },
+        "3K" :              { value:"3k",           type:INTEGER },
+        "4K" :              { value:"4k",           type:INTEGER },
+        "1v1" :             { value:"1v1",          type:INTEGER },
+        "1v2" :             { value:"1v2",          type:INTEGER },
+        "1v3" :             { value:"1v3",          type:INTEGER },
+        "1v4" :             { value:"1v4",          type:INTEGER },
+        "1v5" :             { value:"1v5",          type:INTEGER }
     }
 }

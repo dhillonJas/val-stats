@@ -234,3 +234,16 @@ def get_team_names_id():
         teams.append(team['team_name'])
     
     print(teams)
+
+
+def get_player_names():
+    player_data = open_file('src/data/player_data.json')
+
+    players = set()
+    agents = set()
+    for player in player_data:
+        players.add(player['player_name'])
+        agents.add(player['player_agent'])
+    return agents
+
+print(get_player_names())

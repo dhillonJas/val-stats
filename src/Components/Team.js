@@ -5,6 +5,7 @@ import { Maps, Events, Teams, Regions } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import { INFORMATION, ADVANCED, teams_columns } from '../data/columns_names';
 
+
 function Team({ onFilter, onViewModeChange}) {
 
   const ALL = 'All'
@@ -155,11 +156,11 @@ function Team({ onFilter, onViewModeChange}) {
         )
         setDataToShow(sumFilteredData(dataToSum))
     }
-    }, [ event, mapName, opponent, region])
+    })
 
 useEffect(() => {
   handleFilter()
-}, [handleFilter, event, mapName, opponent]);
+}, [handleFilter, event, mapName, opponent, region]);
 
 
   useEffect(() => {

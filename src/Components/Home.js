@@ -44,7 +44,7 @@ const Home = () => {
       {
         selectedButton === 'Player' && (
           <div>
-            <Player onFilter={handleFilter}> </Player>
+            <Player onFilter={handleFilter} onViewModeChange={handleColumnChange}> </Player>
           </div>
         
       )}      
