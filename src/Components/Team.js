@@ -156,7 +156,7 @@ function Team({ onFilter, onViewModeChange}) {
         )
         setDataToShow(sumFilteredData(dataToSum))
     }
-    })
+    }, [event, mapName, opponent, region])
 
 useEffect(() => {
   handleFilter()

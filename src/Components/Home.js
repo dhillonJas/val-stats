@@ -24,7 +24,7 @@ const Home = () => {
     <div className="home">      
       <div className="buttons">
         <button className="grid-button" onClick={() => setSelectedButton('Team')}>Team</button>
-        <button className="grid-button" onClick={() => setSelectedButton('Map')}>Map</button>
+        <button disabled>Coming Soon</button>
         <button className="grid-button" onClick={() => setSelectedButton('Event')}>Event</button>
         <button className="grid-button" onClick={() => setSelectedButton('Player')}>Player</button>
       </div>

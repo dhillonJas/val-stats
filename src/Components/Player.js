@@ -136,22 +136,22 @@ function Player({ onFilter , onViewModeChange }) {
       filtered_data = player_data.filter(player => player.event_name === event)
 
     if (mapName !== ALL)
-      filtered_data = player_data.filter(player => player.map_name === event)
+      filtered_data = player_data.filter(player => player.map_name === mapName)
 
     if (opponent !== ALL)
-      filtered_data = player_data.filter(player => player.opponent_name === event)
+      filtered_data = player_data.filter(player => player.opponent_name === opponent)
 
     if (region !== ALL)
-      filtered_data = player_data.filter(player => player.opponent_region === event)
+      filtered_data = player_data.filter(player => player.opponent_region === region)
 
     if (agent !== ALL)
-      filtered_data = player_data.filter(player => player.player_agent === event)
+      filtered_data = player_data.filter(player => player.player_agent === agent)
 
     if (bestOf !== ALL)
-      filtered_data = player_data.filter(player => player.match_length === event)
+      filtered_data = player_data.filter(player => player.match_length === bestOf)
 
     setDataToShow(get_data(filtered_data))
-    })
+    },[event, mapName, opponent, region, agent, bestOf])
 
 
     useEffect(() => {
@@ -196,7 +196,7 @@ function Player({ onFilter , onViewModeChange }) {
         Best of:
         <DropdownComp   selectedValue={bestOf}
                         setSelectedValue={setbestOf}
-                        options={['Bo3', 'Bo5']}> 
+                        options={['All','Bo3', 'Bo5']}> 
         </DropdownComp>
         Agent
         <DropdownComp   selectedValue={agent}
