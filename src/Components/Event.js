@@ -1,6 +1,6 @@
 import React, { useState , useEffect} from 'react';
 import Button from 'react-bootstrap/Button'
-
+import './css/toggle_button.css'
 import event_data from '../data/tables/event_table.json'
 import { INFORMATION, ADVANCED, events_columns } from '../data/columns_names';
 
@@ -19,7 +19,9 @@ function Event({ onFilter, onViewModeChange}) {
   };
   return (
     <div>
-        <Button variant="dark"   onClick={handleClick}>
+        <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`} 
+                variant="dark"   
+                onClick={handleClick}>
         {isAdvanced ? ADVANCED : INFORMATION}
        </Button>
     </div>

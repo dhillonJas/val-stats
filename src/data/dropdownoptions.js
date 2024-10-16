@@ -91,6 +91,6 @@ export const Players = ['kiNgg', 'MrFaliN', 'Wolfen', 'Nivera', 'jzz', 'Russ', '
                         'Alfajer', 'cgrs', 'sScary', 'hfmi0dzjc9z7', 'paTiTek', 'SkRossi', 'penny', 
                         'SugarZ3ro', 'Derke', 'SouhcNi', 'bang', 'blaZek1ng', 'johnqt', 'Tacolilla']
 
-export const Agents = ['Neon', 'Deadlock', 'Sage', 'Killjoy', 'Skye', 'Clove', 'Omen', 'Breach', 
+export const Agents = ['All','Neon', 'Deadlock', 'Sage', 'Killjoy', 'Skye', 'Clove', 'Omen', 'Breach', 
                       'Brimstone', 'Harbor', 'Jett', 'Astra', 'Raze', 'Chamber', 'Cypher', 'Fade', 
                       'Yoru', 'Iso', 'Viper', 'Sova', 'Phoenix', 'Gekko', 'Reyna', 'Kayo']

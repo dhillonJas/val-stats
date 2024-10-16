@@ -1,8 +1,7 @@
-import './DataTable.css';
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES} from '../data/columns_names'
-
+import './css/table.css'
 const DataTable = ({data, columns, selectedButton}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc', type:'' });
@@ -226,8 +225,9 @@ const DataTable = ({data, columns, selectedButton}) => {
 
 
   return (
-    <div style={{ overflowX: 'auto' }}>
-      <Table striped bordered hover>
+      <div>
+    <div className='table-wrapper' style={{ overflowX: 'auto' }}>
+      <Table className='fl-table'>
       <thead>
         <tr>
           {Object.keys(columns).map((column) => (
@@ -258,7 +258,7 @@ const DataTable = ({data, columns, selectedButton}) => {
           ))}
         </tbody>
       </Table>
-
+      </div>
       {/* Pagination Control */}
       <Pagination>
         <Pagination.First onClick={() => handlePageChange(1)} disabled={currentPage === 1} />

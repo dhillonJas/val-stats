@@ -4,7 +4,7 @@ import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
-
+import './css/tab.css'
 const Home = () => {
 
   const [selectedButton, setSelectedButton] = useState('Event');
@@ -21,12 +21,12 @@ const Home = () => {
   
 
   return (
-    <div className="home">      
-      <div className="buttons">
-        <button className="grid-button" onClick={() => setSelectedButton('Team')}>Team</button>
-        <button disabled>Coming Soon</button>
-        <button className="grid-button" onClick={() => setSelectedButton('Event')}>Event</button>
-        <button className="grid-button" onClick={() => setSelectedButton('Player')}>Player</button>
+    <div style={{padding:10}}>      
+      <div className="tabs-container">
+        <button className={`tab ${selectedButton === 'Team' ? 'active' : ''}`} onClick={() => setSelectedButton('Team')}>Team</button>
+        <button className={`tab ${selectedButton === 'Event' ? 'active' : ''}`} onClick={() => setSelectedButton('Event')}>Event</button>
+        <button className={`tab ${selectedButton === 'Player' ? 'active' : ''}`} onClick={() => setSelectedButton('Player')}>Player</button>
+        {/* <button disabled>Coming Soon</button> */}
       </div>
 
       {selectedButton === 'Team' && (
