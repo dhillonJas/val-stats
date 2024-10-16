@@ -13,8 +13,10 @@ function get_data(data){
         acc[curr['player_name']] = { 
             player_name: curr['player_name'],
             player_team: curr['player_team'],
+            prev_teams: [],
             maps_won: 0,
-            matches_won: 0,
+            maps_lost: 0,
+            maps_played: 0,
             kills: {all: 0, attack:  0, defense: 0},
             deaths: {all: 0, attack:  0, defense: 0},
             assists: {all: 0, attack:  0, defense: 0},
@@ -39,7 +41,12 @@ function get_data(data){
             '1v5': 0,
          };
     }
+
+    
     let name_key = curr['player_name']
+
+    if (!acc[name_key].prev_teams.includes(curr.player_team + ',\n'))
+      acc[name_key].prev_teams.push(curr.player_team + ',\n')
 
     acc[name_key].kills.attack += curr.kills.attack
     acc[name_key].kills.defense += curr.kills.defense
@@ -89,7 +96,8 @@ function get_data(data){
     acc[name_key].rounds_played.defense += curr.rounds_played.defense
 
     acc[name_key].maps_won += curr.map_won ? 1 : 0
-    acc[name_key].matches_won += curr.match_won ? 1 : 0
+    acc[name_key].maps_lost += curr.map_won ? 0 : 1
+    acc[name_key].maps_played += 1 
 
     acc[name_key].Aces += curr.Aces;
     acc[name_key]['2k'] += curr['2k'];
@@ -107,6 +115,9 @@ function get_data(data){
 
   const weightAverageCols = ['acs', 'adr', 'hsp', 'rating', 'kast']
   Object.values(players).forEach((player) => {
+
+    player['prev_teams'][player['prev_teams'].length - 1] = player['prev_teams'][player['prev_teams'].length - 1].replace(',', '');
+
     weightAverageCols.forEach((column) => {
       player[column].attack = (player[column].attack / player['rounds_played'].attack).toFixed(2)
       player[column].defense = (player[column].defense / player['rounds_played'].defense).toFixed(2)
@@ -152,7 +163,7 @@ function Player({ onFilter , onViewModeChange }) {
     if (bestOf !== ALL)
       filtered_data = filtered_data.filter(player => player.match_length === bestOf)
 
-    console.log(filtered_data)
+    
     setDataToShow(get_data(filtered_data))
     },[event, mapName, opponent, region, agent, bestOf])
 
