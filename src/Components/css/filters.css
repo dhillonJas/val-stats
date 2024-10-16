@@ -1,0 +1,61 @@
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;                             
+    margin-bottom: 20px;
+  }
+
+  .filter-dropdown .dropdown-toggle {
+    background-color: #E3F2FD;        
+    border: none;                     
+    border-bottom: 3px solid #ff4654; 
+    color: #333;                      
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+  }
+  
+  /* Hover effect: slightly darker background color */
+  .filter-dropdown .dropdown-toggle:hover {
+    background-color: #BBDEFB;
+  }
+  
+  /* When an option is selected, outline in red */
+  .filter-dropdown .dropdown-toggle:focus,
+  .filter-dropdown .dropdown-toggle:active {
+    outline: 2px solid #ff4654;
+    background-color: #E3F2FD;
+  }
+  
+  /* Dropdown menu (items) */
+  .filter-dropdown .dropdown-menu {
+    background-color: white;         /* White background for options */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Each dropdown item */
+  .filter-dropdown .dropdown-item {
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for dropdown items */
+  .filter-dropdown .dropdown-item:hover {
+    background-color: #E3F2FD;
+  }
+
+  .filter-label {
+    font-size: 16px;             
+    font-weight: bold;           
+    color: #333;              
+    margin-right: 10px;         
+    text-transform: uppercase;   
+    letter-spacing: 1px;         
+    vertical-align: middle;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  

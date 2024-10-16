@@ -4,7 +4,8 @@ import team_data from '../data/tables/team_table.json'
 import { Maps, Events, Teams, Regions } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import { INFORMATION, ADVANCED, teams_columns } from '../data/columns_names';
-
+import './css/toggle_button.css'
+import './css/filters.css'
 
 function Team({ onFilter, onViewModeChange}) {
 
@@ -175,29 +176,33 @@ useEffect(() => {
 
   return (
     <div>
-       <Button variant="dark"   onClick={handleClick}>
+       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
+               variant="dark"  
+               onClick={handleClick}>
         {isAdvanced ? ADVANCED : INFORMATION}
        </Button>
-       Event:
-        <DropdownComp   selectedValue={event}
-                        setSelectedValue={setEvent}
-                        options={Events}> 
-        </DropdownComp>
-        Map:
-        <DropdownComp   selectedValue={mapName}
-                        setSelectedValue={setMapName}
-                        options={Maps}> 
-        </DropdownComp>
-        Against (opponent):
-        <DropdownComp   selectedValue={opponent}
-                        setSelectedValue={setOpponent}
-                        options={Teams}> 
-        </DropdownComp>
-        Against region:
-        <DropdownComp   selectedValue={region}
-                        setSelectedValue={setRegion}
-                        options={Regions}> 
-        </DropdownComp>
+       <div className='filter-container'>
+        Event:
+          <DropdownComp   selectedValue={event}
+                          setSelectedValue={setEvent}
+                          options={Events}> 
+          </DropdownComp>
+          Map:
+          <DropdownComp   selectedValue={mapName}
+                          setSelectedValue={setMapName}
+                          options={Maps}> 
+          </DropdownComp>
+          Against (opponent):
+          <DropdownComp   selectedValue={opponent}
+                          setSelectedValue={setOpponent}
+                          options={Teams}> 
+          </DropdownComp>
+          Against region:
+          <DropdownComp   selectedValue={region}
+                          setSelectedValue={setRegion}
+                          options={Regions}> 
+          </DropdownComp>
+      </div>
     </div>
 
   );

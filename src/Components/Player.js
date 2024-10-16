@@ -4,6 +4,8 @@ import player_data from '../data/tables/player_table.json'
 import { INFORMATION, ADVANCED, player_columns } from '../data/columns_names';
 import { Maps, Events, Teams, Regions, Agents } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
+import './css/filters.css'
+import './css/toggle_button.css'
 
 function get_data(data){
   const players = data.reduce((acc, curr) => {
@@ -133,23 +135,24 @@ function Player({ onFilter , onViewModeChange }) {
     let filtered_data = player_data
 
     if (event !== ALL)
-      filtered_data = player_data.filter(player => player.event_name === event)
+      filtered_data = filtered_data.filter(player => player.event_name === event)
 
     if (mapName !== ALL)
-      filtered_data = player_data.filter(player => player.map_name === mapName)
+      filtered_data = filtered_data.filter(player => player.map_name === mapName)
 
     if (opponent !== ALL)
-      filtered_data = player_data.filter(player => player.opponent_name === opponent)
+      filtered_data = filtered_data.filter(player => player.opponent_name === opponent)
 
     if (region !== ALL)
-      filtered_data = player_data.filter(player => player.opponent_region === region)
+      filtered_data = filtered_data.filter(player => player.opponent_region === region)
 
     if (agent !== ALL)
-      filtered_data = player_data.filter(player => player.player_agent === agent)
+      filtered_data = filtered_data.filter(player => player.player_agent === agent)
 
     if (bestOf !== ALL)
-      filtered_data = player_data.filter(player => player.match_length === bestOf)
+      filtered_data = filtered_data.filter(player => player.match_length === bestOf)
 
+    console.log(filtered_data)
     setDataToShow(get_data(filtered_data))
     },[event, mapName, opponent, region, agent, bestOf])
 
@@ -170,39 +173,48 @@ function Player({ onFilter , onViewModeChange }) {
     };
   return (
 <div>
-       <Button variant="dark"   onClick={handleClick}>
+       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
+               variant="dark"   
+               onClick={handleClick}>
         {isAdvanced ? ADVANCED : INFORMATION}
        </Button>
-       Event:
-        <DropdownComp   selectedValue={event}
-                        setSelectedValue={setEvent}
-                        options={Events}> 
-        </DropdownComp>
-        Map:
-        <DropdownComp   selectedValue={mapName}
-                        setSelectedValue={setMapName}
-                        options={Maps}> 
-        </DropdownComp>
-        Against (opponent):
-        <DropdownComp   selectedValue={opponent}
-                        setSelectedValue={setOpponent}
-                        options={Teams}> 
-        </DropdownComp>
-        Against region:
-        <DropdownComp   selectedValue={region}
-                        setSelectedValue={setRegion}
-                        options={Regions}> 
-        </DropdownComp>
-        Best of:
-        <DropdownComp   selectedValue={bestOf}
-                        setSelectedValue={setbestOf}
-                        options={['All','Bo3', 'Bo5']}> 
-        </DropdownComp>
-        Agent
-        <DropdownComp   selectedValue={agent}
-                        setSelectedValue={setAgent}
-                        options={Agents}> 
-        </DropdownComp>
+       <div className='filter-container'>
+        <span className="filter-label">Event</span>
+          <DropdownComp   selectedValue={event}
+                          setSelectedValue={setEvent}
+                          options={Events}> 
+          </DropdownComp>
+
+          <span className="filter-label">Map</span>
+          <DropdownComp   selectedValue={mapName}
+                          setSelectedValue={setMapName}
+                          options={Maps}> 
+          </DropdownComp>
+
+          <span className="filter-label">Opponent</span>
+          <DropdownComp   selectedValue={opponent}
+                          setSelectedValue={setOpponent}
+                          options={Teams}> 
+          </DropdownComp>
+          
+          <span className="filter-label">Opponent Region</span>
+          <DropdownComp   selectedValue={region}
+                          setSelectedValue={setRegion}
+                          options={Regions}> 
+          </DropdownComp>
+
+          <span className="filter-label">Best Of</span>
+          <DropdownComp   selectedValue={bestOf}
+                          setSelectedValue={setbestOf}
+                          options={['All','Bo3', 'Bo5']}> 
+          </DropdownComp>
+
+          <span className="filter-label">Agent</span>
+          <DropdownComp   selectedValue={agent}
+                          setSelectedValue={setAgent}
+                          options={Agents}> 
+          </DropdownComp>
+        </div>
     </div>
 
   );
