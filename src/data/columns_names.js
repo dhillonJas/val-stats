@@ -27,7 +27,7 @@ export const events_columns = {
         "Event Link":       { value:"event_link",           type:LINK}
     },
     Advanced: {
-        "Name":                  { value:"event_name",          type:STRING },
+        "Event":                  { value:"event_name",         type:STRING },
         "Total Matches Played":  { value:"event_matches_played",type:STRING },
         "Total Maps Played":     { value:"event_maps_played",   type:STRING },
         "Total Kills":           { value:"event_kills",         type:INTEGER },
@@ -57,7 +57,7 @@ export const events_columns = {
 
 export const teams_columns = {
     Information:{
-        "Name" :            { value:"name",              type:STRING },
+        "Team" :            { value:"name",              type:STRING },
         "Region":           { value:"region",            type:STRING },
         "Events Attended":  { value:"events_attended",   type:LIST },
         "Events Won":       { value:"events_won",        type:STRING },
@@ -73,7 +73,7 @@ export const teams_columns = {
 
     },
     Advanced:{
-        "Name" :            { value:"name",              type:STRING },
+        "Team" :            { value:"name",              type:STRING },
         "Region":           { value:"region",            type:STRING },
         "Kills" :           { value:"kills",             type:STAT_SIDES },
         "Deaths" :          { value:"deaths",            type:STAT_SIDES },
@@ -96,7 +96,7 @@ export const teams_columns = {
 
 export const player_columns = {
     Information:{
-        "Name":             { value:"player_name",  type:STRING },
+        "Player":           { value:"player_name",  type:STRING },
         "Team":             { value:"player_team",  type:STRING },
         "All previous teams":{ value:"prev_teams",  type:STRING },
         "Maps played":      { value:"maps_played",  type:INTEGER },    
@@ -116,7 +116,7 @@ export const player_columns = {
 
     },
     Advanced:{
-        "Name":             { value:"player_name",  type:STRING },
+        "Player":           { value:"player_name",  type:STRING },
         "Team":             { value:"player_team",  type:STRING },
         "Aces" :            { value:"Aces",         type:INTEGER },
         "2K" :              { value:"2k",           type:INTEGER },

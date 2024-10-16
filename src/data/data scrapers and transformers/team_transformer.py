@@ -99,16 +99,32 @@ def team_map_stats(maps):
             team_stats[map['map_loser_id']]['map_picks_lost'] += 1
 
         team_stats[map['map_winner_id']]['rounds_won']['all'] += map['map_winner_score']
-        team_stats[map['map_loser_id']]['rounds_lost']['all'] += map['map_loser_score']
+        team_stats[map['map_loser_id']]['rounds_won']['all'] += map['map_loser_score']
        
         team_stats[map['map_winner_id']]['rounds_won']['attack'] += map['map_winner_attack_rounds']
-        team_stats[map['map_loser_id']]['rounds_lost']['attack'] += map['map_loser_attack_rounds']
+        team_stats[map['map_loser_id']]['rounds_won']['attack'] += map['map_loser_attack_rounds']
         
         team_stats[map['map_winner_id']]['rounds_won']['defense'] += map['map_winner_defense_rounds']
-        team_stats[map['map_loser_id']]['rounds_lost']['defense'] += map['map_loser_defense_rounds']
+        team_stats[map['map_loser_id']]['rounds_won']['defense'] += map['map_loser_defense_rounds']
 
         team_stats[map['map_winner_id']]['rounds_won']['overtime'] += map['map_winner_overtime_rounds']
-        team_stats[map['map_loser_id']]['rounds_lost']['overtime'] += map['map_loser_overtime_rounds']
+        team_stats[map['map_loser_id']]['rounds_won']['overtime'] += map['map_loser_overtime_rounds']
+
+
+
+        team_stats[map['map_winner_id']]['rounds_lost']['all'] += map['map_loser_score']
+        team_stats[map['map_loser_id']]['rounds_lost']['all'] += map['map_winner_score']
+       
+        team_stats[map['map_winner_id']]['rounds_lost']['attack'] += map['map_loser_attack_rounds']
+        team_stats[map['map_loser_id']]['rounds_lost']['attack'] += map['map_winner_attack_rounds']
+        
+        team_stats[map['map_winner_id']]['rounds_lost']['defense'] += map['map_loser_defense_rounds']
+        team_stats[map['map_loser_id']]['rounds_lost']['defense'] += map['map_winner_defense_rounds']
+
+        team_stats[map['map_winner_id']]['rounds_lost']['overtime'] += map['map_loser_overtime_rounds']
+        team_stats[map['map_loser_id']]['rounds_lost']['overtime'] += map['map_winner_overtime_rounds']
+
+        
 
 def team_match_stats(matches):
     for match in matches:

@@ -7,16 +7,16 @@
         "map_picks_won": 8,
         "map_picks_lost": 9,
         "rounds_won": {
-            "attack": 172,
-            "defense": 166,
-            "overtime": 0,
-            "all": 338
+            "attack": 259,
+            "defense": 234,
+            "overtime": 2,
+            "all": 495
         },
         "rounds_lost": {
-            "attack": 87,
-            "defense": 68,
-            "overtime": 2,
-            "all": 157
+            "attack": 212,
+            "defense": 202,
+            "overtime": 8,
+            "all": 422
         },
         "matches_won": {
             "Bo3": 10,
@@ -3087,16 +3087,16 @@
         "map_picks_won": 22,
         "map_picks_lost": 9,
         "rounds_won": {
-            "attack": 271,
-            "defense": 269,
-            "overtime": 15,
-            "all": 555
+            "attack": 386,
+            "defense": 372,
+            "overtime": 16,
+            "all": 774
         },
         "rounds_lost": {
-            "attack": 115,
-            "defense": 103,
-            "overtime": 1,
-            "all": 219
+            "attack": 348,
+            "defense": 332,
+            "overtime": 10,
+            "all": 690
         },
         "matches_won": {
             "Bo3": 14,
@@ -7704,16 +7704,16 @@
         "map_picks_won": 17,
         "map_picks_lost": 6,
         "rounds_won": {
-            "attack": 220,
-            "defense": 216,
-            "overtime": 18,
-            "all": 454
+            "attack": 311,
+            "defense": 312,
+            "overtime": 19,
+            "all": 642
         },
         "rounds_lost": {
-            "attack": 91,
-            "defense": 96,
-            "overtime": 1,
-            "all": 188
+            "attack": 314,
+            "defense": 251,
+            "overtime": 9,
+            "all": 574
         },
         "matches_won": {
             "Bo3": 10,
@@ -11586,16 +11586,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 9,
         "rounds_won": {
-            "attack": 48,
-            "defense": 29,
-            "overtime": 4,
-            "all": 81
+            "attack": 136,
+            "defense": 103,
+            "overtime": 8,
+            "all": 247
         },
         "rounds_lost": {
-            "attack": 88,
-            "defense": 74,
-            "overtime": 4,
-            "all": 166
+            "attack": 160,
+            "defense": 135,
+            "overtime": 14,
+            "all": 309
         },
         "matches_won": {
             "Bo3": 1,
@@ -13497,16 +13497,16 @@
         "map_picks_won": 12,
         "map_picks_lost": 15,
         "rounds_won": {
-            "attack": 132,
-            "defense": 152,
-            "overtime": 5,
-            "all": 289
+            "attack": 281,
+            "defense": 305,
+            "overtime": 13,
+            "all": 599
         },
         "rounds_lost": {
-            "attack": 149,
-            "defense": 153,
-            "overtime": 8,
-            "all": 310
+            "attack": 372,
+            "defense": 324,
+            "overtime": 19,
+            "all": 715
         },
         "matches_won": {
             "Bo3": 9,
@@ -18040,16 +18040,16 @@
         "map_picks_won": 23,
         "map_picks_lost": 15,
         "rounds_won": {
-            "attack": 374,
-            "defense": 309,
-            "overtime": 24,
-            "all": 707
+            "attack": 530,
+            "defense": 481,
+            "overtime": 27,
+            "all": 1038
         },
         "rounds_lost": {
-            "attack": 156,
-            "defense": 172,
-            "overtime": 3,
-            "all": 331
+            "attack": 422,
+            "defense": 487,
+            "overtime": 21,
+            "all": 930
         },
         "matches_won": {
             "Bo3": 22,
@@ -24845,16 +24845,16 @@
         "map_picks_won": 31,
         "map_picks_lost": 17,
         "rounds_won": {
-            "attack": 468,
-            "defense": 395,
-            "overtime": 24,
-            "all": 887
+            "attack": 681,
+            "defense": 576,
+            "overtime": 27,
+            "all": 1284
         },
         "rounds_lost": {
-            "attack": 213,
-            "defense": 181,
-            "overtime": 3,
-            "all": 397
+            "attack": 554,
+            "defense": 546,
+            "overtime": 21,
+            "all": 1121
         },
         "matches_won": {
             "Bo3": 25,
@@ -32751,16 +32751,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 5,
         "rounds_won": {
-            "attack": 32,
-            "defense": 31,
+            "attack": 66,
+            "defense": 66,
             "overtime": 5,
-            "all": 68
+            "all": 137
         },
         "rounds_lost": {
-            "attack": 34,
-            "defense": 35,
-            "overtime": 0,
-            "all": 69
+            "attack": 89,
+            "defense": 88,
+            "overtime": 1,
+            "all": 178
         },
         "matches_won": {
             "Bo3": 2,
@@ -33929,16 +33929,16 @@
         "map_picks_won": 16,
         "map_picks_lost": 5,
         "rounds_won": {
-            "attack": 150,
-            "defense": 194,
-            "overtime": 24,
-            "all": 368
+            "attack": 236,
+            "defense": 280,
+            "overtime": 28,
+            "all": 544
         },
         "rounds_lost": {
-            "attack": 86,
-            "defense": 86,
-            "overtime": 4,
-            "all": 176
+            "attack": 271,
+            "defense": 258,
+            "overtime": 22,
+            "all": 551
         },
         "matches_won": {
             "Bo3": 10,
@@ -37446,16 +37446,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 23,
-            "defense": 42,
+            "attack": 43,
+            "defense": 71,
             "overtime": 0,
-            "all": 65
+            "all": 114
         },
         "rounds_lost": {
-            "attack": 20,
-            "defense": 29,
+            "attack": 57,
+            "defense": 71,
             "overtime": 0,
-            "all": 49
+            "all": 128
         },
         "matches_won": {
             "Bo3": 2,
@@ -38332,16 +38332,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 24,
-            "defense": 27,
+            "attack": 44,
+            "defense": 48,
             "overtime": 3,
-            "all": 54
+            "all": 95
         },
         "rounds_lost": {
-            "attack": 20,
-            "defense": 21,
-            "overtime": 0,
-            "all": 41
+            "attack": 58,
+            "defense": 54,
+            "overtime": 1,
+            "all": 113
         },
         "matches_won": {
             "Bo3": 2,
@@ -39144,16 +39144,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 38,
-            "defense": 27,
-            "overtime": 0,
-            "all": 65
+            "attack": 69,
+            "defense": 55,
+            "overtime": 3,
+            "all": 127
         },
         "rounds_lost": {
-            "attack": 31,
-            "defense": 28,
-            "overtime": 3,
-            "all": 62
+            "attack": 50,
+            "defense": 69,
+            "overtime": 9,
+            "all": 128
         },
         "matches_won": {
             "Bo3": 2,
@@ -40103,16 +40103,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 8,
         "rounds_won": {
-            "attack": 77,
-            "defense": 78,
-            "overtime": 2,
-            "all": 157
+            "attack": 136,
+            "defense": 116,
+            "overtime": 4,
+            "all": 256
         },
         "rounds_lost": {
-            "attack": 59,
-            "defense": 38,
-            "overtime": 2,
-            "all": 99
+            "attack": 150,
+            "defense": 134,
+            "overtime": 4,
+            "all": 288
         },
         "matches_won": {
             "Bo3": 6,
@@ -41792,16 +41792,16 @@
         "map_picks_won": 18,
         "map_picks_lost": 23,
         "rounds_won": {
-            "attack": 343,
-            "defense": 324,
-            "overtime": 23,
-            "all": 690
+            "attack": 539,
+            "defense": 490,
+            "overtime": 24,
+            "all": 1053
         },
         "rounds_lost": {
-            "attack": 196,
-            "defense": 166,
-            "overtime": 1,
-            "all": 363
+            "attack": 532,
+            "defense": 546,
+            "overtime": 12,
+            "all": 1090
         },
         "matches_won": {
             "Bo3": 19,
@@ -49038,16 +49038,16 @@
         "map_picks_won": 14,
         "map_picks_lost": 14,
         "rounds_won": {
-            "attack": 268,
-            "defense": 197,
-            "overtime": 9,
-            "all": 474
+            "attack": 429,
+            "defense": 338,
+            "overtime": 15,
+            "all": 782
         },
         "rounds_lost": {
-            "attack": 161,
-            "defense": 141,
-            "overtime": 6,
-            "all": 308
+            "attack": 368,
+            "defense": 383,
+            "overtime": 25,
+            "all": 776
         },
         "matches_won": {
             "Bo3": 12,
@@ -54165,16 +54165,16 @@
         "map_picks_won": 6,
         "map_picks_lost": 12,
         "rounds_won": {
-            "attack": 108,
-            "defense": 110,
-            "overtime": 6,
-            "all": 224
+            "attack": 210,
+            "defense": 200,
+            "overtime": 7,
+            "all": 417
         },
         "rounds_lost": {
-            "attack": 102,
-            "defense": 90,
-            "overtime": 1,
-            "all": 193
+            "attack": 229,
+            "defense": 227,
+            "overtime": 5,
+            "all": 461
         },
         "matches_won": {
             "Bo3": 7,
@@ -57244,16 +57244,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 6,
         "rounds_won": {
-            "attack": 48,
-            "defense": 29,
+            "attack": 96,
+            "defense": 97,
             "overtime": 2,
-            "all": 79
+            "all": 195
         },
         "rounds_lost": {
-            "attack": 48,
-            "defense": 68,
-            "overtime": 0,
-            "all": 116
+            "attack": 114,
+            "defense": 130,
+            "overtime": 4,
+            "all": 248
         },
         "matches_won": {
             "Bo3": 2,
@@ -58643,16 +58643,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 15,
             "defense": 17,
             "overtime": 0,
             "all": 32
+        },
+        "rounds_lost": {
+            "attack": 25,
+            "defense": 26,
+            "overtime": 2,
+            "all": 53
         },
         "matches_won": {
             "Bo3": 0,
@@ -59017,16 +59017,16 @@
         "map_picks_won": 7,
         "map_picks_lost": 8,
         "rounds_won": {
-            "attack": 92,
-            "defense": 113,
-            "overtime": 6,
-            "all": 211
+            "attack": 164,
+            "defense": 180,
+            "overtime": 11,
+            "all": 355
         },
         "rounds_lost": {
-            "attack": 72,
-            "defense": 67,
-            "overtime": 5,
-            "all": 144
+            "attack": 195,
+            "defense": 169,
+            "overtime": 9,
+            "all": 373
         },
         "matches_won": {
             "Bo3": 8,
@@ -61511,16 +61511,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 32,
-            "defense": 33,
+            "attack": 67,
+            "defense": 65,
             "overtime": 0,
-            "all": 65
+            "all": 132
         },
         "rounds_lost": {
-            "attack": 35,
-            "defense": 32,
-            "overtime": 0,
-            "all": 67
+            "attack": 71,
+            "defense": 55,
+            "overtime": 2,
+            "all": 128
         },
         "matches_won": {
             "Bo3": 2,
@@ -62470,16 +62470,16 @@
         "map_picks_won": 25,
         "map_picks_lost": 13,
         "rounds_won": {
-            "attack": 357,
-            "defense": 325,
-            "overtime": 22,
-            "all": 704
+            "attack": 519,
+            "defense": 482,
+            "overtime": 25,
+            "all": 1026
         },
         "rounds_lost": {
-            "attack": 162,
-            "defense": 157,
-            "overtime": 3,
-            "all": 322
+            "attack": 458,
+            "defense": 456,
+            "overtime": 27,
+            "all": 941
         },
         "matches_won": {
             "Bo3": 18,
@@ -68765,16 +68765,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 4,
         "rounds_won": {
-            "attack": 82,
-            "defense": 59,
-            "overtime": 7,
-            "all": 148
+            "attack": 138,
+            "defense": 113,
+            "overtime": 11,
+            "all": 262
         },
         "rounds_lost": {
-            "attack": 56,
-            "defense": 54,
-            "overtime": 4,
-            "all": 114
+            "attack": 133,
+            "defense": 100,
+            "overtime": 15,
+            "all": 248
         },
         "matches_won": {
             "Bo3": 4,
@@ -70455,16 +70455,16 @@
         "map_picks_won": 12,
         "map_picks_lost": 11,
         "rounds_won": {
-            "attack": 145,
-            "defense": 174,
-            "overtime": 20,
-            "all": 339
+            "attack": 245,
+            "defense": 304,
+            "overtime": 23,
+            "all": 572
         },
         "rounds_lost": {
-            "attack": 100,
-            "defense": 130,
-            "overtime": 3,
-            "all": 233
+            "attack": 292,
+            "defense": 303,
+            "overtime": 15,
+            "all": 610
         },
         "matches_won": {
             "Bo3": 10,
@@ -74558,16 +74558,16 @@
         "map_picks_won": 14,
         "map_picks_lost": 5,
         "rounds_won": {
-            "attack": 189,
-            "defense": 185,
-            "overtime": 7,
-            "all": 381
+            "attack": 254,
+            "defense": 267,
+            "overtime": 8,
+            "all": 529
         },
         "rounds_lost": {
-            "attack": 65,
-            "defense": 82,
-            "overtime": 1,
-            "all": 148
+            "attack": 219,
+            "defense": 191,
+            "overtime": 10,
+            "all": 420
         },
         "matches_won": {
             "Bo3": 9,
@@ -77564,16 +77564,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 7,
         "rounds_won": {
-            "attack": 117,
-            "defense": 88,
-            "overtime": 8,
-            "all": 213
+            "attack": 188,
+            "defense": 146,
+            "overtime": 13,
+            "all": 347
         },
         "rounds_lost": {
-            "attack": 71,
-            "defense": 58,
-            "overtime": 5,
-            "all": 134
+            "attack": 166,
+            "defense": 135,
+            "overtime": 17,
+            "all": 318
         },
         "matches_won": {
             "Bo3": 7,
@@ -79838,16 +79838,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 11,
         "rounds_won": {
-            "attack": 69,
-            "defense": 99,
-            "overtime": 2,
-            "all": 170
+            "attack": 144,
+            "defense": 202,
+            "overtime": 4,
+            "all": 350
         },
         "rounds_lost": {
-            "attack": 75,
-            "defense": 103,
-            "overtime": 2,
-            "all": 180
+            "attack": 231,
+            "defense": 204,
+            "overtime": 6,
+            "all": 441
         },
         "matches_won": {
             "Bo3": 6,
@@ -82625,16 +82625,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 43,
-            "defense": 32,
+            "attack": 61,
+            "defense": 54,
             "overtime": 7,
-            "all": 82
+            "all": 122
         },
         "rounds_lost": {
-            "attack": 18,
-            "defense": 22,
-            "overtime": 0,
-            "all": 40
+            "attack": 78,
+            "defense": 57,
+            "overtime": 1,
+            "all": 136
         },
         "matches_won": {
             "Bo3": 2,
@@ -83511,16 +83511,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 4,
-            "defense": 9,
+            "attack": 19,
+            "defense": 22,
             "overtime": 0,
-            "all": 13
+            "all": 41
         },
         "rounds_lost": {
-            "attack": 15,
-            "defense": 13,
+            "attack": 32,
+            "defense": 28,
             "overtime": 0,
-            "all": 28
+            "all": 60
         },
         "matches_won": {
             "Bo3": 0,
@@ -83958,16 +83958,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 14,
             "defense": 6,
             "overtime": 0,
             "all": 20
+        },
+        "rounds_lost": {
+            "attack": 18,
+            "defense": 8,
+            "overtime": 0,
+            "all": 26
         },
         "matches_won": {
             "Bo3": 0,
@@ -84186,16 +84186,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 7,
             "defense": 4,
             "overtime": 0,
             "all": 11
+        },
+        "rounds_lost": {
+            "attack": 13,
+            "defense": 13,
+            "overtime": 0,
+            "all": 26
         },
         "matches_won": {
             "Bo3": 0,
@@ -84414,16 +84414,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 0,
         "rounds_won": {
-            "attack": 4,
-            "defense": 9,
+            "attack": 10,
+            "defense": 13,
             "overtime": 0,
-            "all": 13
+            "all": 23
         },
         "rounds_lost": {
-            "attack": 6,
-            "defense": 4,
+            "attack": 23,
+            "defense": 14,
             "overtime": 0,
-            "all": 10
+            "all": 37
         },
         "matches_won": {
             "Bo3": 0,
@@ -84715,16 +84715,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 45,
-            "defense": 58,
+            "attack": 74,
+            "defense": 91,
             "overtime": 2,
-            "all": 105
+            "all": 167
         },
         "rounds_lost": {
-            "attack": 29,
-            "defense": 33,
-            "overtime": 0,
-            "all": 62
+            "attack": 82,
+            "defense": 74,
+            "overtime": 2,
+            "all": 158
         },
         "matches_won": {
             "Bo3": 3,
@@ -85893,16 +85893,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 9,
             "defense": 10,
             "overtime": 0,
             "all": 19
+        },
+        "rounds_lost": {
+            "attack": 11,
+            "defense": 15,
+            "overtime": 0,
+            "all": 26
         },
         "matches_won": {
             "Bo3": 0,
@@ -86121,16 +86121,16 @@
         "map_picks_won": 4,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 29,
-            "defense": 62,
+            "attack": 47,
+            "defense": 76,
             "overtime": 0,
-            "all": 91
+            "all": 123
         },
         "rounds_lost": {
-            "attack": 18,
-            "defense": 14,
+            "attack": 65,
+            "defense": 54,
             "overtime": 0,
-            "all": 32
+            "all": 119
         },
         "matches_won": {
             "Bo3": 3,
@@ -87153,16 +87153,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 5,
-            "defense": 8,
+            "attack": 8,
+            "defense": 15,
             "overtime": 0,
-            "all": 13
+            "all": 23
         },
         "rounds_lost": {
-            "attack": 3,
-            "defense": 7,
+            "attack": 19,
+            "defense": 16,
             "overtime": 0,
-            "all": 10
+            "all": 35
         },
         "matches_won": {
             "Bo3": 0,
@@ -87454,16 +87454,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 9,
             "defense": 5,
             "overtime": 0,
             "all": 14
+        },
+        "rounds_lost": {
+            "attack": 11,
+            "defense": 15,
+            "overtime": 0,
+            "all": 26
         },
         "matches_won": {
             "Bo3": 0,
@@ -87682,16 +87682,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 5,
         "rounds_won": {
-            "attack": 33,
-            "defense": 32,
-            "overtime": 0,
-            "all": 65
+            "attack": 80,
+            "defense": 75,
+            "overtime": 6,
+            "all": 161
         },
         "rounds_lost": {
-            "attack": 47,
-            "defense": 43,
-            "overtime": 6,
-            "all": 96
+            "attack": 82,
+            "defense": 88,
+            "overtime": 10,
+            "all": 180
         },
         "matches_won": {
             "Bo3": 1,
@@ -88861,16 +88861,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 0,
         "rounds_won": {
-            "attack": 8,
-            "defense": 17,
+            "attack": 22,
+            "defense": 24,
             "overtime": 6,
-            "all": 31
+            "all": 52
         },
         "rounds_lost": {
-            "attack": 14,
-            "defense": 7,
-            "overtime": 0,
-            "all": 21
+            "attack": 25,
+            "defense": 50,
+            "overtime": 4,
+            "all": 79
         },
         "matches_won": {
             "Bo3": 0,
@@ -89381,16 +89381,16 @@
         "map_picks_won": 15,
         "map_picks_lost": 11,
         "rounds_won": {
-            "attack": 243,
-            "defense": 233,
-            "overtime": 13,
-            "all": 489
+            "attack": 337,
+            "defense": 350,
+            "overtime": 22,
+            "all": 709
         },
         "rounds_lost": {
-            "attack": 94,
-            "defense": 117,
-            "overtime": 9,
-            "all": 220
+            "attack": 310,
+            "defense": 314,
+            "overtime": 20,
+            "all": 644
         },
         "matches_won": {
             "Bo3": 12,
@@ -93774,16 +93774,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 49,
-            "defense": 68,
-            "overtime": 0,
-            "all": 117
+            "attack": 86,
+            "defense": 110,
+            "overtime": 3,
+            "all": 199
         },
         "rounds_lost": {
-            "attack": 37,
-            "defense": 42,
-            "overtime": 3,
-            "all": 82
+            "attack": 98,
+            "defense": 100,
+            "overtime": 7,
+            "all": 205
         },
         "matches_won": {
             "Bo3": 3,
@@ -95098,16 +95098,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 4,
         "rounds_won": {
-            "attack": 38,
-            "defense": 40,
-            "overtime": 0,
-            "all": 78
+            "attack": 93,
+            "defense": 92,
+            "overtime": 4,
+            "all": 189
         },
         "rounds_lost": {
-            "attack": 55,
-            "defense": 52,
-            "overtime": 4,
-            "all": 111
+            "attack": 110,
+            "defense": 99,
+            "overtime": 10,
+            "all": 219
         },
         "matches_won": {
             "Bo3": 1,
@@ -96496,16 +96496,16 @@
         "map_picks_won": 10,
         "map_picks_lost": 8,
         "rounds_won": {
-            "attack": 178,
-            "defense": 158,
-            "overtime": 4,
-            "all": 340
+            "attack": 229,
+            "defense": 237,
+            "overtime": 10,
+            "all": 476
         },
         "rounds_lost": {
-            "attack": 51,
-            "defense": 79,
-            "overtime": 6,
-            "all": 136
+            "attack": 215,
+            "defense": 210,
+            "overtime": 10,
+            "all": 435
         },
         "matches_won": {
             "Bo3": 9,
@@ -99501,16 +99501,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 14,
-            "defense": 11,
+            "attack": 32,
+            "defense": 29,
             "overtime": 3,
-            "all": 28
+            "all": 64
         },
         "rounds_lost": {
-            "attack": 18,
-            "defense": 18,
-            "overtime": 0,
-            "all": 36
+            "attack": 50,
+            "defense": 35,
+            "overtime": 1,
+            "all": 86
         },
         "matches_won": {
             "Bo3": 1,
@@ -100094,16 +100094,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 27,
-            "defense": 36,
+            "attack": 47,
+            "defense": 59,
             "overtime": 8,
-            "all": 71
+            "all": 114
         },
         "rounds_lost": {
-            "attack": 20,
-            "defense": 23,
-            "overtime": 0,
-            "all": 43
+            "attack": 49,
+            "defense": 58,
+            "overtime": 8,
+            "all": 115
         },
         "matches_won": {
             "Bo3": 2,
@@ -100906,16 +100906,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 18,
-            "defense": 21,
+            "attack": 34,
+            "defense": 39,
             "overtime": 0,
-            "all": 39
+            "all": 73
         },
         "rounds_lost": {
-            "attack": 16,
-            "defense": 18,
-            "overtime": 0,
-            "all": 34
+            "attack": 41,
+            "defense": 31,
+            "overtime": 2,
+            "all": 74
         },
         "matches_won": {
             "Bo3": 1,
@@ -101499,16 +101499,16 @@
         "map_picks_won": 7,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 82,
-            "defense": 61,
+            "attack": 108,
+            "defense": 101,
             "overtime": 0,
-            "all": 143
+            "all": 209
         },
         "rounds_lost": {
-            "attack": 26,
-            "defense": 40,
+            "attack": 99,
+            "defense": 95,
             "overtime": 0,
-            "all": 66
+            "all": 194
         },
         "matches_won": {
             "Bo3": 5,
@@ -102750,16 +102750,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 7,
-            "defense": 6,
+            "attack": 21,
+            "defense": 28,
             "overtime": 0,
-            "all": 13
+            "all": 49
         },
         "rounds_lost": {
-            "attack": 14,
-            "defense": 22,
+            "attack": 24,
+            "defense": 35,
             "overtime": 0,
-            "all": 36
+            "all": 59
         },
         "matches_won": {
             "Bo3": 0,
@@ -103197,16 +103197,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 66,
-            "defense": 51,
+            "attack": 87,
+            "defense": 77,
             "overtime": 0,
-            "all": 117
+            "all": 164
         },
         "rounds_lost": {
-            "attack": 21,
-            "defense": 26,
+            "attack": 83,
+            "defense": 67,
             "overtime": 0,
-            "all": 47
+            "all": 150
         },
         "matches_won": {
             "Bo3": 3,
@@ -104375,16 +104375,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 13,
             "defense": 16,
             "overtime": 0,
             "all": 29
+        },
+        "rounds_lost": {
+            "attack": 28,
+            "defense": 23,
+            "overtime": 2,
+            "all": 53
         },
         "matches_won": {
             "Bo3": 0,
@@ -104749,16 +104749,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 34,
-            "defense": 30,
+            "attack": 61,
+            "defense": 60,
             "overtime": 2,
-            "all": 66
+            "all": 123
         },
         "rounds_lost": {
-            "attack": 27,
-            "defense": 30,
-            "overtime": 0,
-            "all": 57
+            "attack": 61,
+            "defense": 87,
+            "overtime": 2,
+            "all": 150
         },
         "matches_won": {
             "Bo3": 2,
@@ -105781,16 +105781,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 6,
         "rounds_won": {
-            "attack": 15,
-            "defense": 11,
+            "attack": 56,
+            "defense": 51,
             "overtime": 0,
-            "all": 26
+            "all": 107
         },
         "rounds_lost": {
-            "attack": 41,
-            "defense": 40,
-            "overtime": 0,
-            "all": 81
+            "attack": 86,
+            "defense": 86,
+            "overtime": 2,
+            "all": 174
         },
         "matches_won": {
             "Bo3": 1,
@@ -106814,16 +106814,16 @@
         "map_picks_won": 11,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 155,
-            "defense": 127,
+            "attack": 195,
+            "defense": 167,
             "overtime": 13,
-            "all": 295
+            "all": 375
         },
         "rounds_lost": {
-            "attack": 40,
-            "defense": 40,
-            "overtime": 0,
-            "all": 80
+            "attack": 120,
+            "defense": 160,
+            "overtime": 7,
+            "all": 287
         },
         "matches_won": {
             "Bo3": 8,
@@ -109162,16 +109162,16 @@
         "map_picks_won": 5,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 84,
-            "defense": 57,
-            "overtime": 6,
-            "all": 147
+            "attack": 121,
+            "defense": 91,
+            "overtime": 7,
+            "all": 219
         },
         "rounds_lost": {
-            "attack": 37,
-            "defense": 34,
-            "overtime": 1,
-            "all": 72
+            "attack": 98,
+            "defense": 80,
+            "overtime": 7,
+            "all": 185
         },
         "matches_won": {
             "Bo3": 5,
@@ -110559,16 +110559,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 5,
         "rounds_won": {
-            "attack": 44,
-            "defense": 46,
+            "attack": 90,
+            "defense": 75,
             "overtime": 2,
-            "all": 92
+            "all": 167
         },
         "rounds_lost": {
-            "attack": 46,
-            "defense": 29,
-            "overtime": 0,
-            "all": 75
+            "attack": 88,
+            "defense": 80,
+            "overtime": 2,
+            "all": 170
         },
         "matches_won": {
             "Bo3": 3,
@@ -111810,16 +111810,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 19,
-            "defense": 20,
-            "overtime": 0,
-            "all": 39
+            "attack": 52,
+            "defense": 54,
+            "overtime": 1,
+            "all": 107
         },
         "rounds_lost": {
-            "attack": 33,
-            "defense": 34,
-            "overtime": 1,
-            "all": 68
+            "attack": 65,
+            "defense": 54,
+            "overtime": 3,
+            "all": 122
         },
         "matches_won": {
             "Bo3": 1,
@@ -112696,16 +112696,16 @@
         "map_picks_won": 8,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 105,
-            "defense": 102,
+            "attack": 136,
+            "defense": 136,
             "overtime": 2,
-            "all": 209
+            "all": 274
         },
         "rounds_lost": {
-            "attack": 31,
-            "defense": 34,
-            "overtime": 0,
-            "all": 65
+            "attack": 119,
+            "defense": 108,
+            "overtime": 2,
+            "all": 229
         },
         "matches_won": {
             "Bo3": 6,
@@ -114387,16 +114387,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 3,
         "rounds_won": {
-            "attack": 16,
-            "defense": 23,
+            "attack": 42,
+            "defense": 40,
             "overtime": 0,
-            "all": 39
+            "all": 82
         },
         "rounds_lost": {
-            "attack": 26,
-            "defense": 17,
-            "overtime": 0,
-            "all": 43
+            "attack": 43,
+            "defense": 39,
+            "overtime": 2,
+            "all": 84
         },
         "matches_won": {
             "Bo3": 1,
@@ -114907,16 +114907,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 13,
-            "defense": 13,
+            "attack": 31,
+            "defense": 37,
             "overtime": 0,
-            "all": 26
+            "all": 68
         },
         "rounds_lost": {
-            "attack": 18,
-            "defense": 24,
+            "attack": 77,
+            "defense": 45,
             "overtime": 0,
-            "all": 42
+            "all": 122
         },
         "matches_won": {
             "Bo3": 0,
@@ -115427,16 +115427,16 @@
         "map_picks_won": 0,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 0,
-            "defense": 0,
-            "overtime": 0,
-            "all": 0
-        },
-        "rounds_lost": {
             "attack": 17,
             "defense": 9,
             "overtime": 0,
             "all": 26
+        },
+        "rounds_lost": {
+            "attack": 24,
+            "defense": 28,
+            "overtime": 0,
+            "all": 52
         },
         "matches_won": {
             "Bo3": 0,
@@ -115801,16 +115801,16 @@
         "map_picks_won": 2,
         "map_picks_lost": 2,
         "rounds_won": {
-            "attack": 35,
-            "defense": 30,
-            "overtime": 0,
-            "all": 65
+            "attack": 61,
+            "defense": 58,
+            "overtime": 3,
+            "all": 122
         },
         "rounds_lost": {
-            "attack": 26,
-            "defense": 28,
-            "overtime": 3,
-            "all": 57
+            "attack": 49,
+            "defense": 51,
+            "overtime": 11,
+            "all": 111
         },
         "matches_won": {
             "Bo3": 2,
@@ -116613,16 +116613,16 @@
         "map_picks_won": 1,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 10,
-            "defense": 3,
+            "attack": 22,
+            "defense": 12,
             "overtime": 0,
-            "all": 13
+            "all": 34
         },
         "rounds_lost": {
-            "attack": 12,
-            "defense": 9,
+            "attack": 25,
+            "defense": 32,
             "overtime": 0,
-            "all": 21
+            "all": 57
         },
         "matches_won": {
             "Bo3": 0,
@@ -117060,16 +117060,16 @@
         "map_picks_won": 3,
         "map_picks_lost": 1,
         "rounds_won": {
-            "attack": 32,
-            "defense": 31,
+            "attack": 52,
+            "defense": 44,
             "overtime": 5,
-            "all": 68
+            "all": 101
         },
         "rounds_lost": {
-            "attack": 20,
-            "defense": 13,
-            "overtime": 0,
-            "all": 33
+            "attack": 58,
+            "defense": 62,
+            "overtime": 1,
+            "all": 121
         },
         "matches_won": {
             "Bo3": 2,
