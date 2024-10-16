@@ -12,7 +12,7 @@ export const INFORMATION = "Information"
 export const ADVANCED = "Advanced"
 export const events_columns = {
     Information:{
-        "Name":             { value:"event_name",           type:STRING },
+        "Event":            { value:"event_name",           type:STRING },
         "Winner":           { value:"event_winner_name",    type:STRING },
         "Winning Region":   { value:"event_winner_region",  type:STRING },
         "Winning Country":  { value:"event_winner_country", type:STRING },

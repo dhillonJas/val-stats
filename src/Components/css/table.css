@@ -61,3 +61,11 @@ h2{
 .fl-table tr:nth-child(even) {
     background: #F8F8F8;
 }
+
+/* First Column */
+.fl-table td:first-child, .fl-table th:first-child {
+    position: sticky; 
+    left: 0; 
+    background: #F8F8F8; 
+    z-index: 10;
+}

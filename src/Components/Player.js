@@ -99,16 +99,19 @@ function get_data(data){
     acc[name_key].maps_lost += curr.map_won ? 0 : 1
     acc[name_key].maps_played += 1 
 
-    acc[name_key].Aces += curr.Aces;
-    acc[name_key]['2k'] += curr['2k'];
-    acc[name_key]['3k'] += curr['3k'];
-    acc[name_key]['4k'] += curr['4k'];
-
-    acc[name_key]['1v1'] += curr['1v1'];
-    acc[name_key]['1v2'] += curr['1v2'];
-    acc[name_key]['1v3'] += curr['1v3'];
-    acc[name_key]['1v4'] += curr['1v4'];
-    acc[name_key]['1v5'] += curr['1v5'];
+    if ('Aces' in curr)
+    {
+        acc[name_key].Aces += curr.Aces;
+        acc[name_key]['2k'] += curr['2k'];
+        acc[name_key]['3k'] += curr['3k'];
+        acc[name_key]['4k'] += curr['4k'];
+    
+        acc[name_key]['1v1'] += curr['1v1'];
+        acc[name_key]['1v2'] += curr['1v2'];
+        acc[name_key]['1v3'] += curr['1v3'];
+        acc[name_key]['1v4'] += curr['1v4'];
+        acc[name_key]['1v5'] += curr['1v5'];
+    }
     
     return acc;
 }, {});
