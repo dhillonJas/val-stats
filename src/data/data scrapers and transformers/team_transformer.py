@@ -77,7 +77,7 @@ def find_best_placement(team_id, events):
                 elif placement in results[0]:
                     results[1].append(event['event_name'])
     
-    return results
+    return [item for sublist in results for item in (sublist if isinstance(sublist, list) else [sublist])]
 
 def team_map_stats(maps):
 

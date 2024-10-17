@@ -63,7 +63,7 @@ export const teams_columns = {
         "Region":           { value:"region",            type:STRING },
         "Events Attended":  { value:"events_attended",   type:STRING_LIST, collapseable:true },
         "Events Won":       { value:"events_won",        type:STRING_LIST },
-        "Best Placement":   { value:"events_best_placements",type:STRING },
+        "Best Placement":   { value:"events_best_placements",type:STRING_LIST, collapseable:true },
         "Maps Won" :        { value:"maps_won",          type:INTEGER },
         "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
         "Map Picks Won" :   { value:"map_picks_won",     type:INTEGER },
