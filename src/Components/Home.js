@@ -5,6 +5,8 @@ import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
 import './css/tab.css'
+import {LIST, STRING_LIST} from '../data/columns_names'
+
 const Home = () => {
 
   const [selectedButton, setSelectedButton] = useState('Event');
@@ -19,6 +21,15 @@ const Home = () => {
     setColumnsToShow(columns);
   };
   
+  const handleTypeChange = (columns, column) => {
+    let cols = columns
+    if (cols[column].type === LIST)
+      cols[column].type = STRING_LIST
+    else if(cols[column].type === STRING_LIST)
+      cols[column].type = LIST
+
+    setColumnsToShow(cols)
+  };
 
   return (
     <div style={{padding:10}}>      
@@ -50,7 +61,9 @@ const Home = () => {
       )}      
       <DataTable data={filteredData}
       columns={columnsToShow}
-      selectedButton={selectedButton}></DataTable>
+      selectedButton={selectedButton}
+      handleCollapseable={handleTypeChange}
+      ></DataTable>
 
     </div>
   );

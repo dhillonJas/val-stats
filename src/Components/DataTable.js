@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useMemo} from 'react';
 import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES} from '../data/columns_names'
+import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST} from '../data/columns_names'
 import './css/table.css'
-const DataTable = ({data, columns, selectedButton}) => {
+
+const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc', type:'' });
   const rowsPerPage = 20; // Number of items you want to display per page 
@@ -56,7 +57,11 @@ const DataTable = ({data, columns, selectedButton}) => {
         aValue = a[data_key][side_key]
         bValue = b[data_key][side_key]
       }
-
+      else if (sortConfig.type === STRING_LIST){
+          aValue = a[sortConfig.key].length
+          bValue = b[sortConfig.key].length
+      }
+      
       if (aValue < bValue) {
 
         return sortConfig.direction === 'asc' ? -1 : 1;
@@ -65,7 +70,7 @@ const DataTable = ({data, columns, selectedButton}) => {
         return sortConfig.direction === 'asc' ? 1 : -1;
       }
       return 0;
-    });
+    })
   },  [data, sortConfig]);
   
    // Total number of pages
@@ -147,6 +152,19 @@ const DataTable = ({data, columns, selectedButton}) => {
     </div>
   }
 
+  function handleStringList(value, type){
+    return <div>
+      {value.map((val, index) => (
+        <div key={index}>{val}</div>
+      ))}
+    </div>
+  }
+
+  function onClickCollpase(column)
+  {
+    handleCollapseable(columns, column)
+  }
+
   const formatCell = (value, type) => {
     switch (type) {
       case DATE:
@@ -188,38 +206,57 @@ const DataTable = ({data, columns, selectedButton}) => {
               </OverlayTrigger>
       case ROUND_SIDES:
       case STAT_SIDES:
-        return handleSidesObject(value, type)       
+        return handleSidesObject(value, type)
+      case STRING_LIST:
+        return handleStringList(value, type)
       default:
         return value;
     }
   }
 
-  const renderTableHeader= (type, column) => {
+  const renderTableHeader= (type, column, collapseable) => {
     
     if (type === STAT_SIDES || type === ROUND_SIDES)
     {
       const display_order = type === ROUND_SIDES ? round_sides_display_order : stat_sides_display_order
       return <div>{display_order.map((side, index) => (
-            <span key={index} onClick={() => handleSort(columns[column].value + '_' + side, columns[column].type) }>
+            <span key={index} 
+                  onClick={() => handleSort(columns[column].value + '_' + side, columns[column].type) }
+                  style={{ cursor: 'pointer' }}>
               {sortConfig.key === columns[column].value + '_' + side
                 ? sortConfig.direction === 'asc'
-                  ? ' ▲'
-                  : ' ▼'
-                : '-'
+                ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
+                : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
+              : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
                 }
-            {index < display_order.length - 1 && <span> / </span>}
+            {index < display_order.length - 1 && <span> <strong> / </strong> </span>}
             </span>
       ))}
       </div>
     }
     else{
-      return <span onClick={() => handleSort(columns[column].value, '')}>
-      {sortConfig.key === columns[column].value
-        ? sortConfig.direction === 'asc'
-          ? ' ▲'
-          : ' ▼'
-        : '-'}
-    </span>
+      return <div>
+              <span onClick={() => handleSort(columns[column].value, columns[column].type)}
+                    style={{ cursor: 'pointer' }}
+              >
+                {sortConfig.key === columns[column].value
+                  ? sortConfig.direction === 'asc'
+                  ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
+                  : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
+                : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
+                  }
+              {collapseable && (
+                <span 
+                onClick={() => onClickCollpase(column)}
+                style={{ cursor: 'pointer' }}
+                >
+                  <span style={{ color: '#FAFAFA' }}>&#8594;</span>
+              </span>
+            )}
+            </span>
+        
+        </div>
+    
     }
   }
 
@@ -241,7 +278,7 @@ const DataTable = ({data, columns, selectedButton}) => {
                   onChange={(e) => handleSearchChange(e, column)}
                   /> */}
                   <div >
-                  { renderTableHeader(columns[column].type, column)}
+                  { renderTableHeader(columns[column].type, column, 'collapseable' in columns[column])}
                   </div>
             </th>
           ))}

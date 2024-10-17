@@ -45,8 +45,8 @@ function get_data(data){
     
     let name_key = curr['player_name']
 
-    if (!acc[name_key].prev_teams.includes(curr.player_team + ',\n'))
-      acc[name_key].prev_teams.push(curr.player_team + ',\n')
+    if (!acc[name_key].prev_teams.includes(curr.player_team))
+      acc[name_key].prev_teams.push(curr.player_team)
 
     acc[name_key].kills.attack += curr.kills.attack
     acc[name_key].kills.defense += curr.kills.defense
@@ -118,9 +118,6 @@ function get_data(data){
 
   const weightAverageCols = ['acs', 'adr', 'hsp', 'rating', 'kast']
   Object.values(players).forEach((player) => {
-
-    player['prev_teams'][player['prev_teams'].length - 1] = player['prev_teams'][player['prev_teams'].length - 1].replace(',', '');
-
     weightAverageCols.forEach((column) => {
       player[column].attack = (player[column].attack / player['rounds_played'].attack).toFixed(2)
       player[column].defense = (player[column].defense / player['rounds_played'].defense).toFixed(2)

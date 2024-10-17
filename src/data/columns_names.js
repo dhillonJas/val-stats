@@ -7,6 +7,8 @@ export const LIST = "list"
 export const OBJECT = "object"
 export const ROUND_SIDES = "round_sides"
 export const STAT_SIDES = "stat_sides"
+export const STRING_LIST = "string_list"
+
 
 export const INFORMATION = "Information"
 export const ADVANCED = "Advanced"
@@ -22,7 +24,7 @@ export const events_columns = {
         "Total Teams":      { value:"event_total_teams",    type:INTEGER },
         "Start Date":       { value:"event_start_date",     type:DATE },
         "End Date":         { value:"event_end_date",       type:DATE },
-        "All Teams":        { value:"event_all_teams",      type:LIST },
+        "All Teams":        { value:"event_all_teams",      type:LIST, collapseable: true},
         "Teams Placements": { value:"event_team_placements",type:OBJECT},
         "Event Link":       { value:"event_link",           type:LINK}
     },
@@ -59,8 +61,8 @@ export const teams_columns = {
     Information:{
         "Team" :            { value:"name",              type:STRING },
         "Region":           { value:"region",            type:STRING },
-        "Events Attended":  { value:"events_attended",   type:LIST },
-        "Events Won":       { value:"events_won",        type:STRING },
+        "Events Attended":  { value:"events_attended",   type:STRING_LIST, collapseable:true },
+        "Events Won":       { value:"events_won",        type:STRING_LIST },
         "Best Placement":   { value:"events_best_placements",type:STRING },
         "Maps Won" :        { value:"maps_won",          type:INTEGER },
         "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
@@ -98,7 +100,7 @@ export const player_columns = {
     Information:{
         "Player":           { value:"player_name",  type:STRING },
         "Team":             { value:"player_team",  type:STRING },
-        "All previous teams":{ value:"prev_teams",  type:STRING },
+        "All previous teams":{ value:"prev_teams",  type:STRING_LIST, collapseable:true },
         "Maps played":      { value:"maps_played",  type:INTEGER },    
         "Maps won":         { value:"maps_won",     type:INTEGER },    
         "Maps lost":        { value:"maps_lost",    type:INTEGER },    
