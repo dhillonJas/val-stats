@@ -166,9 +166,20 @@ useEffect(() => {
 
   useEffect(() => {
     let viewMode = isAdvanced  ?  ADVANCED: INFORMATION
-    onViewModeChange(teams_columns[viewMode]); // Pass columns to Home.js
+    if (event === ALL && mapName === ALL && opponent === ALL && region === ALL)
+      onViewModeChange(teams_columns[viewMode]); // Pass columns to Home.js
+    else
+    {
+      const updatedColumns = Object.fromEntries(
+        Object.entries(teams_columns[viewMode]).filter(([key]) => key !== 'Events Attended' && 
+                                                                  key !== 'Events Won' && 
+                                                                  key !== 'Best Placement')
+      );
+
+      onViewModeChange(updatedColumns); // Pass columns to Home.js
+    }
     onFilter(dataToShow)
-  }, [onViewModeChange, isAdvanced, onFilter, dataToShow]);
+  }, [onViewModeChange, isAdvanced, onFilter, dataToShow, event, mapName, opponent, region]);
 
   const handleClick = () => {
     setIsAdvanced(!isAdvanced);
@@ -182,22 +193,26 @@ useEffect(() => {
         {isAdvanced ? ADVANCED : INFORMATION}
        </Button>
        <div className='filter-container'>
-        Event:
-          <DropdownComp   selectedValue={event}
+        
+        <span className="filter-label">Event</span>
+        <DropdownComp   selectedValue={event}
                           setSelectedValue={setEvent}
                           options={Events}> 
-          </DropdownComp>
-          Map:
+        </DropdownComp>
+
+          <span className="filter-label">Map</span>
           <DropdownComp   selectedValue={mapName}
                           setSelectedValue={setMapName}
                           options={Maps}> 
           </DropdownComp>
-          Against (opponent):
+
+          <span className="filter-label">Opponent</span>
           <DropdownComp   selectedValue={opponent}
                           setSelectedValue={setOpponent}
                           options={Teams}> 
           </DropdownComp>
-          Against region:
+          
+          <span className="filter-label">Opponent region</span>
           <DropdownComp   selectedValue={region}
                           setSelectedValue={setRegion}
                           options={Regions}> 
