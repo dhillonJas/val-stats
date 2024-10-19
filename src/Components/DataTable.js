@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo} from 'react';
-import { Table, Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
+import { Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
 import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST} from '../data/columns_names'
 import './css/table.css'
 
@@ -137,6 +137,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
     return items;
   };
 
+
   function handleSidesObject(value, type){
     const display_order = type === ROUND_SIDES ? round_sides_display_order : stat_sides_display_order
     return <div>
@@ -152,7 +153,30 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
     </div>
   }
 
-  function handleStringList(value, type){
+  const getStyle = (width) => 
+    {
+      // const name_width = '150px'
+      // const kda_widths = '130px'
+      // const col_widths = {
+      //   'Player' : name_width,
+      //   'Kills': kda_widths,
+      //   'Deaths': kda_widths,
+      //   'Assists': kda_widths,
+      //   'Kill Diff': kda_widths,
+      //   'stat_sides': '160px',
+
+      // }
+      if (width)
+        return { 
+          minWidth: width,
+          maxWidth: width,
+          whiteSpace: 'normal',
+          textAlign: 'center'
+        };
+      return {width:'auto'}
+    }
+
+  function handleStringList(value){
     return <div>
       {value.map((val, index) => (
         <div key={index}>{val}</div>
@@ -219,42 +243,57 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
     if (type === STAT_SIDES || type === ROUND_SIDES)
     {
       const display_order = type === ROUND_SIDES ? round_sides_display_order : stat_sides_display_order
-      return <div>{display_order.map((side, index) => (
-            <span key={index} 
-                  onClick={() => handleSort(columns[column].value + '_' + side, columns[column].type) }
-                  style={{ cursor: 'pointer' }}>
-              {sortConfig.key === columns[column].value + '_' + side
-                ? sortConfig.direction === 'asc'
-                ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
-                : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
-              : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
-                }
-            {index < display_order.length - 1 && <span> <strong> / </strong> </span>}
-            </span>
-      ))}
-      </div>
+      return <div>
+              {column} <OverlayTrigger
+                        placement="left"
+                        overlay={  <Tooltip id={`tooltip-${Math.random()}`}> 
+                                        {display_order
+                                        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                                        .join(' / ')}</Tooltip>  
+                                }
+                       >
+                        <span>ⓘ</span>
+                      </OverlayTrigger>
+                    <div>{display_order.map((side, index) => (
+                    <span key={index} 
+                          onClick={() => handleSort(columns[column].value + '_' + side, columns[column].type) }
+                          style={{ cursor: 'pointer' }}>
+                      {sortConfig.key === columns[column].value + '_' + side
+                        ? sortConfig.direction === 'asc'
+                        ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
+                        : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
+                      : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
+                        }
+                    {index < display_order.length - 1 && <span> <strong> / </strong> </span>}
+                    </span>
+              ))}
+              </div>
+          </div> 
     }
     else{
       return <div>
-              <span onClick={() => handleSort(columns[column].value, columns[column].type)}
-                    style={{ cursor: 'pointer' }}
-              >
-                {sortConfig.key === columns[column].value
-                  ? sortConfig.direction === 'asc'
-                  ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
-                  : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
-                : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
-                  }
-              {collapseable && (
-                <span 
-                onClick={() => onClickCollpase(column)}
-                style={{ cursor: 'pointer' }}
-                >
-                  <span style={{ color: '#FAFAFA' }}>&#8594;</span>
-              </span>
-            )}
-            </span>
-        
+              {column}
+                <div>
+                      <span onClick={() => handleSort(columns[column].value, columns[column].type)}
+                            style={{ cursor: 'pointer' }}
+                      >
+                        {sortConfig.key === columns[column].value
+                          ? sortConfig.direction === 'asc'
+                          ? <span style={{ color: '#FAFAFA' }}>&#9650;</span>
+                          : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
+                        : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
+                          }
+                      {collapseable && (
+                        <span 
+                        onClick={() => onClickCollpase(column)}
+                        style={{ cursor: 'pointer' }}
+                        >
+                          <span style={{ color: '#FAFAFA' }}>&#8594;</span>
+                      </span>
+                    )}
+                    </span>
+                
+                </div>
         </div>
     
     }
@@ -264,12 +303,13 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
   return (
       <div>
     <div className='table-wrapper' style={{ overflowX: 'auto' }}>
-      <Table className='fl-table'>
+      <table className='fl-table'>
       <thead>
         <tr>
           {Object.keys(columns).map((column) => (
-            <th key={column} >
-              {column}
+            <th key={column} 
+                style={getStyle(columns[column].width)}>
+              
                 {/* <input
                   key={column}
                   type="text"
@@ -294,7 +334,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
             </tr>
           ))}
         </tbody>
-      </Table>
+      </table>
       </div>
       {/* Pagination Control */}
       <Pagination>
