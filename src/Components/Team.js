@@ -3,7 +3,7 @@ import DropdownComp from './Dropdown';
 import team_data from '../data/tables/team_table.json'
 import { Maps, Events, Teams, Regions } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
-import { INFORMATION, ADVANCED, teams_columns } from '../data/columns_names';
+import { BASIC, ADVANCED, teams_columns } from '../data/columns_names';
 import './css/toggle_button.css'
 import './css/filters.css'
 
@@ -165,7 +165,7 @@ useEffect(() => {
 
 
   useEffect(() => {
-    let viewMode = isAdvanced  ?  ADVANCED: INFORMATION
+    let viewMode = isAdvanced  ?  ADVANCED: BASIC
     if (event === ALL && mapName === ALL && opponent === ALL && region === ALL)
       onViewModeChange(teams_columns[viewMode]); // Pass columns to Home.js
     else
@@ -187,11 +187,6 @@ useEffect(() => {
 
   return (
     <div>
-       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
-               variant="dark"  
-               onClick={handleClick}>
-        {isAdvanced ? ADVANCED : INFORMATION}
-       </Button>
        <div className='filter-container'>
         
         <span className="filter-label">Event</span>
@@ -218,6 +213,12 @@ useEffect(() => {
                           options={Regions}> 
           </DropdownComp>
       </div>
+      <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
+               variant="dark"  
+               onClick={handleClick}
+               style={{ width: '150px', whiteSpace: 'nowrap', textAlign: 'center' }}>
+        {isAdvanced ? ADVANCED : BASIC}
+       </Button>
     </div>
 
   );

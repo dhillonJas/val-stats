@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from 'react';
-import './Home.css'; 
+import './css/tab.css'
+import './css/Home.css'; 
 import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
-import './css/tab.css'
 import {LIST, STRING_LIST} from '../data/columns_names'
 
 const Home = () => {

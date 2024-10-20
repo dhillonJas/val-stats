@@ -1,7 +1,7 @@
 import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import player_data from '../data/tables/player_table.json'
-import { INFORMATION, ADVANCED, player_columns } from '../data/columns_names';
+import { BASIC, ADVANCED, player_columns } from '../data/columns_names';
 import { Maps, Events, Teams, Regions, Agents } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import './css/filters.css'
@@ -173,7 +173,7 @@ function Player({ onFilter , onViewModeChange }) {
     }, [handleFilter, event, mapName, opponent, region, agent, bestOf]);
 
     useEffect(() => {
-      let viewMode = isAdvanced  ?  ADVANCED: INFORMATION
+      let viewMode = isAdvanced  ?  ADVANCED: BASIC
       onViewModeChange(player_columns[viewMode]); // Pass columns to Home.js
       onFilter(dataToShow)
 
@@ -184,11 +184,6 @@ function Player({ onFilter , onViewModeChange }) {
     };
   return (
 <div>
-       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
-               variant="dark"   
-               onClick={handleClick}>
-        {isAdvanced ? ADVANCED : INFORMATION}
-       </Button>
        <div className='filter-container'>
         <span className="filter-label">Event</span>
           <DropdownComp   selectedValue={event}
@@ -226,6 +221,12 @@ function Player({ onFilter , onViewModeChange }) {
                           options={Agents}> 
           </DropdownComp>
         </div>
+        <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
+               variant="dark"   
+               onClick={handleClick}
+               style={{ width: '150px', whiteSpace: 'nowrap', textAlign: 'center' }}  >
+        {isAdvanced ? ADVANCED : BASIC}
+       </Button>
     </div>
 
   );

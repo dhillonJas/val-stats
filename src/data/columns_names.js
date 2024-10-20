@@ -10,10 +10,10 @@ export const STAT_SIDES = "stat_sides"
 export const STRING_LIST = "string_list"
 
 
-export const INFORMATION = "Information"
+export const BASIC = "Basic"
 export const ADVANCED = "Advanced"
 export const events_columns = {
-    Information:{
+    Basic:{
         "Event":            { value:"event_name",           type:STRING },
         "Winner":           { value:"event_winner_name",    type:STRING },
         "Winning Region":   { value:"event_winner_region",  type:STRING },
@@ -58,7 +58,7 @@ export const events_columns = {
 }
 
 export const teams_columns = {
-    Information:{
+    Basic:{
         "Team" :            { value:"name",              type:STRING,           width: '200px' },
         "Region":           { value:"region",            type:STRING,           width: '90px'  },
         "Events Attended":  { value:"events_attended",   type:STRING_LIST,      width: '260px', collapseable:true },
@@ -95,7 +95,7 @@ export const teams_columns = {
 }
 
 export const player_columns = {
-    Information:{
+    Basic:{
         "Player":           { value:"player_name",  type:STRING, width: '150px' },
         "Team Tag":         { value:"player_team",  type:STRING },
         "All previous teams":{ value:"prev_teams",  type:STRING_LIST, collapseable:true },
