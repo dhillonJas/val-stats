@@ -69,3 +69,18 @@ h2{
     background: #F8F8F8; 
     z-index: 10;
 }
+
+/* Freeze the second column (body cells) */
+.fl-table td:nth-child(2) {
+    position: sticky; 
+    left: 30px; 
+    background: #F8F8F8; 
+    z-index: 9;
+}
+
+/* Freeze the second column (header cells) */
+.fl-table th:nth-child(2) {
+    position: sticky; 
+    left: 30px; 
+    z-index: 10;
+}

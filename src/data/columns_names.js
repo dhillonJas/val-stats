@@ -8,6 +8,7 @@ export const OBJECT = "object"
 export const ROUND_SIDES = "round_sides"
 export const STAT_SIDES = "stat_sides"
 export const STRING_LIST = "string_list"
+export const PLACEMENT = "placement"
 
 
 export const BASIC = "Basic"
@@ -63,7 +64,7 @@ export const teams_columns = {
         "Region":           { value:"region",            type:STRING,           width: '90px'  },
         "Events Attended":  { value:"events_attended",   type:STRING_LIST,      width: '260px', collapseable:true },
         "Events Won":       { value:"events_won",        type:STRING_LIST,      width: '240px' },
-        "Best Placement":   { value:"events_best_placements",type:STRING_LIST,  width: '240px', collapseable:true },
+        "Best Placement":   { value:"events_best_placements",type:PLACEMENT,  width: '240px', collapseable:true },
         "Maps Won" :        { value:"maps_won",          type:INTEGER },
         "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
         "Map Picks Won" :   { value:"map_picks_won",     type:INTEGER },

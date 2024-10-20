@@ -1,41 +1,16 @@
 import React, { useState, useEffect, useMemo} from 'react';
 import { Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST} from '../data/columns_names'
+import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST, PLACEMENT} from '../data/columns_names'
 import './css/table.css'
 
 const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({ key: '', direction: 'asc', type:'' });
-  const rowsPerPage = 20; // Number of items you want to display per page 
+  const rowsPerPage = 50; // Number of items you want to display per page 
   const round_sides_display_order = ['all', 'attack', 'defense', 'overtime']
   const stat_sides_display_order = ['all', 'attack', 'defense']
   
-  // const [searchQueries, setSearchQueries] = useState(
-  //   columnNames.reduce((acc, column) => {
-  //     acc[column] = '';
-  //     return acc;
-  //   }, {})
-  // );
-
-    
-    // Handle search
-    // const searchedData = filterData.filter(item =>
-    //   columnNames.every(column =>
-    //     !searchQueries[column] || 
-    //     item[column]?.toString().toLowerCase().includes(searchQueries[column].toLowerCase())
-    //   )    
-    // );
-  
-
-    // // Update search queries for each column dynamically
-    // const handleSearchChange = (e, column) => {
-    //   setSearchQueries({
-    //     ...searchQueries,
-    //     [column]: e.target.value
-    //   });
-    // };
-
-    // Handle sort logic
+  // Handle sort logic
     const handleSort = (column, type) => {
       let direction = 'asc';
       if (sortConfig.key === column && sortConfig.direction === 'asc') {
@@ -56,6 +31,11 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
         const data_key = sortConfig.key.split('_').slice(0, -1).join('_')
         aValue = a[data_key][side_key]
         bValue = b[data_key][side_key]
+      }
+      else if (sortConfig.type === PLACEMENT)
+      {
+        aValue = parseInt(a[sortConfig.key][0].split('-')[0].slice(0, -2))
+        bValue = parseInt(b[sortConfig.key][0].split('-')[0].slice(0, -2))
       }
       else if (sortConfig.type === STRING_LIST){
           aValue = a[sortConfig.key].length
@@ -155,17 +135,6 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
 
   const getStyle = (width) => 
     {
-      // const name_width = '150px'
-      // const kda_widths = '130px'
-      // const col_widths = {
-      //   'Player' : name_width,
-      //   'Kills': kda_widths,
-      //   'Deaths': kda_widths,
-      //   'Assists': kda_widths,
-      //   'Kill Diff': kda_widths,
-      //   'stat_sides': '160px',
-
-      // }
       if (width)
         return { 
           minWidth: width,
@@ -211,7 +180,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
                   </Tooltip>
                 }
               >
-                <span>Hover</span>
+                <span>ⓘ</span>
               </OverlayTrigger>
       case OBJECT:
         return <OverlayTrigger
@@ -226,12 +195,13 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
                   </Tooltip>
                 }
               >
-                <span>Hover</span>
+                <span>ⓘ</span>
               </OverlayTrigger>
       case ROUND_SIDES:
       case STAT_SIDES:
         return handleSidesObject(value, type)
       case STRING_LIST:
+      case PLACEMENT:
         return handleStringList(value, type)
       default:
         return value;
@@ -309,15 +279,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
           <th>#</th> 
           {Object.keys(columns).map((column) => (
             <th key={column} 
-                style={getStyle(columns[column].width)}>
-              
-                {/* <input
-                  key={column}
-                  type="text"
-                  placeholder={`Search ${column}`}
-                  value={searchQueries[column]}
-                  onChange={(e) => handleSearchChange(e, column)}
-                  /> */}
+                style={getStyle(columns[column].width)}>     
                   <div >
                   { renderTableHeader(columns[column].type, column, 'collapseable' in columns[column])}
                   </div>
@@ -329,7 +291,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
         
           {paginatedData.map((row, rowIndex) => (
             <tr key={rowIndex}>
-               <td>{rowIndex + 1}</td> 
+               <td>{(currentPage - 1) * rowsPerPage + rowIndex + 1}</td> 
                {Object.values(columns).map((colName, colIndex) => (
                 <td key={colIndex}>{formatCell(row[colName.value], colName.type)}</td> // Dynamically rendering cell data
               ))}
