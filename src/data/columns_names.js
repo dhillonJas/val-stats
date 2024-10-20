@@ -29,7 +29,7 @@ export const events_columns = {
         "Event Link":       { value:"event_link",           type:LINK}
     },
     Advanced: {
-        "Event":                 { value:"event_name",         type:STRING },
+        "Event":                 { value:"event_name",          type:STRING },
         "Total Matches Played":  { value:"event_matches_played",type:STRING },
         "Total Maps Played":     { value:"event_maps_played",   type:STRING },
         "Total Kills":           { value:"event_kills",         type:INTEGER },
@@ -59,19 +59,17 @@ export const events_columns = {
 
 export const teams_columns = {
     Information:{
-        "Team" :            { value:"name",              type:STRING, width: '150px' },
-        "Region":           { value:"region",            type:STRING, width: '90px' },
-        "Events Attended":  { value:"events_attended",   type:STRING_LIST, collapseable:true, width: '260px' },
-        "Events Won":       { value:"events_won",        type:STRING_LIST, width: '260px' },
-        "Best Placement":   { value:"events_best_placements",type:STRING_LIST, collapseable:true, width: '260px' },
+        "Team" :            { value:"name",              type:STRING,           width: '200px' },
+        "Region":           { value:"region",            type:STRING,           width: '90px'  },
+        "Events Attended":  { value:"events_attended",   type:STRING_LIST,      width: '260px', collapseable:true },
+        "Events Won":       { value:"events_won",        type:STRING_LIST,      width: '240px' },
+        "Best Placement":   { value:"events_best_placements",type:STRING_LIST,  width: '240px', collapseable:true },
         "Maps Won" :        { value:"maps_won",          type:INTEGER },
         "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
         "Map Picks Won" :   { value:"map_picks_won",     type:INTEGER },
         "Map Picks Lost" :  { value:"map_picks_lost",    type:INTEGER },
-        "Rounds Won" :      { value:"rounds_won",        type:ROUND_SIDES, width: '260px' },
-        "Rounds Lost" :     { value:"rounds_lost",       type:ROUND_SIDES, width: '260px' },
-        // "Matches Won" :      { value:"matches_won",      type:ROUND_SIDES },
-        // "Matches Lost" :      { value:"matches_lost",      type:ROUND_SIDES },
+        "Rounds Won" :      { value:"rounds_won",        type:ROUND_SIDES,      width: '260px' },
+        "Rounds Lost" :     { value:"rounds_lost",       type:ROUND_SIDES,      width: '260px' }
 
     },
     Advanced:{
@@ -119,15 +117,15 @@ export const player_columns = {
     },
     Advanced:{
         "Player":           { value:"player_name",  type:STRING, width: '150px' },
-        "Team Tag":         { value:"player_team",  type:STRING },
-        "Aces" :            { value:"Aces",         type:INTEGER },
-        "2K" :              { value:"2k",           type:INTEGER },
-        "3K" :              { value:"3k",           type:INTEGER },
-        "4K" :              { value:"4k",           type:INTEGER },
-        "1v1" :             { value:"1v1",          type:INTEGER },
-        "1v2" :             { value:"1v2",          type:INTEGER },
-        "1v3" :             { value:"1v3",          type:INTEGER },
-        "1v4" :             { value:"1v4",          type:INTEGER },
-        "1v5" :             { value:"1v5",          type:INTEGER }
+        "Team Tag":         { value:"player_team",  type:STRING, width: '70px'  },
+        "Aces" :            { value:"Aces",         type:INTEGER, width: '50px' },
+        "2K" :              { value:"2k",           type:INTEGER, width: '50px' },
+        "3K" :              { value:"3k",           type:INTEGER, width: '50px' },
+        "4K" :              { value:"4k",           type:INTEGER, width: '50px' },
+        "1v1" :             { value:"1v1",          type:INTEGER, width: '50px' },
+        "1v2" :             { value:"1v2",          type:INTEGER, width: '50px' },
+        "1v3" :             { value:"1v3",          type:INTEGER, width: '50px' },
+        "1v4" :             { value:"1v4",          type:INTEGER, width: '50px' },
+        "1v5" :             { value:"1v5",          type:INTEGER, width: '50px' }
     }
 }
