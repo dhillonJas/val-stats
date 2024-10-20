@@ -306,6 +306,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
       <table className='fl-table'>
       <thead>
         <tr>
+          <th>#</th> 
           {Object.keys(columns).map((column) => (
             <th key={column} 
                 style={getStyle(columns[column].width)}>
@@ -328,7 +329,8 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
         
           {paginatedData.map((row, rowIndex) => (
             <tr key={rowIndex}>
-              {Object.values(columns).map((colName, colIndex) => (
+               <td>{rowIndex + 1}</td> 
+               {Object.values(columns).map((colName, colIndex) => (
                 <td key={colIndex}>{formatCell(row[colName.value], colName.type)}</td> // Dynamically rendering cell data
               ))}
             </tr>
