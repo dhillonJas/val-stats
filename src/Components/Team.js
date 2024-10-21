@@ -7,6 +7,103 @@ import { BASIC, ADVANCED, teams_columns } from '../data/columns_names';
 import './css/toggle_button.css'
 import './css/filters.css'
 
+function get_data(data) {
+  return data.reduce((acc, curr) => {
+
+    const event_stats = curr['event_stats']
+
+    const total_stats = event_stats.reduce((innerAcc, innerCurr) => {
+        innerAcc.maps_won += innerCurr.maps_won
+        innerAcc.maps_lost += innerCurr.maps_lost
+        innerAcc.map_picks_won += innerCurr.map_picks_won
+        innerAcc.map_picks_lost += innerCurr.map_picks_lost
+
+        innerAcc.rounds_won.attack += innerCurr.rounds_won.attack
+        innerAcc.rounds_won.defense += innerCurr.rounds_won.defense
+        innerAcc.rounds_won.overtime += innerCurr.rounds_won.overtime
+        innerAcc.rounds_won.all += innerCurr.rounds_won.all
+
+        innerAcc.rounds_lost.attack += innerCurr.rounds_lost.attack
+        innerAcc.rounds_lost.defense += innerCurr.rounds_lost.defense
+        innerAcc.rounds_lost.overtime += innerCurr.rounds_lost.overtime
+        innerAcc.rounds_lost.all += innerCurr.rounds_lost.all
+        
+        innerAcc.kills.attack += innerCurr.kills.attack;
+        innerAcc.kills.defense += innerCurr.kills.defense;
+        innerAcc.kills.all += innerCurr.kills.all;
+
+        innerAcc.deaths.attack += innerCurr.deaths.attack;
+        innerAcc.deaths.defense += innerCurr.deaths.defense;
+        innerAcc.deaths.all += innerCurr.deaths.all;
+        
+        innerAcc.assists.attack += innerCurr.assists.attack;
+        innerAcc.assists.defense += innerCurr.assists.defense;
+        innerAcc.assists.all += innerCurr.assists.all;
+        
+        innerAcc.diffs.attack += innerCurr.diffs.attack;
+        innerAcc.diffs.defense += innerCurr.diffs.defense;
+        innerAcc.diffs.all += innerCurr.diffs.all;
+        
+        innerAcc.first_kills.attack += innerCurr.first_kills.attack;
+        innerAcc.first_kills.defense += innerCurr.first_kills.defense;
+        innerAcc.first_kills.all += innerCurr.first_kills.all;
+
+        innerAcc.first_deaths.attack += innerCurr.first_deaths.attack;
+        innerAcc.first_deaths.defense += innerCurr.first_deaths.defense;
+        innerAcc.first_deaths.all += innerCurr.first_deaths.all;
+
+        innerAcc.Aces += innerCurr.Aces;
+        innerAcc['2k'] += innerCurr['2k'];
+        innerAcc['3k'] += innerCurr['3k'];
+        innerAcc['4k'] += innerCurr['4k'];
+
+        innerAcc['1v1'] += innerCurr['1v1'];
+        innerAcc['1v2'] += innerCurr['1v2'];
+        innerAcc['1v3'] += innerCurr['1v3'];
+        innerAcc['1v4'] += innerCurr['1v4'];
+        innerAcc['1v5'] += innerCurr['1v5'];
+
+        return innerAcc
+    },{
+      maps_won: 0,
+      maps_lost: 0,
+      map_picks_won: 0,
+      map_picks_lost: 0,
+      rounds_won: {attack: 0, defense: 0, overtime: 0, all: 0},
+      rounds_lost: {attack: 0, defense: 0, overtime: 0, all: 0}, 
+
+      kills: { attack: 0, defense: 0, all: 0 }, 
+      deaths: { attack: 0, defense: 0, all: 0 }, 
+      assists: { attack: 0, defense: 0, all: 0 }, 
+      diffs: { attack: 0, defense: 0, all: 0 }, 
+      first_kills: { attack: 0, defense: 0, all: 0 }, 
+      first_deaths: { attack: 0, defense: 0, all: 0 }, 
+
+      Aces: 0,
+      '2k': 0,
+      '3k': 0,
+      '4k': 0,
+
+      '1v1': 0,
+      '1v2': 0,
+      '1v3': 0,
+      '1v4': 0,
+      '1v5': 0,
+    });
+
+    acc.push({           
+        id:curr['id'],
+        name:curr['name'],
+        region:curr['region'],
+        events_attended:curr['events_attended'],
+        events_won:curr['events_won'],
+        events_best_placements:curr['events_best_placements'],
+        ...total_stats}
+      )
+    return acc
+  }, []);
+}
+
 function Team({ onFilter, onViewModeChange}) {
 
   const ALL = 'All'
@@ -15,153 +112,54 @@ function Team({ onFilter, onViewModeChange}) {
   const [mapName, setMapName] = useState(ALL)
   const [opponent, setOpponent] = useState(ALL)
   const [region, setRegion] = useState(ALL)
-  const [dataToShow, setDataToShow] = useState(team_data)
-
+  const [dataToShow, setDataToShow] = useState(get_data(team_data))
+  const [minMaps, setMinMaps] = useState('')
+  const [minRounds, setMinRounds] = useState('')
   
-  function sumFilteredData(filteredData) {
-
-    function sumOneTeamData(one_team_data){
-        return one_team_data.slice(0, -1).reduce((acc, curr) => {
-    
-          acc.maps_won += curr.maps_won
-          acc.maps_lost += curr.maps_lost
-          acc.map_picks_won += curr.map_picks_won
-          acc.map_picks_lost += curr.map_picks_lost
-
-          acc.rounds_won.attack += curr.rounds_won.attack
-          acc.rounds_won.defense += curr.rounds_won.defense
-          acc.rounds_won.overtime += curr.rounds_won.overtime
-          acc.rounds_won.all += curr.rounds_won.all
-
-          acc.rounds_lost.attack += curr.rounds_lost.attack
-          acc.rounds_lost.defense += curr.rounds_lost.defense
-          acc.rounds_lost.overtime += curr.rounds_lost.overtime
-          acc.rounds_lost.all += curr.rounds_lost.all
-          
-          acc.kills.attack += curr.kills.attack;
-          acc.kills.defense += curr.kills.defense;
-          acc.kills.all += curr.kills.all;
-
-          acc.deaths.attack += curr.deaths.attack;
-          acc.deaths.defense += curr.deaths.defense;
-          acc.deaths.all += curr.deaths.all;
-          
-          acc.assists.attack += curr.assists.attack;
-          acc.assists.defense += curr.assists.defense;
-          acc.assists.all += curr.assists.all;
-          
-          acc.diffs.attack += curr.diffs.attack;
-          acc.diffs.defense += curr.diffs.defense;
-          acc.diffs.all += curr.diffs.all;
-          
-          acc.first_kills.attack += curr.first_kills.attack;
-          acc.first_kills.defense += curr.first_kills.defense;
-          acc.first_kills.all += curr.first_kills.all;
-
-          acc.first_deaths.attack += curr.first_deaths.attack;
-          acc.first_deaths.defense += curr.first_deaths.defense;
-          acc.first_deaths.all += curr.first_deaths.all;
-
-          acc.Aces += curr.Aces;
-          acc['2k'] += curr['2k'];
-          acc['3k'] += curr['3k'];
-          acc['4k'] += curr['4k'];
-
-          acc['1v1'] += curr['1v1'];
-          acc['1v2'] += curr['1v2'];
-          acc['1v3'] += curr['1v3'];
-          acc['1v4'] += curr['1v4'];
-          acc['1v5'] += curr['1v5'];
-
-
-          return acc;
-        }, { 
-          maps_won: 0,
-          maps_lost: 0,
-          map_picks_won: 0,
-          map_picks_lost: 0,
-          rounds_won: {attack: 0, defense: 0, overtime: 0, all: 0},
-          rounds_lost: {attack: 0, defense: 0, overtime: 0, all: 0}, 
-
-          kills: { attack: 0, defense: 0, all: 0 }, 
-          deaths: { attack: 0, defense: 0, all: 0 }, 
-          assists: { attack: 0, defense: 0, all: 0 }, 
-          diffs: { attack: 0, defense: 0, all: 0 }, 
-          first_kills: { attack: 0, defense: 0, all: 0 }, 
-          first_deaths: { attack: 0, defense: 0, all: 0 }, 
-
-          Aces: 0,
-          '2k': 0,
-          '3k': 0,
-          '4k': 0,
-
-          '1v1': 0,
-          '1v2': 0,
-          '1v3': 0,
-          '1v4': 0,
-          '1v5': 0,
-
-        });
-  
-    }
-    
-    let summedData = []
-    filteredData.forEach(one_team_data => {
-      const team_data_sum = sumOneTeamData(one_team_data)
-      const team_info = one_team_data[one_team_data.length - 1]
-      const merged_info = {...team_info, ...team_data_sum}
-      summedData.push(merged_info)
-    })
-
-    return summedData
-  }
-
-
   const handleFilter = useCallback(() => {
-    if (event === ALL && mapName === ALL && opponent === ALL && region === ALL)
-        setDataToShow(team_data)
-    else
-    {
-        let dataToSum = []
-        team_data.forEach(team => {          
-          let stats_obj = {}
-          if (event === ALL)
-            stats_obj = team['event_stats']
-          else
-            stats_obj = team['event_stats'].filter(event_stats_obj => event_stats_obj.event_name === event)
+    let filtered_data = team_data
 
-          if (mapName !== ALL)
-            stats_obj = stats_obj.filter(event_stats_obj => event_stats_obj.map_name === mapName)
+    if (event !== ALL)
+      filtered_data = filtered_data.map(item => ({
+        ...item,
+        event_stats: item.event_stats.filter(event_obj => event_obj.event_name === event)
+    }))
 
-          if (opponent !== ALL)
-            stats_obj = stats_obj.filter(event_stats_obj => event_stats_obj.name === opponent)
+    if (mapName !== ALL)
+      filtered_data = filtered_data.map(item => ({
+        ...item,
+        event_stats: item.event_stats.filter(event_obj => event_obj.map_name === mapName)
+    }))
 
-          if (region !== ALL)
-            stats_obj = stats_obj.filter(event_stats_obj => event_stats_obj.region === region)
-         
-          if (stats_obj.length > 0){
-              const info_dict = {
-                'id':team['id'],
-                'name':team['name'],
-                'region':team['region'],
-                'events_attended':team['events_attended'],
-                'events_won':team['events_won'],
-                'events_best_placements':team['events_best_placements']
 
-              }
-              stats_obj.push(info_dict)
-              dataToSum.push(stats_obj)     
-            }           
-          },
-              
-        )
-        setDataToShow(sumFilteredData(dataToSum))
-    }
-    }, [event, mapName, opponent, region])
+    if (opponent !== ALL)
+      filtered_data = filtered_data.map(item => ({
+        ...item,
+        event_stats: item.event_stats.filter(event_obj => event_obj.name === opponent)
+    }))
+
+    if (region !== ALL)
+      filtered_data = filtered_data.map(item => ({
+        ...item,
+        event_stats: item.event_stats.filter(event_obj => event_obj.region === region)
+    }))
+
+    filtered_data = filtered_data.filter(item => item.event_stats.length > 0)
+    filtered_data = get_data(filtered_data)
+
+    if (minMaps !== '')
+      filtered_data = filtered_data.filter(team => team.maps_won + team.maps_lost >= minMaps)
+
+    if (minRounds !== '')
+      filtered_data = filtered_data.filter(team => team.rounds_won.all + team.rounds_lost.all >= minRounds)
+
+    setDataToShow(filtered_data)
+  
+  }, [event, mapName, opponent, region, minMaps, minRounds])
 
 useEffect(() => {
   handleFilter()
-}, [handleFilter, event, mapName, opponent, region]);
+}, [handleFilter, event, mapName, opponent, region, minMaps, minRounds]);
 
 
   useEffect(() => {
@@ -184,6 +182,9 @@ useEffect(() => {
   const handleClick = () => {
     setIsAdvanced(!isAdvanced);
   };
+
+  const onMinMapChange = (e) => { setMinMaps(e.target.value) }
+  const onMinRoundChange = (e) => { setMinRounds(e.target.value) }
 
   return (
     <div>
@@ -212,6 +213,18 @@ useEffect(() => {
                           setSelectedValue={setRegion}
                           options={Regions}> 
           </DropdownComp>
+
+          <span className="filter-label">Minimum Maps</span>
+          <input className='filter-input'
+                 type="number" 
+                 value={minMaps}
+                 onChange={onMinMapChange} />
+
+          <span className="filter-label">Minimum Rounds</span>
+          <input className='filter-input'
+                 type="number" 
+                 value={minRounds}
+                 onChange={onMinRoundChange} />
       </div>
       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
                variant="dark"  

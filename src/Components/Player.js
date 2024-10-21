@@ -139,6 +139,8 @@ function Player({ onFilter , onViewModeChange }) {
   const [region, setRegion] = useState(ALL)
   const [agent, setAgent] = useState(ALL)
   const [bestOf, setbestOf] = useState(ALL)
+  const [minMaps, setMinMaps] = useState('')
+  const [minRounds, setMinRounds] = useState('')
   const [dataToShow, setDataToShow] = useState(get_data(player_data))
 
 
@@ -163,14 +165,21 @@ function Player({ onFilter , onViewModeChange }) {
     if (bestOf !== ALL)
       filtered_data = filtered_data.filter(player => player.match_length === bestOf)
 
-    
-    setDataToShow(get_data(filtered_data))
-    },[event, mapName, opponent, region, agent, bestOf])
+    filtered_data = get_data(filtered_data)
+
+    if (minMaps !== '')
+      filtered_data = filtered_data.filter(player => player.maps_played >= minMaps)
+
+    if (minRounds !== '')
+      filtered_data = filtered_data.filter(player => player.rounds_played.attack + player.rounds_played.defense >= minRounds)
+
+    setDataToShow(filtered_data)
+    },[event, mapName, opponent, region, agent, bestOf, minMaps, minRounds])
 
 
     useEffect(() => {
       handleFilter()
-    }, [handleFilter, event, mapName, opponent, region, agent, bestOf]);
+    }, [handleFilter, event, mapName, opponent, region, agent, bestOf, minMaps, minRounds]);
 
     useEffect(() => {
       let viewMode = isAdvanced  ?  ADVANCED: BASIC
@@ -182,6 +191,10 @@ function Player({ onFilter , onViewModeChange }) {
     const handleClick = () => {
       setIsAdvanced(!isAdvanced);
     };
+
+    const onMinMapChange = (e) => { setMinMaps(e.target.value) }
+    const onMinRoundChange = (e) => { setMinRounds(e.target.value) }
+    
   return (
 <div>
        <div className='filter-container'>
@@ -220,6 +233,18 @@ function Player({ onFilter , onViewModeChange }) {
                           setSelectedValue={setAgent}
                           options={Agents}> 
           </DropdownComp>
+
+          <span className="filter-label">Minimum Maps</span>
+          <input className='filter-input'
+                 type="number" 
+                 value={minMaps}
+                 onChange={onMinMapChange} />
+
+          <span className="filter-label">Minimum Rounds</span>
+          <input className='filter-input'
+                 type="number" 
+                 value={minRounds}
+                 onChange={onMinRoundChange} />
         </div>
         <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
                variant="dark"   
