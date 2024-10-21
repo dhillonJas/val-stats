@@ -208,7 +208,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
     }
   }
 
-  const renderTableHeader= (type, column, collapseable) => {
+  const renderTableHeader= (type, column, collapsedType) => {
     
     if (type === STAT_SIDES || type === ROUND_SIDES)
     {
@@ -253,7 +253,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
                           : <span style={{ color: '#FAFAFA' }}>&#9660;</span>
                         : <span style={{ color: '#FAFAFA' }}>&#8596;</span>
                           }
-                      {collapseable && (
+                      {collapsedType && (
                         <span 
                         onClick={() => onClickCollpase(column)}
                         style={{ cursor: 'pointer' }}
@@ -281,7 +281,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
             <th key={column} 
                 style={getStyle(columns[column].width)}>     
                   <div >
-                  { renderTableHeader(columns[column].type, column, 'collapseable' in columns[column])}
+                  { renderTableHeader(columns[column].type, column, 'collapsedType' in columns[column])}
                   </div>
             </th>
           ))}

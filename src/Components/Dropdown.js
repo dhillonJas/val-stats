@@ -29,7 +29,7 @@ function DropdownComp({ selectedValue, setSelectedValue, options }) {
         {selectedValue}
         </Dropdown.Toggle>
 
-        <Dropdown.Menu style={{ maxHeight: '200px', overflowY: 'auto' }}>
+        <Dropdown.Menu style={{ maxHeight: '300px', overflowY: 'auto' }}>
         <div style={{ padding: '10px' }}>
                       <input
                           type="text"
@@ -55,8 +55,5 @@ function DropdownComp({ selectedValue, setSelectedValue, options }) {
       </Dropdown>
   );
 }
-
-
-
 
 export default DropdownComp;

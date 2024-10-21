@@ -4,10 +4,9 @@ import './css/Header.css'; // Importing the CSS file for styling
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo-container">
-        <img src="/logo.png" alt="Logo" className="logo" />
-      </div>
-      <h1 className="title">Val Pro Match Stats</h1>
+      <img src="/logo-vandal.png" alt="Logo" className="logo" />
+      <h1 className="title">Valorant Stats Central</h1>   
+      <img src="/logo-phantom.png" alt="Logo" className="logo" />
     </header>
   );
 };

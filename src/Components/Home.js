@@ -5,7 +5,7 @@ import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
-import {LIST, STRING_LIST} from '../data/columns_names'
+import {LIST, PLACEMENT, STRING_LIST} from '../data/columns_names'
 
 const Home = () => {
 
@@ -23,11 +23,9 @@ const Home = () => {
   
   const handleTypeChange = (columns, column) => {
     let cols = columns
-    if (cols[column].type === LIST)
-      cols[column].type = STRING_LIST
-    else if(cols[column].type === STRING_LIST)
-      cols[column].type = LIST
-
+    let temp_type = cols[column].type
+    cols[column].type = cols[column].collapsedType
+    cols[column].collapsedType = temp_type
     setColumnsToShow(cols)
   };
 
