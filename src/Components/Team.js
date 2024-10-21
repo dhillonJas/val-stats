@@ -91,6 +91,8 @@ function get_data(data) {
       '1v5': 0,
     });
 
+    const stats = total_stats
+    const decimalPlaces = 2
     acc.push({           
         id:curr['id'],
         name:curr['name'],
@@ -98,7 +100,22 @@ function get_data(data) {
         events_attended:curr['events_attended'],
         events_won:curr['events_won'],
         events_best_placements:curr['events_best_placements'],
-        ...total_stats}
+        killsperround: {
+          'attack': (stats.kills.attack / (stats.rounds_won.attack + stats.rounds_lost.attack)).toFixed(decimalPlaces),
+          'defense': (stats.kills.defense / (stats.rounds_won.defense + stats.rounds_lost.defense)).toFixed(decimalPlaces),
+          'all': (stats.kills.all / (stats.rounds_won.all + stats.rounds_lost.all)).toFixed(decimalPlaces)
+        },
+        deathsperround: {
+          'attack': (stats.deaths.attack / (stats.rounds_won.attack + stats.rounds_lost.attack)).toFixed(decimalPlaces),
+          'defense': (stats.deaths.defense / (stats.rounds_won.defense + stats.rounds_lost.defense)).toFixed(decimalPlaces),
+          'all': (stats.deaths.all / (stats.rounds_won.all + stats.rounds_lost.all)).toFixed(decimalPlaces)
+        },
+        assistsperround: {
+          'attack': (stats.assists.attack / (stats.rounds_won.attack + stats.rounds_lost.attack)).toFixed(decimalPlaces),
+          'defense': (stats.assists.defense / (stats.rounds_won.defense + stats.rounds_lost.defense)).toFixed(decimalPlaces),
+          'all': (stats.assists.all / (stats.rounds_won.all + stats.rounds_lost.all)).toFixed(decimalPlaces)
+        },
+        ...total_stats,}
       )
     return acc
   }, []);

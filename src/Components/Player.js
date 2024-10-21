@@ -71,7 +71,7 @@ function get_data(data){
     acc[name_key].first_deaths.attack += curr.first_deaths.attack
     acc[name_key].first_deaths.defense += curr.first_deaths.defense
     acc[name_key].first_deaths.all += curr.first_deaths.all
-    
+
     acc[name_key].rating.attack += curr.rating.attack * curr.rounds_played.attack
     acc[name_key].rating.defense += curr.rating.defense * curr.rounds_played.defense
     acc[name_key].rating.all += curr.rating.all * (curr.rounds_played.attack + curr.rounds_played.defense)
@@ -117,13 +117,31 @@ function get_data(data){
 }, {});
 
   const weightAverageCols = ['acs', 'adr', 'hsp', 'rating', 'kast']
+  const decimalPlaces = 2
   Object.values(players).forEach((player) => {
     weightAverageCols.forEach((column) => {
-      player[column].attack = (player[column].attack / player['rounds_played'].attack).toFixed(2)
-      player[column].defense = (player[column].defense / player['rounds_played'].defense).toFixed(2)
-      player[column].all = (player[column].all / (player['rounds_played'].attack + player['rounds_played'].defense)).toFixed(2)
-
+      player[column].attack = (player[column].attack / player['rounds_played'].attack).toFixed(decimalPlaces)
+      player[column].defense = (player[column].defense / player['rounds_played'].defense).toFixed(decimalPlaces)
+      player[column].all = (player[column].all / (player['rounds_played'].attack + player['rounds_played'].defense)).toFixed(decimalPlaces)
     })
+
+    player['killsperround'] = {
+      'attack' : (player.kills.attack / player.rounds_played.attack).toFixed(decimalPlaces),
+      'defense' : (player.kills.defense / player.rounds_played.defense).toFixed(decimalPlaces),
+      'all' : (player.kills.all / (player.rounds_played.attack + player.rounds_played.defense)).toFixed(decimalPlaces)
+    }
+
+    player['deathsperround'] = {
+      'attack' : (player.deaths.attack / player.rounds_played.attack).toFixed(decimalPlaces),
+      'defense' : (player.deaths.defense / player.rounds_played.defense).toFixed(decimalPlaces),
+      'all' : (player.deaths.all / (player.rounds_played.attack + player.rounds_played.defense)).toFixed(decimalPlaces)
+    }
+    
+    player['assistsperround'] = {
+      'attack' : (player.assists.attack / player.rounds_played.attack).toFixed(decimalPlaces),
+      'defense' : (player.assists.defense / player.rounds_played.defense).toFixed(decimalPlaces),
+      'all' : (player.assists.all / (player.rounds_played.attack + player.rounds_played.defense)).toFixed(decimalPlaces)
+    }
   })
   return Object.values(players)
 }
@@ -143,7 +161,7 @@ function Player({ onFilter , onViewModeChange }) {
   const [minRounds, setMinRounds] = useState('')
   const [dataToShow, setDataToShow] = useState(get_data(player_data))
 
-
+  // console.log(get_data(player_data))
   const handleFilter = useCallback(() => {
     let filtered_data = player_data
 
