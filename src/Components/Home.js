@@ -5,7 +5,6 @@ import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
-import {LIST, PLACEMENT, STRING_LIST} from '../data/columns_names'
 
 const Home = () => {
 
