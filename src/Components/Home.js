@@ -5,6 +5,7 @@ import Team from './Team';
 import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
+import HeadToHead from './HeadToHead';
 
 const Home = () => {
 
@@ -34,13 +35,13 @@ const Home = () => {
         <button className={`tab ${selectedButton === 'Team' ? 'active' : ''}`} onClick={() => setSelectedButton('Team')}>Team</button>
         <button className={`tab ${selectedButton === 'Event' ? 'active' : ''}`} onClick={() => setSelectedButton('Event')}>Event</button>
         <button className={`tab ${selectedButton === 'Player' ? 'active' : ''}`} onClick={() => setSelectedButton('Player')}>Player</button>
-        {/* <button disabled>Coming Soon</button> */}
+        <button className={`tab ${selectedButton === 'HeadToHead' ? 'active' : ''}`} onClick={() => setSelectedButton('HeadToHead')}>Head To Head</button>
       </div>
 
       {selectedButton === 'Team' && (
         <div>
           <Team onFilter={handleFilter}  onViewModeChange={handleColumnChange}></Team>
-                  </div>
+        </div>
       )}
       {
         selectedButton === 'Event' && (
@@ -53,6 +54,13 @@ const Home = () => {
         selectedButton === 'Player' && (
           <div>
             <Player onFilter={handleFilter} onViewModeChange={handleColumnChange}> </Player>
+          </div>
+        
+      )}  
+      {
+        selectedButton === 'HeadToHead' && (
+          <div>
+            <HeadToHead onFilter={handleFilter}> </HeadToHead>
           </div>
         
       )}      
