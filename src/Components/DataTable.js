@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo} from 'react';
 import { Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST, PLACEMENT} from '../data/columns_names'
+import {STRING, DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST, PLACEMENT} from '../data/columns_names'
 import './css/table.css'
 
 const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
@@ -40,6 +40,11 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
       else if (sortConfig.type === STRING_LIST){
           aValue = a[sortConfig.key].length
           bValue = b[sortConfig.key].length
+      }
+      else if (sortConfig.type === STRING)
+      {
+        aValue = aValue.toLowerCase()
+        bValue = bValue.toLowerCase()
       }
       
       if (aValue < bValue) {

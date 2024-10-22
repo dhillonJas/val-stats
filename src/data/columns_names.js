@@ -31,8 +31,8 @@ export const events_columns = {
     },
     Advanced: {
         "Event":                 { value:"event_name",          type:STRING },
-        "Total Matches Played":  { value:"event_matches_played",type:STRING },
-        "Total Maps Played":     { value:"event_maps_played",   type:STRING },
+        "Total Matches Played":  { value:"event_matches_played",type:INTEGER },
+        "Total Maps Played":     { value:"event_maps_played",   type:INTEGER },
         "Total Kills":           { value:"event_kills",         type:INTEGER },
         "Total Deaths":          { value:"event_deaths",        type:INTEGER },
         "Total Assists":         { value:"event_assists",       type:INTEGER },
