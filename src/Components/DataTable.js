@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo} from 'react';
 import { Pagination, Tooltip, OverlayTrigger} from 'react-bootstrap';
-import {STRING, DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, STRING_LIST, PLACEMENT} from '../data/columns_names'
+import {STRING, DATE, PRIZE,  LINK, LIST, OBJECT, ROUND_SIDES, STAT_SIDES, COLLAPSED_LIST, PLACEMENT, COLLAPSED_OBJECT} from '../data/columns_names'
 import './css/table.css'
 
 const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
@@ -37,7 +37,7 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
         aValue = parseInt(a[sortConfig.key][0].split('-')[0].slice(0, -2))
         bValue = parseInt(b[sortConfig.key][0].split('-')[0].slice(0, -2))
       }
-      else if (sortConfig.type === STRING_LIST){
+      else if (sortConfig.type === LIST){
           aValue = a[sortConfig.key].length
           bValue = b[sortConfig.key].length
       }
@@ -45,6 +45,11 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
       {
         aValue = aValue.toLowerCase()
         bValue = bValue.toLowerCase()
+      }
+      else if (sortConfig.type === OBJECT)
+      {
+        aValue = Object.keys(a[sortConfig.key]).length
+        bValue = Object.keys(b[sortConfig.key]).length
       }
       
       if (aValue < bValue) {
@@ -150,10 +155,20 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
       return {width:'auto'}
     }
 
-  function handleStringList(value){
+  function toStringList(value){
     return <div>
       {value.map((val, index) => (
         <div key={index}>{val}</div>
+      ))}
+    </div>
+  }
+
+  function toStringObject(value){
+    return <div>
+      {Object.entries(value).map(([key, val], index) => (
+                      <div key={index}>
+                        <strong>{key}</strong>: {Array.isArray(val) ? val.join(', ') : val}
+                      </div>
       ))}
     </div>
   }
@@ -174,40 +189,36 @@ const DataTable = ({data, columns, selectedButton, handleCollapseable}) => {
         return new Intl.NumberFormat('en-US', prize_options).format(value);
       case LINK:
         return <a href={value} target="_blank" rel="noopener noreferrer">Link</a>;
-      case LIST:
+      case COLLAPSED_LIST:
         return <OverlayTrigger
                 placement="left"
                 overlay={
                   <Tooltip id={`tooltip-${Math.random()}`}>
-                    {value.map((val, index) => (
-                      <div key={index}>{val}</div>
-                    ))}
+                    {toStringList(value)}
+                  </Tooltip>
+                }
+              >
+                <span>ⓘ</span>
+              </OverlayTrigger>
+      case COLLAPSED_OBJECT:
+        return <OverlayTrigger
+                placement="left"
+                overlay={
+                  <Tooltip id={`tooltip-${Math.random()}`}>
+                    {toStringObject(value)}
                   </Tooltip>
                 }
               >
                 <span>ⓘ</span>
               </OverlayTrigger>
       case OBJECT:
-        return <OverlayTrigger
-                placement="left"
-                overlay={
-                  <Tooltip id={`tooltip-${Math.random()}`}>
-                    {Object.entries(value).map(([key, val], index) => (
-                      <div key={index}>
-                        <strong>{key}</strong>: {Array.isArray(val) ? val.join(', ') : val}
-                      </div>
-                    ))}
-                  </Tooltip>
-                }
-              >
-                <span>ⓘ</span>
-              </OverlayTrigger>
+        return toStringObject(value)
       case ROUND_SIDES:
       case STAT_SIDES:
         return handleSidesObject(value, type)
-      case STRING_LIST:
+      case LIST:
       case PLACEMENT:
-        return handleStringList(value, type)
+        return toStringList(value, type)
       default:
         return value;
     }

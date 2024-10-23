@@ -4,12 +4,12 @@ export const STRING = "string"
 export const PRIZE = "prize"
 export const LINK = "link"
 export const LIST = "list"
+export const COLLAPSED_LIST = "collapsed_list"
 export const OBJECT = "object"
+export const COLLAPSED_OBJECT = "collapsed_object"
 export const ROUND_SIDES = "round_sides"
 export const STAT_SIDES = "stat_sides"
-export const STRING_LIST = "string_list"
 export const PLACEMENT = "placement"
-
 
 export const BASIC = "Basic"
 export const ADVANCED = "Advanced"
@@ -25,8 +25,8 @@ export const events_columns = {
         "Total Teams":      { value:"event_total_teams",    type:INTEGER },
         "Start Date":       { value:"event_start_date",     type:DATE },
         "End Date":         { value:"event_end_date",       type:DATE },
-        "All Teams":        { value:"event_all_teams",      type:LIST, collapsedType: STRING_LIST,        width: '200px'},
-        "Teams Placements": { value:"event_team_placements",type:OBJECT},
+        "All Teams":        { value:"event_all_teams",      type:COLLAPSED_LIST,   collapsedType: LIST,   width: '200px'},
+        "Teams Placements": { value:"event_team_placements",type:COLLAPSED_OBJECT, collapsedType: OBJECT},
         "Event Link":       { value:"event_link",           type:LINK}
     },
     Advanced: {
@@ -62,8 +62,8 @@ export const teams_columns = {
     Basic:{
         "Team" :            { value:"name",              type:STRING,        width: '200px' },
         "Region":           { value:"region",            type:STRING,        width: '90px'  },
-        "Events Attended":  { value:"events_attended",   type:STRING_LIST,   width: '260px', collapsedType: LIST },
-        "Events Won":       { value:"events_won",        type:STRING_LIST,   width: '240px' },
+        "Events Attended":  { value:"events_attended",   type:LIST,   width: '260px', collapsedType: LIST },
+        "Events Won":       { value:"events_won",        type:LIST,   width: '240px' },
         "Best Placement":   { value:"events_best_placements",type:PLACEMENT, width: '240px', collapsedType: LIST },
         "Maps Won" :        { value:"maps_won",          type:INTEGER },
         "Maps Lost" :       { value:"maps_lost",         type:INTEGER },
@@ -102,12 +102,12 @@ export const player_columns = {
     Basic:{
         "Player":           { value:"player_name",    type:STRING, width: '150px' },
         "Team Tag":         { value:"player_team",    type:STRING },
-        "All previous teams":{ value:"prev_teams",    type:STRING_LIST, collapsedType: LIST },
+        "All previous teams":{ value:"prev_teams",    type:LIST, collapsedType: COLLAPSED_LIST },
         "Maps played":      { value:"maps_played",    type:INTEGER },    
         "Maps won":         { value:"maps_won",       type:INTEGER },    
         "Maps lost":        { value:"maps_lost",      type:INTEGER },    
-        "Agents Played":    { value:"agents_played",  type:OBJECT },    
-        "Roles Played":     { value:"roles_played",   type:OBJECT },    
+        "Agents Played":    { value:"agents_played",  type:COLLAPSED_OBJECT, collapsedType: OBJECT },    
+        "Roles Played":     { value:"roles_played",   type:COLLAPSED_OBJECT, collapsedType: OBJECT },    
         "Kills":            { value:"kills",          type:STAT_SIDES, width: '130px' },
         "Deaths":           { value:"deaths",         type:STAT_SIDES, width: '130px' },
         "Assists":          { value:"assists",        type:STAT_SIDES, width: '130px' },
