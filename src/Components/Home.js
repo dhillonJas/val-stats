@@ -17,9 +17,9 @@ const Home = () => {
     setFilteredData(filteredData);
   }, []);
 
-  const handleColumnChange = (columns) => {
+  const handleColumnChange = useCallback((columns) => {
     setColumnsToShow(columns);
-  };
+  }, []);
   
   const handleTypeChange = (columns, column) => {
     let cols = columns

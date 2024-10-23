@@ -180,20 +180,25 @@ useEffect(() => {
 
   useEffect(() => {
     let viewMode = isAdvanced  ?  ADVANCED: BASIC
-    if (event === ALL && mapName === ALL && opponent === ALL && region === ALL)
-      onViewModeChange(teams_columns[viewMode]); // Pass columns to Home.js
-    else
-    {
-      const updatedColumns = Object.fromEntries(
-        Object.entries(teams_columns[viewMode]).filter(([key]) => key !== 'Events Attended' && 
-                                                                  key !== 'Events Won' && 
-                                                                  key !== 'Best Placement')
-      );
-
-      onViewModeChange(updatedColumns); // Pass columns to Home.js
-    }
-    onFilter(dataToShow)
-  }, [onViewModeChange, isAdvanced, onFilter, dataToShow, event, mapName, opponent, region]);
+    const noFilterApplied = event === ALL && mapName === ALL && opponent === ALL && minMaps !== '' && minRounds !== '';
+    
+    const determineColumns = () => {
+      if (noFilterApplied) {
+        return teams_columns[viewMode]; // Use all columns if no filters are applied
+      } else {
+        return Object.fromEntries(
+          Object.entries(teams_columns[viewMode]).filter(([key]) => 
+            key !== 'Events Attended' && 
+            key !== 'Events Won' && 
+            key !== 'Best Placement'
+          )
+        );
+      }
+    };
+    const updatedColumns = determineColumns();
+    onViewModeChange(updatedColumns); // Pass columns to Home.js
+    onFilter(dataToShow);
+  }, [onViewModeChange, isAdvanced, onFilter, dataToShow, event, mapName, opponent, region, minMaps, minRounds]);
 
   const handleClick = () => {
     setIsAdvanced(!isAdvanced);
