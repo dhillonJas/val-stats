@@ -1,8 +1,8 @@
 import player_data from '../data/tables/player_table.json'
-import React, { useState , useEffect, useCallback} from 'react';
+import React, { useState , useEffect, useCallback, useMemo} from 'react';
 import DropdownComp from './Dropdown';
 import { player_head_to_head } from '../data/columns_names';
-import { ALL, Maps, Events, Agents, Players } from '../data/dropdownoptions';
+import { ALL, Maps, Events, Agents } from '../data/dropdownoptions';
 import './css/toggle_button.css'
 import './css/filters.css'
 
@@ -53,7 +53,12 @@ function HeadToHead({ onFilter, columns}) {
   // const [opponentTeam, setOpponentTeam] = useState(ALL) // update data to allow this
   const [dataToShow, setDataToShow] = useState(get_data(player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())))
 
-  
+  const PlayerNames = useMemo(() => {
+    const names = player_data.map(item => item.player_name);
+    const uniqueNames = [...new Set(names)]; 
+    return uniqueNames.sort();
+  }, []);
+
   
   const handleFilter = useCallback(() => {
     let filtered_data = player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())
@@ -87,7 +92,7 @@ function HeadToHead({ onFilter, columns}) {
         <span className="filter-label">Player</span>
         <DropdownComp   selectedValue={player}
                         setSelectedValue={setPlayer}
-                        options={Players}> 
+                        options={PlayerNames}> 
         </DropdownComp>
 
         <span className="filter-label">Player Agent</span>

@@ -51,34 +51,6 @@ export const Events = [
     'Masters Berlin 2021',
     'Masters Reykjav\u00edk 2021',
 ]
-
-
-// change data in player_table to have keys as names, then use Object.keys(player_table)
-// for options instead of this [same for team_table]
-export const Players = ['2ge', 'AAAAY', 'Alfajer', 'allow', 'ANGE1', 'Anthem', 'AsLanM4shadoW', 'aspas', 'Asuna', 
-                        'AtaKaptan', 'Autumn', 'AYRIN', 'Bazzi', 'BcJ', 'benjyfishy', 'Benkai', 'BerLIN', 'BerserX', 
-                        'BeYN', 'BONECOLD', 'Boaster', 'Boo', 'BORKUM', 'Boostio', 'Brave', 'BuZz', 'bunt', 'Bunny', 
-                        'C0M', 'Carpe', 'cauanzin', 'ceNder', 'CHICHOO', 'Chronicle', 'Cloud', 'Crws', 'Cryocells', 
-                        'crow', 'cNed', 'cgrs', 'Crashies', 'd4v41', 'dapr', 'DaveeyS', 'deNaro', 'Demon1', 'Derialy', 
-                        'Derke', 'Derrek', 'Destrian', 'dephh', 'd3ffo', 'dgzin', 'dimasick', 'Dispenser', 'DubsteP', 
-                        'eeiu', 'Efina', 'EJAY', 'Emman', 'Enzo', 'Esperanza', 'f0rsakeN', 'Famouz', 'FengF', 
-                        'FiNESSE', 'Fit1nho', 'fiveK', 'Flex1n', 'fl1pzjder', 'Flashback', 'foxy', 'Foxy9', 'fra', 
-                        'frz', 'gaabxx', 'garnetS', 'gtn', 'H1ber', 'Haodong', 'heat', 'heybay', 'hfmi0dzjc9z7', 
-                        'Hiko', 'hiro', 'Hoody', 'iZu', 'Izzy', 'jammyz', 'Jamppi', 'JessieVash', 'JhoW', 'Jinggg', 
-                        'JitBoyS', 'Jonn', 'JohnOlsen', 'JonahP', 'JoXJo', 'jzz', 'Kai', 'Karon', 'Keloqz', 
-                        'Khalil', 'Kicks', 'KiNgg', 'Kiles', 'Knight', 'koldamenta', 'krain', 'Kryptix', 'Lakia', 
-                        'L1NK', 'LAMMYSNAX', 'Laz', 'leaf', 'Less', 'liazzi', 'Life', 'Lmemore', 'LuoK1ng', 
-                        'Lysoar', 'MaKo', 'MAGNUM', 'makiba', 'Marved', 'marteen', 'mazin', 'Mazino', 'Meddo', 
-                        'Medusa', 'MELser', 'Meteor', 'MINDfreak', 'MiniBoo', 'Mixwell', 'mitch', 'Molic', 'MOJJ', 
-                        'Monk', 'Monyet', 'MrFaliN', 'mta', 'murizzz', 'Myssen', 'N4RRATE', 'NagZ', 'nAts', 'neth', 
-                        'Newzera', 'Nicc', 'nitr0', 'nizhaoTZH', 'Nivera', 'nobody', 'Nukkye', 'nzr', 'pANcada', 
-                        'paTiTek', 'Patiphan', 'penny', 'peri', 'primmie', 'Prozin', 'QutionerX', 'quick', 'qw1', 
-                        'Rb', 'Redgar', 'reita', 'Rhyme', 'Rion', 'Rossy', 'Russ', 'Russell', 's0m', 'Sacy', 
-                        'SantaGolf', 'Sayaplayer', 'Sayf', 'ScreaM', 'Secret', 'Seoldam', 'ShahZaM', 'Shiba', 'Shion', 
-                        'Shyy', 'SicK', 'SkRossi', 'Solo', 'Something', 'SouhcNi', 'Sova', 'stax', 'steel', 'stellar', 
-                        'SugarZ3ro', 'Suygetsu', 'Sweden', 'takej', 'tacos', 'T3xture', 't3xture', 'TenZ', 'TvirusLuke', 
-                        'Turko', 'Vanity', 'vo0kashu', 'Wolfen', 'xand', 'xeta', 'XmjjKK', 'Xccurate', 'yuicaw', 'Zekken', 
-                        'Zeek', 'Zest', 'Zyppan']
   
 export const Agents = {
                         Skye: 'Initiator',
