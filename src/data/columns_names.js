@@ -136,3 +136,11 @@ export const player_columns = {
         "1v5" :             { value:"1v5",          type:INTEGER, width: '50px' }
     }
 }
+
+export const player_head_to_head = {
+    "Opponent" :   { value:"name",         type:STRING, width: '150px' },
+    "Maps Played": { value:"maps_played",  type:INTEGER, width: '50px' },
+    "Kills":       { value:"kills",        type:INTEGER, width: '50px' },
+    "Deaths":      { value:"deaths",       type:INTEGER, width: '50px' },
+    "Diff":        { value:"diff",         type:INTEGER, width: '50px' },
+}

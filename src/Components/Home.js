@@ -60,7 +60,7 @@ const Home = () => {
       {
         selectedButton === 'HeadToHead' && (
           <div>
-            <HeadToHead onFilter={handleFilter}> </HeadToHead>
+            <HeadToHead onFilter={handleFilter} columns={handleColumnChange}> </HeadToHead>
           </div>
         
       )}      

@@ -1,7 +1,7 @@
 import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import team_data from '../data/tables/team_table.json'
-import { Maps, Events, Teams, Regions } from '../data/dropdownoptions';
+import { ALL, Maps, Events, Teams, Regions } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import { BASIC, ADVANCED, teams_columns } from '../data/columns_names';
 import './css/toggle_button.css'
@@ -123,7 +123,6 @@ function get_data(data) {
 
 function Team({ onFilter, onViewModeChange}) {
 
-  const ALL = 'All'
   const [isAdvanced, setIsAdvanced] = useState(false)
   const [event, setEvent] = useState(ALL)
   const [mapName, setMapName] = useState(ALL)

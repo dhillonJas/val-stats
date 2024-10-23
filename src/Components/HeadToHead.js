@@ -1,24 +1,20 @@
-import Button from 'react-bootstrap/Button'
 import player_data from '../data/tables/player_table.json'
-import React, { useState , useEffect} from 'react';
-import './css/toggle_button.css'
-import { BASIC, ADVANCED, events_columns } from '../data/columns_names';
-import './css/filters.css'
-import Player from './Player';
-import { Maps, Events, Teams, Regions, Agents, Players } from '../data/dropdownoptions';
+import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
+import { player_head_to_head } from '../data/columns_names';
+import { ALL, Maps, Events, Agents, Players } from '../data/dropdownoptions';
+import './css/toggle_button.css'
+import './css/filters.css'
 
 
 // getting all head to heads for ONE player
 // the data should be already filtered for ONE player
 function get_data(data){
-  const filtered_data = data.filter(player => player.player_name === 't3xture')
   const opponents = {}
-  filtered_data.forEach(player => {
+  data.forEach(player => {
     if (Object.keys(player['player_head_to_head'] !== 0))
     {
       const stats_obj = player['player_head_to_head']
-
       for (const name in stats_obj)
       {
         if (name in opponents)
@@ -26,51 +22,92 @@ function get_data(data){
           opponents[name].kills += stats_obj[name][0]
           opponents[name].deaths += stats_obj[name][1]
           opponents[name].diff += stats_obj[name][2]
+          opponents[name].maps_played += 1
         }
         else
         {
           opponents[name] = {
             'name':name,
-            'kills':0,
-            'deaths':0,
-            'diff':0
+            'kills':stats_obj[name][0],
+            'deaths': stats_obj[name][1],
+            'diff':stats_obj[name][2],
+            'maps_played':1
           }
         }
       }
     }
 
   });
-  console.log(opponents)
-  return opponents
+  return Object.values(opponents)
 }   
 
 
-function HeadToHead({ onFilter, onViewModeChange}) {
+function HeadToHead({ onFilter, columns}) {
 
-  const ALL = 'ALL'
+  // const players = Object.keys(player_data) // should use this for dropdown options
   const [player, setPlayer] = useState('TenZ')
   const [event, setEvent] = useState(ALL)
   const [mapName, setMapName] = useState(ALL)
-  const [opponent, setOpponent] = useState(ALL)
-  const [region, setRegion] = useState(ALL)
   const [playerAgent, setPlayerAgent] = useState(ALL)
-  const [opponentAgent, setOpponentAgent] = useState(ALL)
-  const [dataToShow, setDataToShow] = useState(get_data(player_data))
+  // const [opponentAgent, setOpponentAgent] = useState(ALL) // update data to allow this
+  // const [opponentTeam, setOpponentTeam] = useState(ALL) // update data to allow this
+  const [dataToShow, setDataToShow] = useState(get_data(player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())))
 
   
-  useEffect(() => {
+  
+  const handleFilter = useCallback(() => {
+    let filtered_data = player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())
     
-  }, []);
+    if (event !== ALL)
+      filtered_data = filtered_data.filter(player_obj => player_obj.event_name === event)
+    
+    if (mapName !== ALL)
+      filtered_data = filtered_data.filter(player => player.map_name === mapName)
+
+    if (playerAgent !== ALL)
+      filtered_data = filtered_data.filter(player => player.player_agent === playerAgent)
+
+    setDataToShow(get_data(filtered_data))
+  }, [player, event, mapName, playerAgent])
+
+  useEffect(() => {
+    handleFilter()
+  }, [handleFilter, event, mapName, playerAgent]);
+
+
+  useEffect(() => {
+    columns(player_head_to_head)
+    onFilter(dataToShow)
+  }, [dataToShow, onFilter, columns]);
 
 
   return (
     <div>
       <div className='filter-container'>
         <span className="filter-label">Player</span>
-          <DropdownComp   selectedValue={Player}
-                          setSelectedValue={setPlayer}
-                          options={Players}> 
-          </DropdownComp>
+        <DropdownComp   selectedValue={player}
+                        setSelectedValue={setPlayer}
+                        options={Players}> 
+        </DropdownComp>
+
+        <span className="filter-label">Player Agent</span>
+        <DropdownComp   selectedValue={playerAgent}
+                        setSelectedValue={setPlayerAgent}
+                        options={Agents}> 
+        </DropdownComp>
+
+        <span className="filter-label">Event</span>
+        <DropdownComp   selectedValue={event}
+                        setSelectedValue={setEvent}
+                        options={Events}> 
+        </DropdownComp>
+
+        <span className="filter-label">Map</span>
+        <DropdownComp   selectedValue={mapName}
+                        setSelectedValue={setMapName}
+                        options={Maps}> 
+        </DropdownComp>
+
         </div>
     </div>
 

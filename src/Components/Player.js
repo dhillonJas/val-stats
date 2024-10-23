@@ -2,7 +2,7 @@ import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import player_data from '../data/tables/player_table.json'
 import { BASIC, ADVANCED, player_columns } from '../data/columns_names';
-import { Maps, Events, Teams, Regions, Agents } from '../data/dropdownoptions';
+import { ALL, Maps, Events, Teams, Regions, Agents } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import './css/filters.css'
 import './css/toggle_button.css'
@@ -149,7 +149,6 @@ function get_data(data){
 
 function Player({ onFilter , onViewModeChange }) {
 
-  const ALL = 'All'
   const [isAdvanced, setIsAdvanced] = useState(false)
   const [event, setEvent] = useState(ALL)
   const [mapName, setMapName] = useState(ALL)
@@ -161,7 +160,6 @@ function Player({ onFilter , onViewModeChange }) {
   const [minRounds, setMinRounds] = useState('')
   const [dataToShow, setDataToShow] = useState(get_data(player_data))
 
-  // console.log(get_data(player_data))
   const handleFilter = useCallback(() => {
     let filtered_data = player_data
 
