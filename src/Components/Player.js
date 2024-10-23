@@ -2,7 +2,7 @@ import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import player_data from '../data/tables/player_table.json'
 import { BASIC, ADVANCED, player_columns } from '../data/columns_names';
-import { ALL, Maps, Events, Teams, Regions, Agents } from '../data/dropdownoptions';
+import { ALL, Maps, Events, Teams, Regions, Agents, Roles } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import './css/filters.css'
 import './css/toggle_button.css'
@@ -17,6 +17,8 @@ function get_data(data){
             maps_won: 0,
             maps_lost: 0,
             maps_played: 0,
+            agents_played: {},
+            roles_played: {},
             kills: {all: 0, attack:  0, defense: 0},
             deaths: {all: 0, attack:  0, defense: 0},
             assists: {all: 0, attack:  0, defense: 0},
@@ -47,6 +49,16 @@ function get_data(data){
 
     if (!acc[name_key].prev_teams.includes(curr.player_team))
       acc[name_key].prev_teams.push(curr.player_team)
+
+    if (curr.player_agent in acc[name_key].agents_played)
+      acc[name_key].agents_played[curr.player_agent] += 1
+    else
+      acc[name_key].agents_played[curr.player_agent] = 1
+
+    if (Agents[curr.player_agent] in acc[name_key].roles_played)
+      acc[name_key].roles_played[Agents[curr.player_agent]] += 1
+    else
+      acc[name_key].roles_played[Agents[curr.player_agent]] = 1
 
     acc[name_key].kills.attack += curr.kills.attack
     acc[name_key].kills.defense += curr.kills.defense
@@ -142,6 +154,25 @@ function get_data(data){
       'defense' : (player.assists.defense / player.rounds_played.defense).toFixed(decimalPlaces),
       'all' : (player.assists.all / (player.rounds_played.attack + player.rounds_played.defense)).toFixed(decimalPlaces)
     }
+
+    player['agents_played'] = Object.fromEntries(
+      Object.entries(player['agents_played'])
+        .sort(([, value1], [, value2]) => value2 - value1) // Sort by values in descending order
+    );
+
+    player['roles_played'] = Object.fromEntries(
+      Object.entries(player['roles_played'])
+        .sort(([, value1], [, value2]) => value2 - value1)
+    );
+
+    for (const agent_name in player['agents_played'])
+      player['agents_played'][agent_name] = String(Math.round(((player['agents_played'][agent_name] / player.maps_played) * 100))) + '%'
+ 
+    for (const role_name in player['roles_played'])
+      player['roles_played'][role_name] = String(Math.round(((player['roles_played'][role_name] / player.maps_played) * 100))) + '%'
+ 
+
+    
   })
   return Object.values(players)
 }
@@ -155,6 +186,7 @@ function Player({ onFilter , onViewModeChange }) {
   const [opponent, setOpponent] = useState(ALL)
   const [region, setRegion] = useState(ALL)
   const [agent, setAgent] = useState(ALL)
+  const [role, setRole] = useState(ALL)
   const [bestOf, setbestOf] = useState(ALL)
   const [minMaps, setMinMaps] = useState('')
   const [minRounds, setMinRounds] = useState('')
@@ -178,6 +210,9 @@ function Player({ onFilter , onViewModeChange }) {
     if (agent !== ALL)
       filtered_data = filtered_data.filter(player => player.player_agent === agent)
 
+    if (role !== ALL)
+      filtered_data = filtered_data.filter(player => Roles[role].includes(player.player_agent))
+
     if (bestOf !== ALL)
       filtered_data = filtered_data.filter(player => player.match_length === bestOf)
 
@@ -190,12 +225,12 @@ function Player({ onFilter , onViewModeChange }) {
       filtered_data = filtered_data.filter(player => player.rounds_played.attack + player.rounds_played.defense >= minRounds)
 
     setDataToShow(filtered_data)
-    },[event, mapName, opponent, region, agent, bestOf, minMaps, minRounds])
+    },[event, mapName, opponent, region, agent, role, bestOf, minMaps, minRounds])
 
 
     useEffect(() => {
       handleFilter()
-    }, [handleFilter, event, mapName, opponent, region, agent, bestOf, minMaps, minRounds]);
+    }, [handleFilter, event, mapName, opponent, region, agent, role, bestOf, minMaps, minRounds]);
 
     useEffect(() => {
       let viewMode = isAdvanced  ?  ADVANCED: BASIC
@@ -247,7 +282,13 @@ function Player({ onFilter , onViewModeChange }) {
           <span className="filter-label">Agent</span>
           <DropdownComp   selectedValue={agent}
                           setSelectedValue={setAgent}
-                          options={Agents}> 
+                          options={[ALL, ...Object.keys(Agents)]}> 
+          </DropdownComp>
+
+          <span className="filter-label">Role</span>
+          <DropdownComp   selectedValue={role}
+                          setSelectedValue={setRole}
+                          options={[ALL, ...Object.keys(Roles)]}> 
           </DropdownComp>
 
           <span className="filter-label">Minimum Maps</span>

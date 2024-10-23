@@ -106,6 +106,8 @@ export const player_columns = {
         "Maps played":      { value:"maps_played",    type:INTEGER },    
         "Maps won":         { value:"maps_won",       type:INTEGER },    
         "Maps lost":        { value:"maps_lost",      type:INTEGER },    
+        "Agents Played":    { value:"agents_played",  type:OBJECT },    
+        "Roles Played":     { value:"roles_played",   type:OBJECT },    
         "Kills":            { value:"kills",          type:STAT_SIDES, width: '130px' },
         "Deaths":           { value:"deaths",         type:STAT_SIDES, width: '130px' },
         "Assists":          { value:"assists",        type:STAT_SIDES, width: '130px' },
