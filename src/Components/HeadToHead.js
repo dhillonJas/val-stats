@@ -93,7 +93,7 @@ function HeadToHead({ onFilter, columns}) {
         <span className="filter-label">Player Agent</span>
         <DropdownComp   selectedValue={playerAgent}
                         setSelectedValue={setPlayerAgent}
-                        options={Agents}> 
+                        options={[ALL, ...Object.keys(Agents)]}> 
         </DropdownComp>
 
         <span className="filter-label">Event</span>
