@@ -1,4 +1,4 @@
-import player_data from '../data/tables/player_table.json'
+import head_to_head_data from '../data/tables/head_to_head_table.json'
 import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import { player_head_to_head } from '../data/columns_names';
@@ -17,6 +17,7 @@ function get_data(data){
       const stats_obj = player['player_head_to_head']
       for (const name in stats_obj)
       {
+        
         if (name in opponents)
         {
           opponents[name].kills += stats_obj[name][0]
@@ -48,12 +49,12 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
   const [event, setEvent] = useState(ALL)
   const [mapName, setMapName] = useState(ALL)
   const [playerAgent, setPlayerAgent] = useState(ALL)
-  // const [opponentAgent, setOpponentAgent] = useState(ALL) // update data to allow this
-  // const [opponentTeam, setOpponentTeam] = useState(ALL) // update data to allow this
-  const [dataToShow, setDataToShow] = useState(get_data(player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())))
+  const [opponentAgent, setOpponentAgent] = useState(ALL) 
+  const [minMaps, setMinMaps] = useState('')
+  const [dataToShow, setDataToShow] = useState(get_data(head_to_head_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())))
   
   const handleFilter = useCallback(() => {
-    let filtered_data = player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())
+    let filtered_data = head_to_head_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())
     
     if (event !== ALL)
       filtered_data = filtered_data.filter(player_obj => player_obj.event_name === event)
@@ -64,12 +65,17 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
     if (playerAgent !== ALL)
       filtered_data = filtered_data.filter(player => player.player_agent === playerAgent)
 
-    setDataToShow(get_data(filtered_data))
-  }, [player, event, mapName, playerAgent])
+    filtered_data = get_data(filtered_data)
+
+    if (minMaps !== '')
+      filtered_data = filtered_data.filter(player => player.maps_played >= minMaps)
+
+    setDataToShow(filtered_data)
+  }, [player, event, mapName, playerAgent, minMaps])
 
   useEffect(() => {
     handleFilter()
-  }, [handleFilter, event, mapName, playerAgent]);
+  }, [handleFilter, event, mapName, playerAgent, minMaps]);
 
 
   useEffect(() => {
@@ -77,6 +83,7 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
     onFilter(dataToShow)
   }, [dataToShow, onFilter, columns]);
 
+  const onMinMapChange = (e) => { setMinMaps(e.target.value) }
 
   return (
     <div>
@@ -99,6 +106,14 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
         </div>
 
         <div className='filter'>
+          <span className="filter-label">Opponent Agent</span>
+          <DropdownComp   selectedValue={opponentAgent}
+                          setSelectedValue={setOpponentAgent}
+                          options={[ALL, ...Object.keys(Agents)]}> 
+          </DropdownComp>
+        </div>
+
+        <div className='filter'>
           <span className="filter-label">Event</span>
           <DropdownComp   selectedValue={event}
                           setSelectedValue={setEvent}
@@ -113,6 +128,14 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
                           options={Maps}> 
           </DropdownComp>
         </div>
+
+        <div className='filter'> 
+            <span className="filter-label">Minimum Maps</span>
+            <input className='filter-input'
+                  type="number" 
+                  value={minMaps}
+                  onChange={onMinMapChange} />
+          </div>
 
         </div>
     </div>
