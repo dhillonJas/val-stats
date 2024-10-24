@@ -43,5 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dhillonJas.github.io/val-stats"
+  "homepage": "https://dhillonJas.github.io/val-stats",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
 }
