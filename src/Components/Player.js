@@ -249,59 +249,78 @@ function Player({ onFilter , onViewModeChange, EventNames, TeamNames }) {
   return (
 <div>
        <div className='filter-container'>
-        <span className="filter-label">Event</span>
-          <DropdownComp   selectedValue={event}
-                          setSelectedValue={setEvent}
-                          options={EventNames}> 
-          </DropdownComp>
+        <div className='filter'>
+          <span className="filter-label">Event</span>
+            <DropdownComp   selectedValue={event}
+                            setSelectedValue={setEvent}
+                            options={EventNames}> 
+            </DropdownComp>
+        </div>
 
+        <div className='filter'>
           <span className="filter-label">Map</span>
           <DropdownComp   selectedValue={mapName}
                           setSelectedValue={setMapName}
                           options={Maps}> 
           </DropdownComp>
+        </div>
 
-          <span className="filter-label">Opponent</span>
-          <DropdownComp   selectedValue={opponent}
-                          setSelectedValue={setOpponent}
-                          options={TeamNames}> 
-          </DropdownComp>
-          
+          <div className='filter'>
+            <span className="filter-label">Opponent</span>
+            <DropdownComp   selectedValue={opponent}
+                            setSelectedValue={setOpponent}
+                            options={TeamNames}> 
+            </DropdownComp>
+          </div>
+
+          <div className='filter'>
           <span className="filter-label">Opponent Region</span>
           <DropdownComp   selectedValue={region}
                           setSelectedValue={setRegion}
                           options={Regions}> 
           </DropdownComp>
+          </div>
 
-          <span className="filter-label">Best Of</span>
-          <DropdownComp   selectedValue={bestOf}
-                          setSelectedValue={setbestOf}
-                          options={['All','Bo3', 'Bo5']}> 
-          </DropdownComp>
+          <div className='filter'> 
+            <span className="filter-label">Best Of</span>
+            <DropdownComp   selectedValue={bestOf}
+                            setSelectedValue={setbestOf}
+                            options={['All','Bo3', 'Bo5']}> 
+            </DropdownComp>
+          </div>
 
-          <span className="filter-label">Agent</span>
-          <DropdownComp   selectedValue={agent}
-                          setSelectedValue={setAgent}
-                          options={[ALL, ...Object.keys(Agents)]}> 
-          </DropdownComp>
+          <div className='filter'> 
+            <span className="filter-label">Agent</span>
+            <DropdownComp   selectedValue={agent}
+                            setSelectedValue={setAgent}
+                            options={[ALL, ...Object.keys(Agents)]}> 
+            </DropdownComp>
+          </div>
 
-          <span className="filter-label">Role</span>
-          <DropdownComp   selectedValue={role}
-                          setSelectedValue={setRole}
-                          options={[ALL, ...Object.keys(Roles)]}> 
-          </DropdownComp>
+          <div className='filter'> 
+            <span className="filter-label">Role</span>
+            <DropdownComp   selectedValue={role}
+                            setSelectedValue={setRole}
+                            options={[ALL, ...Object.keys(Roles)]}> 
+            </DropdownComp>
+          </div>
 
-          <span className="filter-label">Minimum Maps</span>
-          <input className='filter-input'
-                 type="number" 
-                 value={minMaps}
-                 onChange={onMinMapChange} />
+          <div className='filter'> 
+            <span className="filter-label">Minimum Maps</span>
+            <input className='filter-input'
+                  type="number" 
+                  value={minMaps}
+                  onChange={onMinMapChange} />
+          </div>
 
-          <span className="filter-label">Minimum Rounds</span>
-          <input className='filter-input'
-                 type="number" 
-                 value={minRounds}
-                 onChange={onMinRoundChange} />
+          <div className='filter'> 
+            <span className="filter-label">Minimum Rounds</span>
+            <input className='filter-input'
+                  type="number" 
+                  value={minRounds}
+                  onChange={onMinRoundChange} />
+          </div>
+
         </div>
         <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
                variant="dark"   

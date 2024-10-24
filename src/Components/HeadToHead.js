@@ -81,29 +81,38 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
   return (
     <div>
       <div className='filter-container'>
-        <span className="filter-label">Player</span>
-        <DropdownComp   selectedValue={player}
-                        setSelectedValue={setPlayer}
-                        options={PlayerNames}> 
-        </DropdownComp>
 
-        <span className="filter-label">Player Agent</span>
-        <DropdownComp   selectedValue={playerAgent}
-                        setSelectedValue={setPlayerAgent}
-                        options={[ALL, ...Object.keys(Agents)]}> 
-        </DropdownComp>
+        <div className='filter'>
+          <span className="filter-label">Player</span>
+          <DropdownComp   selectedValue={player}
+                          setSelectedValue={setPlayer}
+                          options={PlayerNames}> 
+          </DropdownComp>
+        </div>
 
-        <span className="filter-label">Event</span>
-        <DropdownComp   selectedValue={event}
-                        setSelectedValue={setEvent}
-                        options={EventNames}> 
-        </DropdownComp>
+        <div className='filter'>
+          <span className="filter-label">Player Agent</span>
+          <DropdownComp   selectedValue={playerAgent}
+                          setSelectedValue={setPlayerAgent}
+                          options={[ALL, ...Object.keys(Agents)]}> 
+          </DropdownComp>
+        </div>
 
-        <span className="filter-label">Map</span>
-        <DropdownComp   selectedValue={mapName}
-                        setSelectedValue={setMapName}
-                        options={Maps}> 
-        </DropdownComp>
+        <div className='filter'>
+          <span className="filter-label">Event</span>
+          <DropdownComp   selectedValue={event}
+                          setSelectedValue={setEvent}
+                          options={EventNames}> 
+          </DropdownComp>
+        </div>
+
+        <div className='filter'>
+          <span className="filter-label">Map</span>
+          <DropdownComp   selectedValue={mapName}
+                          setSelectedValue={setMapName}
+                          options={Maps}> 
+          </DropdownComp>
+        </div>
 
         </div>
     </div>

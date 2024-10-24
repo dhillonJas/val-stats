@@ -211,41 +211,54 @@ useEffect(() => {
     <div>
        <div className='filter-container'>
         
-        <span className="filter-label">Event</span>
-        <DropdownComp   selectedValue={event}
-                          setSelectedValue={setEvent}
-                          options={EventNames}> 
-        </DropdownComp>
+        <div className='filter'>
+          <span className="filter-label">Event</span>
+          <DropdownComp   selectedValue={event}
+                            setSelectedValue={setEvent}
+                            options={EventNames}> 
+          </DropdownComp>
+        </div>
 
+          
+        <div className='filter'>
           <span className="filter-label">Map</span>
           <DropdownComp   selectedValue={mapName}
                           setSelectedValue={setMapName}
                           options={Maps}> 
           </DropdownComp>
-
-          <span className="filter-label">Opponent</span>
-          <DropdownComp   selectedValue={opponent}
-                          setSelectedValue={setOpponent}
-                          options={TeamNames}> 
-          </DropdownComp>
+        </div>
           
-          <span className="filter-label">Opponent region</span>
-          <DropdownComp   selectedValue={region}
-                          setSelectedValue={setRegion}
-                          options={Regions}> 
-          </DropdownComp>
+          <div className='filter'>  
+            <span className="filter-label">Opponent</span>
+            <DropdownComp   selectedValue={opponent}
+                            setSelectedValue={setOpponent}
+                            options={TeamNames}> 
+            </DropdownComp>
+          </div>
+          
+          <div className='filter'>
+            <span className="filter-label">Opponent region</span>
+            <DropdownComp   selectedValue={region}
+                            setSelectedValue={setRegion}
+                            options={Regions}> 
+            </DropdownComp>
+          </div>
 
-          <span className="filter-label">Minimum Maps</span>
-          <input className='filter-input'
-                 type="number" 
-                 value={minMaps}
-                 onChange={onMinMapChange} />
+          <div className='filter'>
+            <span className="filter-label">Minimum Maps</span>
+            <input className='filter-input'
+                  type="number" 
+                  value={minMaps}
+                  onChange={onMinMapChange} />
+          </div>
 
-          <span className="filter-label">Minimum Rounds</span>
-          <input className='filter-input'
-                 type="number" 
-                 value={minRounds}
-                 onChange={onMinRoundChange} />
+          <div className='filter'>
+            <span className="filter-label">Minimum Rounds</span>
+            <input className='filter-input'
+                  type="number" 
+                  value={minRounds}
+                  onChange={onMinRoundChange} />
+          </div>
       </div>
       <Button className={`toggle-button ${isAdvanced ? 'advanced' : ''}`}
                variant="dark"  
