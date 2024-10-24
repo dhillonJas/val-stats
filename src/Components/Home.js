@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import './css/tab.css'
 import './css/Home.css'; 
 import Team from './Team';
@@ -6,12 +6,38 @@ import Event from './Event';
 import Player from './Player';
 import DataTable from './DataTable';
 import HeadToHead from './HeadToHead';
+import team_data from '../data/tables/team_table.json'
+import player_data from '../data/tables/player_table.json'
+import event_data from '../data/tables/event_table.json'
+import { ALL } from '../data/dropdownoptions';
+
 
 const Home = () => {
 
   const [selectedButton, setSelectedButton] = useState('Event');
   const [filteredData, setFilteredData] = useState([]); // Filtered dataset (passed to DataTable)
   const [columnsToShow, setColumnsToShow] = useState([]);
+
+  const all_players = useMemo(() => {
+    const players = [...new Set(player_data.map(item => item.player_name))];
+    return players.sort()
+  }, []);
+
+  const all_teams = useMemo(() => {
+    const teams = [...new Set(team_data.map(item => item.name))];
+    return [ALL, ...teams.sort()];
+  }, []);
+
+  const all_events = useMemo(() => {
+    const events = [...new Set(event_data.map(item => item.event_name))];
+    const sorted =  events.sort((a, b) => {
+      
+      const yearA = parseInt(a.slice(-4), 10);
+      const yearB = parseInt(b.slice(-4), 10);
+      return yearB - yearA; 
+    })
+    return [ALL, ...sorted]
+  }, []);
 
   const handleFilter = useCallback((filteredData) => {
     setFilteredData(filteredData);
@@ -40,27 +66,40 @@ const Home = () => {
 
       {selectedButton === 'Team' && (
         <div>
-          <Team onFilter={handleFilter}  onViewModeChange={handleColumnChange}></Team>
+          <Team onFilter={handleFilter}  
+                onViewModeChange={handleColumnChange}
+                EventNames={all_events}
+                TeamNames={all_teams}  
+          ></Team>
         </div>
       )}
       {
         selectedButton === 'Event' && (
           <div>
-            <Event onFilter={handleFilter} onViewModeChange={handleColumnChange}> </Event>
+            <Event onFilter={handleFilter} 
+                   onViewModeChange={handleColumnChange}> </Event>
           </div>
         
       )}
       {
         selectedButton === 'Player' && (
           <div>
-            <Player onFilter={handleFilter} onViewModeChange={handleColumnChange}> </Player>
+            <Player onFilter={handleFilter} 
+                    onViewModeChange={handleColumnChange}
+                    EventNames={all_events}
+                    TeamNames={all_teams}  
+            > </Player>
           </div>
         
       )}  
       {
         selectedButton === 'HeadToHead' && (
           <div>
-            <HeadToHead onFilter={handleFilter} columns={handleColumnChange}> </HeadToHead>
+            <HeadToHead onFilter={handleFilter} 
+                        columns={handleColumnChange}
+                        EventNames={all_events}
+                        PlayerNames={all_players}  
+                        > </HeadToHead>
           </div>
         
       )}      

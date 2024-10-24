@@ -1,8 +1,8 @@
 import player_data from '../data/tables/player_table.json'
-import React, { useState , useEffect, useCallback, useMemo} from 'react';
+import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import { player_head_to_head } from '../data/columns_names';
-import { ALL, Maps, Events, Agents } from '../data/dropdownoptions';
+import { ALL, Maps, Agents } from '../data/dropdownoptions';
 import './css/toggle_button.css'
 import './css/filters.css'
 
@@ -42,9 +42,8 @@ function get_data(data){
 }   
 
 
-function HeadToHead({ onFilter, columns}) {
+function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
 
-  // const players = Object.keys(player_data) // should use this for dropdown options
   const [player, setPlayer] = useState('TenZ')
   const [event, setEvent] = useState(ALL)
   const [mapName, setMapName] = useState(ALL)
@@ -52,13 +51,6 @@ function HeadToHead({ onFilter, columns}) {
   // const [opponentAgent, setOpponentAgent] = useState(ALL) // update data to allow this
   // const [opponentTeam, setOpponentTeam] = useState(ALL) // update data to allow this
   const [dataToShow, setDataToShow] = useState(get_data(player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())))
-
-  const PlayerNames = useMemo(() => {
-    const names = player_data.map(item => item.player_name);
-    const uniqueNames = [...new Set(names)]; 
-    return uniqueNames.sort();
-  }, []);
-
   
   const handleFilter = useCallback(() => {
     let filtered_data = player_data.filter(player_obj => player_obj.player_name.toLowerCase() === player.toLowerCase())
@@ -104,7 +96,7 @@ function HeadToHead({ onFilter, columns}) {
         <span className="filter-label">Event</span>
         <DropdownComp   selectedValue={event}
                         setSelectedValue={setEvent}
-                        options={Events}> 
+                        options={EventNames}> 
         </DropdownComp>
 
         <span className="filter-label">Map</span>

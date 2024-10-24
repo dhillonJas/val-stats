@@ -1,7 +1,7 @@
 import React, { useState , useEffect, useCallback} from 'react';
 import DropdownComp from './Dropdown';
 import team_data from '../data/tables/team_table.json'
-import { ALL, Maps, Events, Teams, Regions } from '../data/dropdownoptions';
+import { ALL, Maps, Regions } from '../data/dropdownoptions';
 import Button from 'react-bootstrap/Button'
 import { BASIC, ADVANCED, teams_columns } from '../data/columns_names';
 import './css/toggle_button.css'
@@ -121,7 +121,7 @@ function get_data(data) {
   }, []);
 }
 
-function Team({ onFilter, onViewModeChange}) {
+function Team({ onFilter, onViewModeChange, EventNames, TeamNames}) {
 
   const [isAdvanced, setIsAdvanced] = useState(false)
   const [event, setEvent] = useState(ALL)
@@ -214,7 +214,7 @@ useEffect(() => {
         <span className="filter-label">Event</span>
         <DropdownComp   selectedValue={event}
                           setSelectedValue={setEvent}
-                          options={Events}> 
+                          options={EventNames}> 
         </DropdownComp>
 
           <span className="filter-label">Map</span>
@@ -226,7 +226,7 @@ useEffect(() => {
           <span className="filter-label">Opponent</span>
           <DropdownComp   selectedValue={opponent}
                           setSelectedValue={setOpponent}
-                          options={Teams}> 
+                          options={TeamNames}> 
           </DropdownComp>
           
           <span className="filter-label">Opponent region</span>
