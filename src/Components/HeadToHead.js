@@ -65,17 +65,34 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
     if (playerAgent !== ALL)
       filtered_data = filtered_data.filter(player => player.player_agent === playerAgent)
 
+    if (opponentAgent !== ALL)
+      filtered_data = filtered_data.map(player_obj => {
+        const head_to_head_obj = player_obj.player_head_to_head
+        const filteredOpponents = Object.fromEntries(
+                                  Object.entries(head_to_head_obj)
+                                  .filter(([, arr]) => arr[3] === opponentAgent) )
+        
+        if (Object.keys(filteredOpponents).length > 0) {
+          return {
+              ...player_obj,
+              player_head_to_head: filteredOpponents
+          };
+        }
+      return null
+    }).filter(obj => obj !== null)
+
+    console.log(filtered_data)
     filtered_data = get_data(filtered_data)
 
     if (minMaps !== '')
       filtered_data = filtered_data.filter(player => player.maps_played >= minMaps)
 
     setDataToShow(filtered_data)
-  }, [player, event, mapName, playerAgent, minMaps])
+  }, [player, event, mapName, playerAgent, minMaps, opponentAgent])
 
   useEffect(() => {
     handleFilter()
-  }, [handleFilter, event, mapName, playerAgent, minMaps]);
+  }, [handleFilter, event, mapName, playerAgent, minMaps, opponentAgent]);
 
 
   useEffect(() => {
@@ -98,17 +115,16 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
         </div>
 
         <div className='filter'>
+          <span className="filter-label">Map</span>
+          <DropdownComp   selectedValue={mapName}
+                          setSelectedValue={setMapName}
+                          options={Maps}> 
+          </DropdownComp>
+        </div>
+        <div className='filter'>
           <span className="filter-label">Player Agent</span>
           <DropdownComp   selectedValue={playerAgent}
                           setSelectedValue={setPlayerAgent}
-                          options={[ALL, ...Object.keys(Agents)]}> 
-          </DropdownComp>
-        </div>
-
-        <div className='filter'>
-          <span className="filter-label">Opponent Agent</span>
-          <DropdownComp   selectedValue={opponentAgent}
-                          setSelectedValue={setOpponentAgent}
                           options={[ALL, ...Object.keys(Agents)]}> 
           </DropdownComp>
         </div>
@@ -122,12 +138,13 @@ function HeadToHead({ onFilter, columns, EventNames,  PlayerNames}) {
         </div>
 
         <div className='filter'>
-          <span className="filter-label">Map</span>
-          <DropdownComp   selectedValue={mapName}
-                          setSelectedValue={setMapName}
-                          options={Maps}> 
+          <span className="filter-label">Opponent Agent</span>
+          <DropdownComp   selectedValue={opponentAgent}
+                          setSelectedValue={setOpponentAgent}
+                          options={[ALL, ...Object.keys(Agents)]}> 
           </DropdownComp>
         </div>
+
 
         <div className='filter'> 
             <span className="filter-label">Minimum Maps</span>
