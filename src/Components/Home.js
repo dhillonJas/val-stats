@@ -20,7 +20,7 @@ const Home = () => {
 
   const all_players = useMemo(() => {
     const players = [...new Set(player_data.map(item => item.player_name))];
-    return players.sort()
+    return players.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
   }, []);
 
   const all_teams = useMemo(() => {
